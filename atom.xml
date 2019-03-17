@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.gadflysu.com/"/>
-  <updated>2019-03-05T16:32:44.797Z</updated>
+  <updated>2019-03-17T17:28:04.121Z</updated>
   <id>https://blog.gadflysu.com/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在 Ubuntu 配置 MariaDB</title>
+    <link href="https://blog.gadflysu.com/linux/mariadb-on-ubuntu/"/>
+    <id>https://blog.gadflysu.com/linux/mariadb-on-ubuntu/</id>
+    <published>2019-03-17T16:00:00.000Z</published>
+    <updated>2019-03-17T17:28:04.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="https://blog.gadflysu.com/categories/linux/"/>
+    
+    
+      <category term="database" scheme="https://blog.gadflysu.com/tags/database/"/>
+    
+      <category term="mariadb" scheme="https://blog.gadflysu.com/tags/mariadb/"/>
+    
+      <category term="mysql" scheme="https://blog.gadflysu.com/tags/mysql/"/>
+    
+      <category term="ubuntu" scheme="https://blog.gadflysu.com/tags/ubuntu/"/>
+    
+      <category term="primer" scheme="https://blog.gadflysu.com/tags/primer/"/>
+    
+  </entry>
+  
+  <entry>
     <title>为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持</title>
     <link href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/"/>
     <id>https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/</id>
     <published>2019-03-05T16:00:00.000Z</published>
-    <updated>2019-03-05T16:32:44.797Z</updated>
+    <updated>2019-03-05T16:32:09.000Z</updated>
     
     <summary type="html">
     
