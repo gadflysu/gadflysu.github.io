@@ -249,7 +249,7 @@
 
     
         <meta property="article:published_time" content="Mon Mar 18 2019 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Mon Mar 18 2019 01:28:04 GMT+0800">
+        <meta property="article:modified_time" content="Mon Mar 18 2019 15:01:17 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -272,7 +272,7 @@
     "mainEntityOfPage": "https://blog.gadflysu.com/linux/mariadb-on-ubuntu/index.html",
     "headline": "在 Ubuntu 配置 MariaDB",
     "datePublished": "Mon Mar 18 2019 00:00:00 GMT+0800",
-    "dateModified": "Mon Mar 18 2019 01:28:04 GMT+0800",
+    "dateModified": "Mon Mar 18 2019 15:01:17 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "sudo",
@@ -527,7 +527,7 @@ mysql  Ver 15.1 Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64) using rea
 <h2 id="安全配置"><a href="#安全配置" class="headerlink" title="安全配置"></a>安全配置</h2><p>安装完成后建议首先用软件自带的一个脚本执行初始的安全配置：</p>
 <pre><code class="shell">sudo mysql_secure_installation
 </code></pre>
-<p>注意使用 <code>sudo</code> 以获取 <code>root</code> 权限来执行，这是因为 MariaDB 的默认用户 <code>root</code> 采用 <code>unix_socket</code> 插件进行鉴权（这一点会在<a href="##创建用户">后面</a>提到），而执行安全配置需要登录。</p>
+<p>注意使用 <code>sudo</code> 以获取 <code>root</code> 权限来执行，这是因为 MariaDB 的默认用户 <code>root</code> 采用 <code>unix_socket</code> 插件进行鉴权（这一点会在后面提到），而执行安全配置需要登录。</p>
 <pre><code>NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
       SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
 
@@ -604,7 +604,7 @@ MariaDB [mysql]&gt; SELECT User, Host, plugin FROM mysql.user;
 +----------+-----------+-------------+
 2 rows in set (0.12 sec)
 </code></pre>
-<p>虽然也可以修改插件配置，但是这里我仍然建议创建一个同名的数据库用户：</p>
+<p>虽然也可以修改插件配置，但是这里我仍然建议<a href="https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/#creating-users" target="_blank" rel="noopener">创建</a>一个同名的数据库用户：</p>
 <pre><code class="shell">➜  ~ sudo mysql  # connect as &quot;root&quot;
 
 MariaDB [(none)]&gt; USE mysql;
