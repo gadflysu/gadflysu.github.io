@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
+<html style="display: none;" lang="en">
     <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <!--
@@ -23,6 +23,8 @@
     <!-- dns prefetch -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
 
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
 
 
 
@@ -66,7 +68,7 @@
         <link rel="stylesheet" href="/css/ie-blocker.css">
 
         
-            <script src="/js/ie-blocker.zhCN.js"></script>
+            <script src="/js/ie-blocker.en.js"></script>
         
     <![endif]-->
 
@@ -94,7 +96,7 @@
 <!-- Other Styles -->
 <style>
   body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     overflow-x: hidden !important;
   }
   
@@ -336,7 +338,7 @@
             <img src="/img/avatar.png" width="32px" height="32px" alt="avatar">
         </div>
         <div>
-            <strong>sudo</strong>
+            <strong>gadflysu</strong>
         </div>
     </div>
 </div>
@@ -387,6 +389,24 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
             
+                <a class="index_share-link" href="/tags" title="Tags">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        Tags
+                    </li>
+                </a>
+            
+                <a class="index_share-link" href="/timeline" title="Timeline">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        Timeline
+                    </li>
+                </a>
+            
+                <a class="index_share-link" href="/links" title="Links">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        Links
+                    </li>
+                </a>
+            
         </ul>
 
         <!-- Menu -->
@@ -396,11 +416,20 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
             
+                <!-- All Site UV -->
+                <a class="index_share-link" href="#">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        <span id="busuanzi_container_site_uv">
+                            <span id="busuanzi_value_site_uv"></span>&nbsp;Views
+                        </span>
+                    </li>
+                </a>
+            
 
             
                 <a class="index_share-link" href="atom.xml">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        文章 RSS
+                        Article RSS
                     </li>
                 </a>
             
@@ -408,39 +437,27 @@
             
                 <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=sudo&#39;s blog&url=https://blog.gadflysu.com&pic=https://blog.gadflysu.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
+                        Share to Weibo
                     </li>
                 </a>
             
 
             
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=sudo&#39;s blog&url=https://blog.gadflysu.com&via=sudo" target="_blank">
+                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=sudo&#39;s blog&url=https://blog.gadflysu.com&via=gadflysu" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
+                        Share to Twitter
                     </li>
                 </a>
             
 
             
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
 
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=https://blog.gadflysu.com" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
             
 
             
                 <a class="index_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=sudo&#39;s blog" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 LinkedIn
+                        Share to LinkedIn
                     </li>
                 </a>
             
@@ -450,7 +467,7 @@
             
                 <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.gadflysu.com&text=sudo&#39;s blog" target="_blank">
                     <li class="mdl-menu__item">
-                        分享到 Telegram
+                        Share to Telegram
                     </li>
                 </a>
             
@@ -487,11 +504,11 @@
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            
+            MariaDB 是流行的关系型数据库管理系统...
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/linux/mariadb-on-ubuntu/" target="_self">阅读全文</a>
+            <a href="/linux/mariadb-on-ubuntu/" target="_self">Read more</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -499,11 +516,11 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="sudo's avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="gadflysu's avatar">
             </div>
             <div>
-                <strong>sudo</strong>
-                <span>3月 18, 2019</span>
+                <strong>gadflysu</strong>
+                <span>Mar 18, 2019</span>
             </div>
         </div>
         <div id="post_entry-right-info">
@@ -548,11 +565,12 @@
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            
+            本文是一份提示。
+TL;DR: sudo apt-get install --install-recommends linux-generic-hwe...
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/" target="_self">阅读全文</a>
+            <a href="/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/" target="_self">Read more</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -560,11 +578,11 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="sudo's avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="gadflysu's avatar">
             </div>
             <div>
-                <strong>sudo</strong>
-                <span>3月 06, 2019</span>
+                <strong>gadflysu</strong>
+                <span>Mar 06, 2019</span>
             </div>
         </div>
         <div id="post_entry-right-info">
@@ -611,9 +629,10 @@
         
             
         
+        
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/life/the-end-of-2018/" target="_self">阅读全文</a>
+            <a href="/life/the-end-of-2018/" target="_self">Read more</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -621,11 +640,11 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="sudo's avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="gadflysu's avatar">
             </div>
             <div>
-                <strong>sudo</strong>
-                <span>12月 31, 2018</span>
+                <strong>gadflysu</strong>
+                <span>Dec 31, 2018</span>
             </div>
         </div>
         <div id="post_entry-right-info">
@@ -697,7 +716,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="sudo's avatar">
+        <img src="/img/avatar.png" alt="gadflysu's avatar">
     </div>
 
     <!-- Sidebar Email -->
@@ -733,7 +752,7 @@
                 
                     <i class="material-icons sidebar-material-icons">home</i>
                 
-                主页
+                Home
             </a>
         </li>
         
@@ -746,12 +765,12 @@
                 
                     <i class="material-icons sidebar-material-icons">inbox</i>
                 
-                    归档
+                    Archives
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -764,7 +783,7 @@
                 
                     <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
                 
-                分类
+                Categories
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -776,6 +795,36 @@
     
 
     <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="Tags">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                Tags
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                Timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="Links">
+                
+                    <i class="material-icons sidebar-material-icons">link</i>
+                
+                Links
+            </a>
+        </li>
+        
     
 
     <!-- Article Number  -->
@@ -975,6 +1024,91 @@ It will not impact the appearance and can give developers a lot of support :)
         <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
     
 
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('IbP6t8qHJnN7gMcLuqK70KC0-gzGzoHsz', 'EqBxJkiKefzjkpz20wA081aQ');
+    </script>
+    <script type="text/ls-javascript" id="leancloud-views-script">
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
 
 
 
