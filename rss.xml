@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>blog / gadflysu</title>
+  
+  <subtitle>希望與熱烈的風</subtitle>
+  <link href="/rss.xml" rel="self"/>
+  
+  <link href="https://blog.gadflysu.com/"/>
+  <updated>2019-07-13T18:57:55.672Z</updated>
+  <id>https://blog.gadflysu.com/</id>
+  
+  <author>
+    <name>gadflysu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://blog.gadflysu.com/general/regular-expression/"/>
+    <id>https://blog.gadflysu.com/general/regular-expression/</id>
+    <published>2019-07-11T16:00:00.000Z</published>
+    <updated>2019-07-13T18:57:55.672Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;正则表达式 (Regular Expression, regex, regexp) 使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。&lt;/strong&gt;
+    
+    </summary>
+    
+      <category term="general" scheme="https://blog.gadflysu.com/categories/general/"/>
+    
+    
+      <category term="string" scheme="https://blog.gadflysu.com/tags/string/"/>
+    
+      <category term="pattern matching" scheme="https://blog.gadflysu.com/tags/pattern-matching/"/>
+    
+      <category term="grep" scheme="https://blog.gadflysu.com/tags/grep/"/>
+    
+      <category term="sed" scheme="https://blog.gadflysu.com/tags/sed/"/>
+    
+      <category term="awk" scheme="https://blog.gadflysu.com/tags/awk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Ubuntu 安装与配置 MariaDB</title>
+    <link href="https://blog.gadflysu.com/database/mariadb-on-ubuntu/"/>
+    <id>https://blog.gadflysu.com/database/mariadb-on-ubuntu/</id>
+    <published>2019-03-17T16:00:00.000Z</published>
+    <updated>2019-07-05T18:01:08.430Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://mariadb.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MariaDB&lt;/a&gt; 是流行的关系型数据库管理系统 (RDBMS)，其著名用户有 Wikipedia、WordPress.com 和 Google。
+    
+    </summary>
+    
+      <category term="database" scheme="https://blog.gadflysu.com/categories/database/"/>
+    
+    
+      <category term="mariadb" scheme="https://blog.gadflysu.com/tags/mariadb/"/>
+    
+      <category term="mysql" scheme="https://blog.gadflysu.com/tags/mysql/"/>
+    
+      <category term="linux" scheme="https://blog.gadflysu.com/tags/linux/"/>
+    
+      <category term="ubuntu" scheme="https://blog.gadflysu.com/tags/ubuntu/"/>
+    
+      <category term="primer" scheme="https://blog.gadflysu.com/tags/primer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持</title>
+    <link href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/"/>
+    <id>https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/</id>
+    <published>2019-03-05T16:00:00.000Z</published>
+    <updated>2019-07-05T18:26:39.743Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文是一份提示。
+    
+    </summary>
+    
+      <category term="linux" scheme="https://blog.gadflysu.com/categories/linux/"/>
+    
+    
+      <category term="ubuntu" scheme="https://blog.gadflysu.com/tags/ubuntu/"/>
+    
+      <category term="software" scheme="https://blog.gadflysu.com/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二〇一八，以末为始</title>
+    <link href="https://blog.gadflysu.com/life/the-end-of-2018/"/>
+    <id>https://blog.gadflysu.com/life/the-end-of-2018/</id>
+    <published>2018-12-30T16:00:00.000Z</published>
+    <updated>2019-01-01T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="life" scheme="https://blog.gadflysu.com/categories/life/"/>
+    
+    
+  </entry>
+  
+</feed>

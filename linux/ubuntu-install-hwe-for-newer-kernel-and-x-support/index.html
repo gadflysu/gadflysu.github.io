@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="en">
+
+<html lang="en">
     <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.6 -->
+        © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+        Version: 1.3.3
+    -->
     <script>
-        window.materialVersion = "1.5.6"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0',
-            '1.5.2',
-            '1.5.5'
-        ]
-    </script>
+window.lsVersion = "1.3.3",
+window.oldVersion = [
+    
+        
+            "0.2.0","0.0.1","0.1.0","1.0.0","1.0.1","1.1.0","1.1.1","1.2.0","1.3.0","1.3.2"
+        
+    
+]
+</script>
 
-    <!-- dns prefetch -->
+    <!-- ### DNS Prefetch ### -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
 
 
-    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
-
-
-
-
-    <link rel="dns-prefetch" href="https://sudoblog.disqus.com">
-
+<!-- comment -->
 
 
 
@@ -38,444 +34,478 @@
 
 
 
+<!-- analytics -->
 
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <!-- Title -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+
+    <!-- ### Preload ### -->
     
-    <title>
-        
-            为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | 
-        
-        sudo&#39;s blog
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" href="/img/favicon.png">
-
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="sudo&#39;s blog about science and technology">
-    <meta name="keywords" content="blog,ubuntu,software">
-    <meta name="theme-color" content="#d81b60">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.en.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
+    <!-- Busuanzi -->
     
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
 
-        
-            
-                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-cave-light.min.css?5MK/TK/zbpdHM7rmG+ehCw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-            
-        
 
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+<!-- Title -->
+<title>为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | blog / gadflysu</title>
+
+<!-- favicon -->
+<!-- Favicons -->
+
+    <link rel="icon" type="image/ico" href="/img/favicon.png">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png">
+
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png">
+
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icon-16.png">
+
+
+    <link rel="mask-icon" href="/img/icon.svg" color="#3949ab">
+
+<!-- Android Chrome Color -->
+
+    <meta name="theme-color" content="#3949ab">
+
+
+
+<meta name="format-detection" content="telephone=no">
+
+<!-- Description -->
+<meta name="description" content="本文是一份提示。">
+
+<!-- Keywords -->
+<meta name="keywords" content="gadflysu, blog, GadflySu, sudo, @gadflysu, 博客, Hexo, Linux, Web, Developer, Program, ubuntu, software">
+
+<!-- Disable Fucking Bloody Baidu Tranformation -->
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!-- ### Import File ### -->
     
+        <!-- spectre.css -->
 
-    
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css">
 
-    <!-- Config CSS -->
 
-<!-- Other Styles -->
 <style>
-  body, html {
-    font-family: Ubuntu, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
-  
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
+    body {
+        background-color: #f8f9fa;
+    }
 
-  a {
-    color: #3949ab;
-  }
+    a, a:visited {
+        color: #d81b60;
+    }
 
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #d81b60 !important;
-  }
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
 
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #d81b60 !important;
-  }
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
 
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #d81b60 !important;
-  }
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
 
-  .toTop {
-    background: #3949ab !important;
-  }
+    .avatar {
+        background: #3949ab;
+    }
 
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #3949ab;
-  }
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
 
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #3949ab;
-  }
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
 
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #3949ab;
-  }
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
 
-  .post-toc a:hover {
-    color: #3949ab;
-    text-decoration: underline;
-  }
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
 
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
 </style>
 
+<!-- style.css -->
 
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/style.min.css">
 
 
 
 
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 
 
 
-    <!-- Import jQuery -->
+
+    <!-- Prettify Theme -->
     
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+        <link rel="stylesheet" href="/css/highlight/mono-blue.min.css">
     
 
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="sudo&#39;s blog">
-    <meta name="msapplication-starturl" content="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">
-    <meta name="msapplication-navbutton-color" content="#d81b60">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="sudo&#39;s blog">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
 
-    <!-- Site Verification -->
+
+    
+
+    <!-- ### Site Verification ### -->
+    
     <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw">
+
+
+
+    <!-- ### RSS ### -->
+    
+    
+        <link rel="alternate" type="application/atom+xml" href="/rss.xml">
     
 
-    <!-- RSS -->
+
+    <!-- ### WebApp ### -->
+    <meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="blog / gadflysu">
+<meta name="msapplication-starturl" content="https://blog.gadflysu.com">
+
+    <meta name="msapplication-navbutton-color" content="#3949ab">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="blog / gadflysu">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Manifest Import -->
+
+<!-- Open Search -->
+
+    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | blog / gadflysu">
+<meta property="og:site_name" content="blog / gadflysu">
+
+<meta property="og:locale" content="en">
+
+<meta property="og:url" content="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">
+<meta property="og:image" content="https://blog.gadflysu.com/img/icon-192.png">
+
+<meta property="og:description" content="本文是一份提示。">
+
+<meta name="twitter:card" content="summary">
+
+
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-03-05T16:00:00.000Z">
+    <meta property="article:modified_time" content="2019-03-05T16:00:00.000Z">
+    <meta property="article:author" content="gadflysu">
+    <meta property="og:article:tag" content="gadflysu, blog, GadflySu, sudo, @gadflysu, 博客, Hexo, Linux, Web, Developer, Program, ubuntu, software"> 
+
+
+
+
+
+    <!-- ### Analytics ### -->
     
-        
-            <link rel="alternate" type="application/atom+xml" href="atom.xml">
-        
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">
+
+    <!-- ### Structured Data ### -->
     
 
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | sudo&#39;s blog">
-    <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="sudo&#39;s blog about science and technology">
-    <meta property="og:article:tag" content="ubuntu"> <meta property="og:article:tag" content="software"> 
-
-    
-        <meta property="article:published_time" content="Wed Mar 06 2019 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Mon Mar 18 2019 15:10:25 GMT+0800">
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/index.html">
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
 
 
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
+    "@context": "http://schema.org",
+    "url": "https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/index.html",
-    "headline": "为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持",
-    "datePublished": "Wed Mar 06 2019 00:00:00 GMT+0800",
-    "dateModified": "Mon Mar 18 2019 15:10:25 GMT+0800",
+    "logo": "https://blog.gadflysu.com/img/icon-192.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/"
+    },
+    "headline": "为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | blog / gadflysu",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.gadflysu.com/img/icon-192.png"
+    },
+    
+    "datePublished": "2019-03-05T16:00:00.000Z",
+    "dateModified": "2019-07-05T18:26:39.743Z",
     "author": {
         "@type": "Person",
         "name": "gadflysu",
         "image": {
             "@type": "ImageObject",
-            "url": "/img/avatar.png"
+            "url": "https://blog.gadflysu.com/img/avatar.png"
         },
-        "description": "触不到的电波"
+        "description": "希望與熱烈的風"
     },
     "publisher": {
         "@type": "Organization",
-        "name": "sudo&#39;s blog",
+        "name": "blog / gadflysu",
         "logo": {
-            "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/icon-192.png"
         }
     },
-    "keywords": ",ubuntu,softwareblog",
-    "description": "sudo&#39;s blog about science and technology",
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.gadflysu.com/search/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "gadflysu, blog, GadflySu, sudo, @gadflysu, 博客, Hexo, Linux, Web, Developer, Program, ubuntu, software",
+    "description": "本文是一份提示。"
 }
 </script>
 
 
+
+    <!-- ### Custom Head ### -->
     
 
-    <!-- Analytics -->
-    
-    
-    
-
-    <!-- Custom Head -->
-    
 
 </head>
 
+    <body>
+        
 
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
+            
 
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
 
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
+    <p class="text-center header-slogan">
+        
+            
+                希望與熱烈的風
+            
+        
+    </p>
 
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span id="MD-burger-id" class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Post TOC -->
-
-    
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
-
-
-    <!-- Left aligned menu below button -->
+    <nav class="navbar-section text-center">
     
     
-    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+        <a href="/search/" class="navbar-link">Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">Tags</a>
+    
+        <a href="/donate/" class="navbar-link">Donate</a>
+    
+        <a href="/recommendation/" class="navbar-link">Recommendation</a>
+    
+        <a href="/links/" class="navbar-link">Links</a>
+    
+        <a href="/about/" class="navbar-link">About</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">Share</a>
+    <ul class="menu share-menu">
 
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Reference"><span class="post-toc-text">Reference</span></a></li></ol>
+        <!-- Share Weibo -->
+        
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=blog / gadflysu&url=https://blog.gadflysu.com&pic=https://blog.gadflysu.com/img/icon-192.png&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=About gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=blog / gadflysu&title=About gadflysu&summary=gadflysu&#39;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。&pics=https://blog.gadflysu.com/img/icon-192.png&url=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=About gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAAAAAB0L9x7AAABiklEQVR42u3a0Y6DMAxEUf7/p7evrIRnxhSlDrq8VKU0nEoudpwcfwOOAwQIEFsgDnGcr/n35eKa87loXBBjEZdBU5xXN0i+D2IfxFVgnc9fDVQFbDIuiL0R1U3ctSDej0geWiDeg6gSjStwVEA+lkVBLEeoIuWb18eqbRBLEXbSGt40KZBvz8pBLEWoQEomRUniqsYDMROhJi6d4tU97GQCAzEOUTXAqkGT5ogKbhB7IKoC1k12FcAGKYixCFeoqvcKa38kiJGIqjGmmiHJgy1pvIOYjXAFazJBckVQXG2DGIm4m8RUkJcJDMQohEtOapH+zg8BMR/hgi1ZcL3TlAUxH6GKm6RoSZJYlMBAjEF0Nmy4jWDJZyD2Q6imWdJkdRNqEHMRyUKcW7B3zbRHFmdBLEN0mhtp89QVQCDmI9JAS5qrrYQGYjSis1FYTZJdAgPxDkS66OYWXWxlBWIbRLLJLyl4H/l3gFiG6G7qSpvoMrhBjEV0NvJ0HnCtxhmIMYhfHiBAgBiN+AC6o/k5fZjD1wAAAABJRU5ErkJggg==" alr="QRCode">
+        </li>
+        
+
     </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    
     
 
 
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
-    
+<div class="post-container">
+    <div id="post-card" class="card">
         
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 62 + 1);
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持</h1>
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.jpg');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
 
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>03/06/2019</span>
         
-    
-            <p class="article-headline-p">
-                为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>gadflysu</strong>
-        <span>Mar 06, 2019</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/software/">software</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/ubuntu/">ubuntu</a>
-    </li></ul>
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-    <!-- Leancloud Views -->
-        <a class="post_share-link" href="#">
-            <li class="mdl-menu__item">
-                <span id="/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/" class="leancloud-views_num" data-flag-title="为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持">
-     &nbsp;Views
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/linux/">linux</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
 </span>
-
-            </li>
-        </a>
-    
-
-    
-
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/index.html&pic=https://blog.gadflysu.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                Share to Weibo
-            </li>
-        </a>
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/&pic=https://blog.gadflysu.com/img/icon-192.png&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+    </li>
     
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/index.html&via=gadflysu" target="_blank">
-            <li class="mdl-menu__item">
-                Share to Twitter
-            </li>
-        </a>
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
     
 
     <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
     
 
     <!-- Share Google+ -->
@@ -483,176 +513,190 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/index.html&title=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持" target="_blank">
-            <li class="mdl-menu__item">
-                Share to LinkedIn
-            </li>
-        </a>
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
     
 
     <!-- Share QQ -->
     
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=blog / gadflysu&title=blog / gadflysu&summary=gadflysu&#39;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。&pics=https://blog.gadflysu.com/img/icon-192.png&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+    </li>
+    
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/index.html&text=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持" target="_blank">
-            <li class="mdl-menu__item">
-                Share to Telegram
-            </li>
-        </a>
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
     
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAAAAAA83tqdAAACLklEQVR42u2cQVLDQAwE/f9Pw4VTytK0TBKC1XsJBHu3XRUpo5GK4+sfrENIIYUU8gMgj2aVN//87fG69PvZvd25Qu6F7EAe36sOPju8gqLnCrkbcrL52UHV9V3QJXghhewgqwScgqBM1EIK+STILuFXIG8PHCFvATkRtuT96gFeooKEvB1kVxC98vVp1aKQt4KMplEQGOnwzih4mqsm5K0gk6Btky0Us9VDpfOE3A1JgCbGVWcedHsKKWRnlnabEuO+EjHVGSNjX8jbQl4xomgjKd3T7SHkXshOIFATgNzfBQ2uFoVcB0kOTcZWCrxksraDIkKuhaTCg5irV4ozIXdD4kIdCta012TYSci9kDQoSFOTNFBJ40DIvZC0OCIGPxEnaagkCgwh10FOEjwxWCfBgqtFIVdAThI5NROmiR8Nigh5e8jJoZ3Bn8z86gsDNUCFXAtJhj+6YooY/cnEElLI35hRyUygBRkyrIRcD0kTfTL7UxDhLq2Q6yA7YUCbRlcFRtnoEnIlZEridEBpKoaROSvkWsj0gU4DILTxToyIOPUn5CrILgCouE0DS3RgT0ghyWZ0gIkUW2SwVMidkGlNxS8BIgWgkHsh6dARLbS65vxUsAi5F5Im6DQ8Mrl+HDhCroMkoiI9UCeiqbCIKkhIIYcNpglwNFuFFBIEDknaNOBig1XI1ZB4eONg/1BrIkhiA1TIdZDpi5/+nAacyNCnkEJ+8hJSSCGF/MP1DetnFkQzzsxyAAAAAElFTkSuQmCC" alt="QRCode">
+    </li>
+    
+
 </ul>
-
-    
 </div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <p>本文是一份提示。</p>
-<p>TL;DR: <code>sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</code></p>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                            <div id="post-toc">
+                                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.</span> <span class="post-toc-text">Reference</span></a></li></ol>
+                            </div>
+                        
+                    
+                    <article id="post-content">
+                        <p>本文是一份提示。<a id="more"></a></p>
+<p>TL;DR:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install <span class="comment">--install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</span></span><br></pre></td></tr></table></figure>
 <hr>
 <p>原计划于今年 2 月 7 日发布的 Ubuntu 18.04.2 LTS 因 Linux 4.18 内核的一个 bug 推延至 2 月 14 日。（放送旧闻？）Ubuntu 18.04.2 LTS 最终伴随着来自 18.10 的内核与图形更新以及其他安全补丁和 bug 修复得以正式发布。此外，Ubuntu 18.04 的生命周期从五年延长至<strong>十年</strong>，这是 Ubuntu 创始人 Mark Shuttleworth 在去年 11 月的 <a href="https://www.openstack.org/summit/berlin-2018/" target="_blank" rel="noopener">OpenStack Summit</a> 上宣布的。</p>
 <p><strong>Ubuntu LTS enablement</strong>（也叫 <strong>HWE</strong> 或 <strong>H</strong>ard<strong>w</strong>are <strong>E</strong>nablement）<strong>stacks</strong> 用于支持不断更新的硬件技术，能够为现存的 Ubuntu LTS 提供更新的内核与图形支持，适用于桌面版、服务器版甚至 Cloud 版和虚拟镜像。</p>
 <p>HWE Stacks (i.e. HWE Kernel + X Stack) 随 LTS 的小版本更新（<code>point release</code>，比如最近的 <code>18.04.2</code>）发布，当通过媒介安装新版 Ubuntu LTS 时，HWE 会一并安装，对于正在运行的系统则需要手动安装。为了减轻维护团队的负担，HWE 采用滚动更新的模式。LTS 的第五个（即最后一个）小版本更新时，用户将被要求升级至最后一个 HWE stack 以保留安全更新和 bug 修复的支持。</p>
 <p>安装 HWE 只需要执行： </p>
-<pre><code class="shell">sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</span><br></pre></td></tr></table></figure>
 <p>下面是我的安装记录，显示了一些实际即将安装的和移除的包：</p>
-<pre><code>➜  ~ sudo apt install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  linux-headers-4.13.0-43 linux-headers-4.13.0-43-generic
-Use &#39;sudo apt autoremove&#39; to remove them.
-The following additional packages will be installed:
-  linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-headers-generic-hwe-18.04
-  linux-image-4.18.0-15-generic linux-image-generic-hwe-18.04 linux-modules-4.18.0-15-generic
-  linux-modules-extra-4.18.0-15-generic xserver-xorg-core-hwe-18.04 xserver-xorg-input-all-hwe-18.04
-  xserver-xorg-input-libinput-hwe-18.04 xserver-xorg-legacy-hwe-18.04 xserver-xorg-video-all-hwe-18.04
-  xserver-xorg-video-amdgpu-hwe-18.04 xserver-xorg-video-ati-hwe-18.04 xserver-xorg-video-fbdev-hwe-18.04
-  xserver-xorg-video-intel-hwe-18.04 xserver-xorg-video-nouveau-hwe-18.04 xserver-xorg-video-qxl-hwe-18.04
-  xserver-xorg-video-radeon-hwe-18.04 xserver-xorg-video-vesa-hwe-18.04 xserver-xorg-video-vmware-hwe-18.04
-Suggested packages:
-  fdutils linux-hwe-doc-4.18.0 | linux-hwe-source-4.18.0 linux-hwe-tools xfonts-100dpi | xfonts-75dpi
-  firmware-amd-graphics xserver-xorg-video-r128 xserver-xorg-video-mach64 firmware-misc-nonfree
-Recommended packages:
-  xserver-xorg-input-wacom-hwe-18.04
-The following packages will be REMOVED:
-  xserver-xorg xserver-xorg-core xserver-xorg-input-all xserver-xorg-input-all-hwe-16.04 xserver-xorg-input-evdev
-  xserver-xorg-input-libinput xserver-xorg-input-synaptics xserver-xorg-input-wacom xserver-xorg-input-wacom-hwe-16.04
-  xserver-xorg-legacy xserver-xorg-video-all xserver-xorg-video-amdgpu xserver-xorg-video-ati xserver-xorg-video-fbdev
-  xserver-xorg-video-intel xserver-xorg-video-nouveau xserver-xorg-video-qxl xserver-xorg-video-radeon
-  xserver-xorg-video-vesa xserver-xorg-video-vmware
-The following NEW packages will be installed:
-  linux-generic-hwe-18.04 linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-headers-generic-hwe-18.04
-  linux-image-4.18.0-15-generic linux-image-generic-hwe-18.04 linux-modules-4.18.0-15-generic
-  linux-modules-extra-4.18.0-15-generic xserver-xorg-core-hwe-18.04 xserver-xorg-hwe-18.04
-  xserver-xorg-input-all-hwe-18.04 xserver-xorg-input-libinput-hwe-18.04 xserver-xorg-legacy-hwe-18.04
-  xserver-xorg-video-all-hwe-18.04 xserver-xorg-video-amdgpu-hwe-18.04 xserver-xorg-video-ati-hwe-18.04
-  xserver-xorg-video-fbdev-hwe-18.04 xserver-xorg-video-intel-hwe-18.04 xserver-xorg-video-nouveau-hwe-18.04
-  xserver-xorg-video-qxl-hwe-18.04 xserver-xorg-video-radeon-hwe-18.04 xserver-xorg-video-vesa-hwe-18.04
-  xserver-xorg-video-vmware-hwe-18.04
-0 upgraded, 23 newly installed, 20 to remove and 4 not upgraded.
-Need to get 68.1 MB of archives.
-After this operation, 324 MB of additional disk space will be used.
-Do you want to continue? [Y/n] 
-</code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ sudo apt install --install-recommends linux-generic-hwe<span class="string">-18</span>.04 xserver-xorg-hwe<span class="string">-18</span>.04</span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">The following packages were automatically installed and are no longer required:</span><br><span class="line">  linux-headers<span class="string">-4</span>.13.0<span class="string">-43</span> linux-headers<span class="string">-4</span>.13.0<span class="string">-43</span>-generic</span><br><span class="line">Use 'sudo apt autoremove' to remove them.</span><br><span class="line">The following additional packages will be installed:</span><br><span class="line">  linux-headers<span class="string">-4</span>.18.0<span class="string">-15</span> linux-headers<span class="string">-4</span>.18.0<span class="string">-15</span>-generic linux-headers-generic-hwe<span class="string">-18</span>.04</span><br><span class="line">  linux-image<span class="string">-4</span>.18.0<span class="string">-15</span>-generic linux-image-generic-hwe<span class="string">-18</span>.04 linux-modules<span class="string">-4</span>.18.0<span class="string">-15</span>-generic</span><br><span class="line">  linux-modules-extra<span class="string">-4</span>.18.0<span class="string">-15</span>-generic xserver-xorg-core-hwe<span class="string">-18</span>.04 xserver-xorg-input-all-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-input-libinput-hwe<span class="string">-18</span>.04 xserver-xorg-legacy-hwe<span class="string">-18</span>.04 xserver-xorg-video-all-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-video-amdgpu-hwe<span class="string">-18</span>.04 xserver-xorg-video-ati-hwe<span class="string">-18</span>.04 xserver-xorg-video-fbdev-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-video-intel-hwe<span class="string">-18</span>.04 xserver-xorg-video-nouveau-hwe<span class="string">-18</span>.04 xserver-xorg-video-qxl-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-video-radeon-hwe<span class="string">-18</span>.04 xserver-xorg-video-vesa-hwe<span class="string">-18</span>.04 xserver-xorg-video-vmware-hwe<span class="string">-18</span>.04</span><br><span class="line">Suggested packages:</span><br><span class="line">  fdutils linux-hwe-doc<span class="string">-4</span>.18.0 | linux-hwe-source<span class="string">-4</span>.18.0 linux-hwe-tools xfonts<span class="string">-100</span>dpi | xfonts<span class="string">-75</span>dpi</span><br><span class="line">  firmware-amd-graphics xserver-xorg-video-r128 xserver-xorg-video-mach64 firmware-misc-nonfree</span><br><span class="line">Recommended packages:</span><br><span class="line">  xserver-xorg-input-wacom-hwe<span class="string">-18</span>.04</span><br><span class="line">The following packages will be REMOVED:</span><br><span class="line">  xserver-xorg xserver-xorg-core xserver-xorg-input-all xserver-xorg-input-all-hwe<span class="string">-16</span>.04 xserver-xorg-input-evdev</span><br><span class="line">  xserver-xorg-input-libinput xserver-xorg-input-synaptics xserver-xorg-input-wacom xserver-xorg-input-wacom-hwe<span class="string">-16</span>.04</span><br><span class="line">  xserver-xorg-legacy xserver-xorg-video-all xserver-xorg-video-amdgpu xserver-xorg-video-ati xserver-xorg-video-fbdev</span><br><span class="line">  xserver-xorg-video-intel xserver-xorg-video-nouveau xserver-xorg-video-qxl xserver-xorg-video-radeon</span><br><span class="line">  xserver-xorg-video-vesa xserver-xorg-video-vmware</span><br><span class="line">The following NEW packages will be installed:</span><br><span class="line">  linux-generic-hwe<span class="string">-18</span>.04 linux-headers<span class="string">-4</span>.18.0<span class="string">-15</span> linux-headers<span class="string">-4</span>.18.0<span class="string">-15</span>-generic linux-headers-generic-hwe<span class="string">-18</span>.04</span><br><span class="line">  linux-image<span class="string">-4</span>.18.0<span class="string">-15</span>-generic linux-image-generic-hwe<span class="string">-18</span>.04 linux-modules<span class="string">-4</span>.18.0<span class="string">-15</span>-generic</span><br><span class="line">  linux-modules-extra<span class="string">-4</span>.18.0<span class="string">-15</span>-generic xserver-xorg-core-hwe<span class="string">-18</span>.04 xserver-xorg-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-input-all-hwe<span class="string">-18</span>.04 xserver-xorg-input-libinput-hwe<span class="string">-18</span>.04 xserver-xorg-legacy-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-video-all-hwe<span class="string">-18</span>.04 xserver-xorg-video-amdgpu-hwe<span class="string">-18</span>.04 xserver-xorg-video-ati-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-video-fbdev-hwe<span class="string">-18</span>.04 xserver-xorg-video-intel-hwe<span class="string">-18</span>.04 xserver-xorg-video-nouveau-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-video-qxl-hwe<span class="string">-18</span>.04 xserver-xorg-video-radeon-hwe<span class="string">-18</span>.04 xserver-xorg-video-vesa-hwe<span class="string">-18</span>.04</span><br><span class="line">  xserver-xorg-video-vmware-hwe<span class="string">-18</span>.04</span><br><span class="line">0 upgraded, 23 newly installed, 20 to remove and 4 not upgraded.</span><br><span class="line">Need to get 68.1 MB of archives.</span><br><span class="line">After this operation, 324 MB of additional disk space will be used.</span><br><span class="line">Do you want to continue? [Y/n]</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a href="https://news.softpedia.com/news/ubuntu-18-04-2-lts-released-with-linux-kernel-4-18-from-ubuntu-18-10-524961.shtml" target="_blank" rel="noopener">news.softpedia.com</a></li>
 <li><a href="https://itsfoss.com/ubuntu-18-04-ten-year-support/" target="_blank" rel="noopener">itsfoss.com</a></li>
 <li><a href="https://wiki.ubuntu.com/Kernel/LTSEnablementStack" target="_blank" rel="noopener">wiki.ubuntu.com</a></li>
 <li><a href="https://wiki.ubuntu.com/Kernel/RollingLTSEnablementStack" target="_blank" rel="noopener">wiki.ubuntu.com</a></li>
 </ul>
 
-        
-                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
-                    <p><strong>
-                         
-                            本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="view_window">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。
-                        </strong>
-                        <br>
-                        <strong>Link to this article: </strong><a href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/</a>
-                    </p>
-                </blockquote>
-        
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
+                    </article>
                     
-    <!-- 使用 DISQUS_CLICK -->
-<div id="disqus-comment">
-    <div id="disqus_thread"></div>
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由分享、演绎，<b>惟须</b>遵照：署名、非商业性使用、相同方式共享、不得增加额外限制。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/</a>
+        </p>
+    </blockquote>
 
-<!-- add animation -->
-<style>
-	.disqus_click_btn {
-            line-height: 30px;
-            margin: 0;
-            min-width: 50px;
-            padding: 0 14px;
-            display: inline-block;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0;
-            overflow: hidden;
-            will-change: box-shadow;
-            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
-            outline: 0;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            vertical-align: middle;
-            border: 0;
-            background: rgba(158, 158, 158, .2);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            color: #fff;
-            background-color: #3949ab;
-            text-shadow: 0;
-            display: none
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+        var dateUpdate = Date.parse("2019-07-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
         }
-</style>
-	
-<div class="btn_click_load"> 
-    <button class="disqus_click_btn">Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)</button>
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-03-05T16:00:00.000Z" itemprop="datePublished">03/06/2019</time>
+
+    , Updated at&nbsp;<time datetime="2019-07-05T18:26:39.743Z" itemprop="dateModified">07/06/2019</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+
+<a class="post-categories-list-item" href="/categories/linux/">linux</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+
+<a class="post-tags-list-item" href="/tags/ubuntu/" rel="tag">#&nbsp;ubuntu</a>
+
+<a class="post-tags-list-item" href="/tags/software/" rel="tag">#&nbsp;software</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                
+<div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/database/mariadb-on-ubuntu/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">在 Ubuntu 安装与配置 MariaDB</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/life/the-end-of-2018/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">二〇一八，以末为始</div>
+            </a>
+        </li>
+    
+</ul>
 </div>
 
-<script type="text/javascript">
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
     var disqus_config = function () {
-        this.page.url = 'https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.url = 'https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/'; // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = 'https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
-<script type="text/ls-javascript" id="disqus-lazy-load-script">
-    $.ajax({
-        url: 'https://disqus.com/next/config.json',
-        timeout: 4000,
-        type: 'GET',
-        success: (function() {
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
             var d = document;
             var s = d.createElement('script');
             s.src = '//sudoblog.disqus.com/embed.js';
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
-            $('.disqus_click_btn').css('display','none');
-        })(),
-        error: function() {
-          $('.disqus_click_btn').css('display','block');
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
         }
-    });
-    $('.btn_click_load').click(function() {  //click to load comments
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
         (function() { // DON'T EDIT BELOW THIS LINE
             var d = document;
             var s = d.createElement('script');
@@ -660,582 +704,127 @@ Do you want to continue? [Y/n]
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
         })();
-        $('.disqus_click_btn').css('display','none');
-    });
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
 </script>
-  	
 
-</div>
-<style>
-    #disqus-comment{
-        background-color: #eee;
-        padding: 2pc;
-    }
-</style>
-
+                        </div>
+                    
                 
             </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/linux/mariadb-on-ubuntu/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/life/the-end-of-2018/" id="post_nav-older" class="next-content">
-            Older
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
         </div>
     </div>
-
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpeg);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="gadflysu's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        
-        <b class="caret"></b>
-    </a>
 </div>
 
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span data-year=""></span>
+        <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+    </p>
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+        
+            Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a><span class="footer-develop-divider"></span>Using <a href="https://analytics.google.com" target="_blank">Google Analytics</a>
+        
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
             
-                <li>
-                    <a href="https://t.me/sudo_cast" target="_blank" title="Telegram Channel">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">chat</i>
-                        
-                        Telegram Channel
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                Home
-            </a>
-        </li>
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
         
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    Archives
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2019/03/">March 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">December 2018<span class="sidebar_archives-count">1</span></a>
-            </li></ul>
-        </li>
+            <span>/</span>
         
-    
+    </span>
 
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                Categories
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/life/">life<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">2</span></a>
-            </li></ul>
-        </li>
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
         
-    
+    </span>
 
-    <!-- Pages  -->
-    
-        <li>
-            <a href="/recommendation" title="Recommendation">
-                
-                    <i class="material-icons sidebar-material-icons">stars</i>
-                
-                Recommendation
-            </a>
-        </li>
+
         
-    
-        <li>
-            <a href="/tags" title="Tags">
-                
-                    <i class="material-icons sidebar-material-icons">label</i>
-                
-                Tags
-            </a>
-        </li>
         
-    
-        <li>
-            <a href="/timeline" title="Timeline">
-                
-                    <i class="material-icons sidebar-material-icons">timeline</i>
-                
-                Timeline
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/links" title="Links">
-                
-                    <i class="material-icons sidebar-material-icons">link</i>
-                
-                Links
-            </a>
-        </li>
-        
-    
-
-    <!-- Article Number  -->
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
-    </div>
-
-    <!-- Sidebar Image -->
-    
-
-</aside>
-
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Telegram -->
-    
-        <a href="https://t.me/gadflysu" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
-                <span class="visuallyhidden">Telegram</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/gadflysu" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- V2EX -->
-    
-
-    <!-- Segmentfault -->
-    
-
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/gadflysu" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Facebook -->
-    
-
-    <!-- Instagram -->
-    
-        <a href="https://www.instagram.com/gadfly_su/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
-                <span class="visuallyhidden">Instagram</span>
-            </button><!--
-     --></a>
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;sudo's blog
-            
-                <br>
-                
-                    « Version 0.0.1 alpha »<br>Hosted by <a href="https://pages.github.com/">GitHub Pages</a>
-                
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
 </footer>
 
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
-
-
-
-    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
-
-
-
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#3949ab'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #3949ab, 0 0 15px #3949ab'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#3949ab',
-        'border-left-color': '#3949ab'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-    
-        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
-    
-
-
-
-    <!-- Leancloud -->
-    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-    <script>
-        AV.initialize('IbP6t8qHJnN7gMcLuqK70KC0-gzGzoHsz', 'EqBxJkiKefzjkpz20wA081aQ');
-    </script>
-    <script type="text/ls-javascript" id="leancloud-views-script">
-    function showTime(Counter) {
-        var query = new AV.Query(Counter);
-        $('.leancloud-views_num').each(function() {
-            var url = $(this).attr('id').trim();
-            query.equalTo('url', url);
-            query.find({
-                success: function(results) {
-                    if (results.length === 0) {
-                        var content = '0 ' + $(document.getElementById(url)).text();
-                        $(document.getElementById(url)).text(content);
-                        return;
-                    }
-                    for (var i = 0; i < results.length; i++) {
-                        var object = results[i];
-                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
-                        $(document.getElementById(url)).text(content);
-                    }
-                },
-                error: function(object, error) {
-                    console.log('Error: ' + error.code + ' ' + error.message);
-                }
-            });
-        });
-    }
-
-    function addCount(Counter) {
-      var Counter = AV.Object.extend('Counter');
-      url = $('.leancloud-views_num').attr('id').trim();
-      title = $('.leancloud-views_num').attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-      query.equalTo('url', url);
-      query.find({
-          success: function(results) {
-            if (results.length > 0) {
-                var counter = results[0];
-                counter.fetchWhenSave(true);
-                counter.increment('time');
-                counter.save(null, {
-                    success: function(counter) {
-                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
-                        $(document.getElementById(url)).text(content);
-                    },
-                    error: function(counter, error) {
-                        console.log('Failed to save Visitor num, with error message: ' + error.message);
-                    }
-                });
-            } else {
-              var newcounter = new Counter();
-              newcounter.set('title', title);
-              newcounter.set('url', url);
-              newcounter.set('time', 1);
-              newcounter.save(null, {
-                  success: function(newcounter) {
-                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
-                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
-                      $(document.getElementById(url)).text(content);
-                  },
-                  error: function(newcounter, error) {
-                      console.log('Failed to create');
-                  }
-              });
-            }
-        },
-        error: function(error) {
-            console.log('Error:' + error.code + ' ' + error.message);
-        }
-      });
-    }
-    $(function() {
-        var Counter = AV.Object.extend('Counter');
-        if ($('.leancloud-views_num').length === 1) {
-            addCount(Counter);
-        } else if ($('.post-title-link').length > 1) {
-            showTime(Counter);
-        }
-    });
-</script>
-
-
-
-
-
-
-   <!-- 使用 DISQUS js 代码 -->
-
-
-
-
-
-
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Import prettify js  -->
-
-    
         
-            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
-        
-    
 
-
-
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-
-    
-        
-            $(function() {
-                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-                prettyPrint();
-                })
-        
-    
-    
-</script>
-
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
 
 <script>
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+
+
+    /* Copyright */
     var copyrightNow = new Date().getFullYear();
-    var textContent = document.querySelector('span[year]')
-
-    copyrightSince = 2018;
-    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
-        textContent.textContent = copyrightNow
-    } else {
-        textContent.textContent = copyrightSince + ' - ' + copyrightNow
-    }
-
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
+    var copyrightContent = document.querySelector('span[data-year]')
+    
+        copyrightSince = 2018;
+        if (copyrightSince === copyrightNow) {
+            copyrightContent.textContent = copyrightNow
+        } else {
+            copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow
         }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+    
+
+
+
+/* Cnosole Log */
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
 </script>
 
-                </main>
-            </div>
-        </body>
+<!-- vanilla-lazyload -->
+
+    <script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+    <!-- Busuanzi -->
     
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+
+
+
+<!-- gallery.js -->
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+
+
+    </body>
+
 </html>
