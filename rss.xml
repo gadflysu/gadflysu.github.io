@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://blog.gadflysu.com/"/>
-  <updated>2019-07-14T09:07:19.300Z</updated>
+  <updated>2019-07-16T16:00:00.000Z</updated>
   <id>https://blog.gadflysu.com/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>七月十六夜与父母电话：父母的无力感与我的轻蔑</title>
+    <link href="https://blog.gadflysu.com/life/phone-call-with-parents-on-july-16th/"/>
+    <id>https://blog.gadflysu.com/life/phone-call-with-parents-on-july-16th/</id>
+    <published>2019-07-15T16:00:00.000Z</published>
+    <updated>2019-07-16T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="life" scheme="https://blog.gadflysu.com/categories/life/"/>
+    
+    
+      <category term="parents" scheme="https://blog.gadflysu.com/tags/parents/"/>
+    
+      <category term="education" scheme="https://blog.gadflysu.com/tags/education/"/>
+    
+      <category term="love" scheme="https://blog.gadflysu.com/tags/love/"/>
+    
+      <category term="emotion" scheme="https://blog.gadflysu.com/tags/emotion/"/>
+    
+  </entry>
+  
+  <entry>
     <title>正则表达式</title>
     <link href="https://blog.gadflysu.com/general/regular-expression/"/>
     <id>https://blog.gadflysu.com/general/regular-expression/</id>
     <published>2019-07-11T16:00:00.000Z</published>
-    <updated>2019-07-14T09:07:19.300Z</updated>
+    <updated>2019-07-16T05:32:39.953Z</updated>
     
     <summary type="html">
     
@@ -49,7 +81,7 @@
     <link href="https://blog.gadflysu.com/database/mariadb-on-ubuntu/"/>
     <id>https://blog.gadflysu.com/database/mariadb-on-ubuntu/</id>
     <published>2019-03-17T16:00:00.000Z</published>
-    <updated>2019-07-14T09:06:23.829Z</updated>
+    <updated>2019-07-16T05:33:13.894Z</updated>
     
     <summary type="html">
     
@@ -77,7 +109,7 @@
     <link href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/"/>
     <id>https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/</id>
     <published>2019-03-05T16:00:00.000Z</published>
-    <updated>2019-07-14T09:22:39.567Z</updated>
+    <updated>2019-07-16T05:32:03.237Z</updated>
     
     <summary type="html">
     
@@ -117,6 +149,38 @@
     
       <category term="life" scheme="https://blog.gadflysu.com/categories/life/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 启动错误 0xc0e90002 的解决办法</title>
+    <link href="https://blog.gadflysu.com/issue/windows-error-0xc0e90002/"/>
+    <id>https://blog.gadflysu.com/issue/windows-error-0xc0e90002/</id>
+    <published>2017-10-21T16:00:00.000Z</published>
+    <updated>2019-07-14T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="issue" scheme="https://blog.gadflysu.com/categories/issue/"/>
+    
+    
+      <category term="windows" scheme="https://blog.gadflysu.com/tags/windows/"/>
+    
+      <category term="error" scheme="https://blog.gadflysu.com/tags/error/"/>
+    
+      <category term="boot" scheme="https://blog.gadflysu.com/tags/boot/"/>
+    
+      <category term="blue screen" scheme="https://blog.gadflysu.com/tags/blue-screen/"/>
     
   </entry>
   
