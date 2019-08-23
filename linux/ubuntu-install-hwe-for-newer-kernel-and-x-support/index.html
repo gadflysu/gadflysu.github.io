@@ -316,7 +316,7 @@ window.oldVersion = [
     },
     
     "datePublished": "2019-03-05T16:00:00.000Z",
-    "dateModified": "2019-07-17T02:34:30.000Z",
+    "dateModified": "2019-03-05T16:00:00.000Z",
     "author": {
         "@type": "Person",
         "name": "gadflysu",
@@ -324,7 +324,7 @@ window.oldVersion = [
             "@type": "ImageObject",
             "url": "https://blog.gadflysu.com/img/avatar.png"
         },
-        "description": "希望與熱烈的風"
+        "description": "希望與熱烈的風,<em><a href="https://lkml.org/lkml/2000/8/25/132" style="<!-- font-family: monospace; -->font-size: .6rem">Talk is Cheap</a></em>"
     },
     "publisher": {
         "@type": "Organization",
@@ -367,7 +367,7 @@ window.oldVersion = [
     <p class="text-center header-slogan">
         
             
-                希望與熱烈的風
+                希望與熱烈的風<br><em><a href="https://lkml.org/lkml/2000/8/25/132" style="<!-- font-family: monospace; -->font-size: .6rem">Talk is Cheap</a></em>
             
         
     </p>
@@ -385,7 +385,7 @@ window.oldVersion = [
     
         <a href="/donate/" class="navbar-link">Donate</a>
     
-        <a href="/recommend/" class="navbar-link">Recommend</a>
+        <a href="/ref/" class="navbar-link">Referral</a>
     
         <a href="/links/" class="navbar-link">Links</a>
     
@@ -575,7 +575,7 @@ window.oldVersion = [
 <p>下面是我的安装记录，显示了一些实际即将安装的和移除的包：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ sudo apt install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">The following packages were automatically installed and are no longer required:</span><br><span class="line">  linux-headers-4.13.0-43 linux-headers-4.13.0-43-generic</span><br><span class="line">Use 'sudo apt autoremove' to remove them.</span><br><span class="line">The following additional packages will be installed:</span><br><span class="line">  linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-headers-generic-hwe-18.04</span><br><span class="line">  linux-image-4.18.0-15-generic linux-image-generic-hwe-18.04 linux-modules-4.18.0-15-generic</span><br><span class="line">  linux-modules-extra-4.18.0-15-generic xserver-xorg-core-hwe-18.04 xserver-xorg-input-all-hwe-18.04</span><br><span class="line">  xserver-xorg-input-libinput-hwe-18.04 xserver-xorg-legacy-hwe-18.04 xserver-xorg-video-all-hwe-18.04</span><br><span class="line">  xserver-xorg-video-amdgpu-hwe-18.04 xserver-xorg-video-ati-hwe-18.04 xserver-xorg-video-fbdev-hwe-18.04</span><br><span class="line">  xserver-xorg-video-intel-hwe-18.04 xserver-xorg-video-nouveau-hwe-18.04 xserver-xorg-video-qxl-hwe-18.04</span><br><span class="line">  xserver-xorg-video-radeon-hwe-18.04 xserver-xorg-video-vesa-hwe-18.04 xserver-xorg-video-vmware-hwe-18.04</span><br><span class="line">Suggested packages:</span><br><span class="line">  fdutils linux-hwe-doc-4.18.0 | linux-hwe-source-4.18.0 linux-hwe-tools xfonts-100dpi | xfonts-75dpi</span><br><span class="line">  firmware-amd-graphics xserver-xorg-video-r128 xserver-xorg-video-mach64 firmware-misc-nonfree</span><br><span class="line">Recommended packages:</span><br><span class="line">  xserver-xorg-input-wacom-hwe-18.04</span><br><span class="line">The following packages will be REMOVED:</span><br><span class="line">  xserver-xorg xserver-xorg-core xserver-xorg-input-all xserver-xorg-input-all-hwe-16.04 xserver-xorg-input-evdev</span><br><span class="line">  xserver-xorg-input-libinput xserver-xorg-input-synaptics xserver-xorg-input-wacom xserver-xorg-input-wacom-hwe-16.04</span><br><span class="line">  xserver-xorg-legacy xserver-xorg-video-all xserver-xorg-video-amdgpu xserver-xorg-video-ati xserver-xorg-video-fbdev</span><br><span class="line">  xserver-xorg-video-intel xserver-xorg-video-nouveau xserver-xorg-video-qxl xserver-xorg-video-radeon</span><br><span class="line">  xserver-xorg-video-vesa xserver-xorg-video-vmware</span><br><span class="line">The following NEW packages will be installed:</span><br><span class="line">  linux-generic-hwe-18.04 linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-headers-generic-hwe-18.04</span><br><span class="line">  linux-image-4.18.0-15-generic linux-image-generic-hwe-18.04 linux-modules-4.18.0-15-generic</span><br><span class="line">  linux-modules-extra-4.18.0-15-generic xserver-xorg-core-hwe-18.04 xserver-xorg-hwe-18.04</span><br><span class="line">  xserver-xorg-input-all-hwe-18.04 xserver-xorg-input-libinput-hwe-18.04 xserver-xorg-legacy-hwe-18.04</span><br><span class="line">  xserver-xorg-video-all-hwe-18.04 xserver-xorg-video-amdgpu-hwe-18.04 xserver-xorg-video-ati-hwe-18.04</span><br><span class="line">  xserver-xorg-video-fbdev-hwe-18.04 xserver-xorg-video-intel-hwe-18.04 xserver-xorg-video-nouveau-hwe-18.04</span><br><span class="line">  xserver-xorg-video-qxl-hwe-18.04 xserver-xorg-video-radeon-hwe-18.04 xserver-xorg-video-vesa-hwe-18.04</span><br><span class="line">  xserver-xorg-video-vmware-hwe-18.04</span><br><span class="line">0 upgraded, 23 newly installed, 20 to remove and 4 not upgraded.</span><br><span class="line">Need to get 68.1 MB of archives.</span><br><span class="line">After this operation, 324 MB of additional disk space will be used.</span><br><span class="line">Do you want to continue? [Y/n]</span><br></pre></td></tr></table></figure>
 <hr>
-<p><strong>[Ref]</strong> <a href="https://news.softpedia.com/news/ubuntu-18-04-2-lts-released-with-linux-kernel-4-18-from-ubuntu-18-10-524961.shtml" target="_blank" rel="noopener">Softpedia news</a>, <a href="https://itsfoss.com/ubuntu-18-04-ten-year-support/" target="_blank" rel="noopener">It’s F.O.S.S news</a>, <a href="https://wiki.ubuntu.com/Kernel/LTSEnablementStack" target="_blank" rel="noopener">Ubuntu wiki LTSEnablementStack</a> &amp; <a href="https://wiki.ubuntu.com/Kernel/RollingLTSEnablementStack" target="_blank" rel="noopener">RollingLTSEnablementStack</a></p>
+<p>📖 <strong>[Ref]</strong> <a href="https://news.softpedia.com/news/ubuntu-18-04-2-lts-released-with-linux-kernel-4-18-from-ubuntu-18-10-524961.shtml" target="_blank" rel="noopener">Softpedia news</a> | <a href="https://itsfoss.com/ubuntu-18-04-ten-year-support/" target="_blank" rel="noopener">It’s F.O.S.S news</a> | <a href="https://wiki.ubuntu.com/Kernel/LTSEnablementStack" target="_blank" rel="noopener">Ubuntu wiki LTSEnablementStack</a>, <a href="https://wiki.ubuntu.com/Kernel/RollingLTSEnablementStack" target="_blank" rel="noopener">RollingLTSEnablementStack</a></p>
 
                     </article>
                     
@@ -596,7 +596,7 @@ window.oldVersion = [
 
     <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
     <script>
-        var dateUpdate = Date.parse("2019-07-17");
+        var dateUpdate = Date.parse("2019-03-06");
         var nowDate = new Date();
         var a = nowDate.getTime();
         var b = a - dateUpdate;
@@ -610,8 +610,6 @@ window.oldVersion = [
 
 
 <p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-03-05T16:00:00.000Z" itemprop="datePublished">03/06/2019</time>
-
-    , Updated at&nbsp;<time datetime="2019-07-17T02:34:30.000Z" itemprop="dateModified">07/17/2019</time>
 
 </p>
 <p class="post-footer-info mb-0 pt-2">
