@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head>
     <meta charset="utf-8">
     <!--
         © SukkaW
         GitHub: https://github.com/SukkaW/hexo-theme-suka
         Version: 1.3.3
     -->
-    <script>
-window.lsVersion = "1.3.3",
-window.oldVersion = [
-    
-        
-            "0.2.0","0.0.1","0.1.0","1.0.0","1.0.1","1.1.0","1.1.1","1.2.0","1.3.0"
-        
-    
-]
-</script>
 
-    <!-- ### DNS Prefetch ### -->
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
+
 <!-- busuanzi -->
 
     <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
@@ -49,8 +42,7 @@ window.oldVersion = [
 
 
 
-
-    <!-- ### Preload ### -->
+    <!-- ## Preload ## -->
     
     <!-- Busuanzi -->
     
@@ -63,59 +55,23 @@ window.oldVersion = [
 
 
     <!-- ### Meta & Title & Info ### -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
 
-<!-- Title -->
-<title>Tag: mariadb / blog / gadflysu</title>
+    <!-- Title -->
+    <title>Tag: mariadb / blog / gadflysu</title>
 
-<!-- favicon -->
-<!-- Favicons -->
+    <!-- Favicons -->
+    <link rel="icon" type="image/ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image/png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image/png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image/png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
 
-    <link rel="icon" type="image/ico" href="/img/favicon.png">
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png">
-
-
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
-
-
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png">
-
-
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/icon-16.png">
-
-
-    <link rel="mask-icon" href="/img/icon.svg" color="#3949ab">
-
-<!-- Android Chrome Color -->
-
-    <meta name="theme-color" content="#3949ab">
-
-
-
-<meta name="format-detection" content="telephone=no">
-
-<!-- Description -->
-<meta name="description" content="gadflysu&#39;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。">
-
-<!-- Keywords -->
-<meta name="keywords" content="gadflysu, blog, GadflySu, sudo, @gadflysu, 博客, Hexo, Linux, Web, Developer, Program">
-
-<!-- Disable Fucking Bloody Baidu Tranformation -->
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- Description -->
+    <meta name="description" content="gadflysu&amp;apos;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。">
+    <!-- Keywords -->
+    <meta name="keywords" content="blog">
 
     <!-- ### Import File ### -->
-    
-        <!-- spectre.css -->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3">
-
-
-<style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3"><style>
     body {
         background-color: #f8f9fa;
     }
@@ -136,6 +92,8 @@ window.oldVersion = [
         color: #d81b60;
         opacity: 1;
     }
+
+    
 
     .post-entry .card-body a {
         color: #3949ab;
@@ -178,12 +136,7 @@ window.oldVersion = [
         background: #f8f9fa;
         opacity: .85;
     }
-</style>
-
-<!-- style.css -->
-
-    <link rel="stylesheet" href="/css/style.min.css">
-
+</style><link rel="stylesheet" href="/css/style.min.css">
 
 
 
@@ -196,40 +149,29 @@ window.oldVersion = [
     
 
 
-    
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
 
     <!-- ### Site Verification ### -->
     
-    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw">
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
 
 
 
-    <!-- ### RSS ### -->
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Manifest Import -->
     
+        <link rel="manifest" href="pwa_manifest.json">
     
-        <link rel="alternate" type="application/atom+xml" href="/rss.xml">
+    <!-- Open Search -->
     
-
-
-    <!-- ### WebApp ### -->
-    <meta name="mobile-web-app-capable" content="yes">
-<meta name="application-name" content="blog / gadflysu">
-<meta name="msapplication-starturl" content="https://blog.gadflysu.com">
-
-    <meta name="msapplication-navbutton-color" content="#3949ab">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="blog / gadflysu">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-<!-- Manifest Import -->
-
-    <link rel="manifest" href="pwa_manifest.json">
-
-<!-- Open Search -->
-
-    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
-
+        <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+    
 
     <!-- ### The Open Graph & Twitter Card Protocol ### -->
     <meta property="og:title" content="Tag: mariadb / blog / gadflysu">
@@ -240,16 +182,18 @@ window.oldVersion = [
 <meta property="og:url" content="https://blog.gadflysu.com/tags/mariadb/">
 <meta property="og:image" content="https://blog.gadflysu.com/img/icon-192.png">
 
-<meta property="og:description" content="gadflysu&#39;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。">
+<meta property="og:description" content="gadflysu&amp;apos;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。">
 
 <meta name="twitter:card" content="summary">
 
 
-    <meta property="og:type" content="blog">
+    <meta property="og:type" content="website">
 
 
 
 
+
+    <meta name="generator" content="Hexo 3.8.0">
 
     <!-- ### Analytics ### -->
     
@@ -269,7 +213,7 @@ window.oldVersion = [
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-131282255-1');
+    gtag('config', 'GTM-56TDLFX');
 </script>
 
 
@@ -278,7 +222,6 @@ window.oldVersion = [
     <div hidden>
     <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
 </div>
-
 
 
 
@@ -295,13 +238,9 @@ window.oldVersion = [
 
     <!-- ### Custom Head ### -->
     
-
-
 </head>
 
     <body>
-        
-
             
 
             <!-- ### Main content ### -->
@@ -335,6 +274,8 @@ window.oldVersion = [
         <a href="/links/" class="navbar-link">Links</a>
     
         <a href="/about/" class="navbar-link">About</a>
+    
+        <a href="/changelog/" class="navbar-link">Changelog</a>
     
     
         <div class="dropdown dropdown-right">
@@ -410,10 +351,7 @@ window.oldVersion = [
             <!-- # Post List # -->
             <div class="post-stream-container">
                 
-                    
-    <script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
-
-<article class="post-entry container px-0 card">
+                    <article class="post-entry container px-0 card">
         <div class="columns col-gapless">
             
                 <div class="column column-thumbnail col-4 col-lg-12">
@@ -461,16 +399,12 @@ window.oldVersion = [
             <!-- ### Footer ### -->
             <footer class="text-center">
     <!-- footer copyright -->
-    <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span data-year=""></span>
+    <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
         <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
     </p>
     <!-- footer custom text -->
     <p class="footer-text mb-0">
-    
-        
-            Using <a href="https://pages.github.com" target="_blank" rel="nofollow noopener noreferrer">GitHub Pages</a>, <a href="https://analytics.google.com" target="_blank" rel="nofollow noopener noreferrer">Google Analytics</a> & <a href="https://web.umeng.com" target="_blank" rel="nofollow noopener noreferrer">CNZZ</a>
-        
-    
+    Using <a href="https://pages.github.com" target="_blank" rel="nofollow noopener noreferrer">GitHub Pages</a>, <a href="https://analytics.google.com" target="_blank" rel="nofollow noopener noreferrer">Google Analytics</a> & <a href="https://web.umeng.com" target="_blank" rel="nofollow noopener noreferrer">CNZZ</a>
     </p>
     <!-- footer develop info -->
     <p class="footer-develop mb-0">
@@ -506,45 +440,33 @@ window.oldVersion = [
     </p>
 </footer>
 
-        
 
         <!-- ### Import File ### -->
         <!-- ### Footer JS Import ### -->
 
 <script>
+
+    
 window.lazyLoadOptions = {
     elements_selector: ".lazyload",
     threshold: 50
 };
 
-
-
-    /* Copyright */
+(function() {
     var copyrightNow = new Date().getFullYear();
-    var copyrightContent = document.querySelector('span[data-year]')
-    
-        copyrightSince = 2018;
-        if (copyrightSince === copyrightNow) {
-            copyrightContent.textContent = copyrightNow
-        } else {
-            copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow
-        }
-    
-
-
-
-/* Cnosole Log */
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
 console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
 </script>
 
-<!-- vanilla-lazyload -->
-
-    <script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
-
-
-
-    <!-- Busuanzi -->
-    
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.9.0" async></script>
     <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
 
 
@@ -553,20 +475,13 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
 
 
 
-
-
-
-<!-- gallery.js -->
-
-
 <!-- Comment -->
 
     
 
 
 <!-- ### Custom Footer ### -->
-
-
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
     </body>
 
 </html>

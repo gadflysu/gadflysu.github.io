@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://blog.gadflysu.com/"/>
-  <updated>2019-08-24T16:00:00.000Z</updated>
+  <updated>2019-09-25T16:00:00.000Z</updated>
   <id>https://blog.gadflysu.com/</id>
   
   <author>
@@ -17,30 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>八月二十四白日梦</title>
-    <link href="https://blog.gadflysu.com/life/day-dream-on-aug-24th/"/>
-    <id>https://blog.gadflysu.com/life/day-dream-on-aug-24th/</id>
-    <published>2019-08-23T16:00:00.000Z</published>
-    <updated>2019-08-24T16:00:00.000Z</updated>
+    <title>Windows 启动引导选项</title>
+    <link href="https://blog.gadflysu.com/post/windows-boot-options/"/>
+    <id>https://blog.gadflysu.com/post/windows-boot-options/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-25T16:00:00.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;
-        
-      
+      &lt;p&gt;😋 本文根据微软文档 &lt;a href=&quot;https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/boot-options-for-driver-testing-and-debugging&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tools for Changing Boot Options for Driver Testing and Debugging&lt;/a&gt; 写成，由于该主题部分内容可能是由机器翻译，&lt;code&gt;gadflysu&lt;/code&gt; 在其基础上主要对「Windows 启动选项」部分内容进行完善翻译，且有改动或删减。能力受限，若有不足还请见谅。
     
     </summary>
     
-      <category term="life" scheme="https://blog.gadflysu.com/categories/life/"/>
     
+      <category term="windows" scheme="https://blog.gadflysu.com/tags/windows/"/>
     
-      <category term="dream" scheme="https://blog.gadflysu.com/tags/dream/"/>
-    
-      <category term="essay" scheme="https://blog.gadflysu.com/tags/essay/"/>
+      <category term="boot" scheme="https://blog.gadflysu.com/tags/boot/"/>
     
   </entry>
   

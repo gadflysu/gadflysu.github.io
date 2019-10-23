@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head>
     <meta charset="utf-8">
     <!--
         © SukkaW
         GitHub: https://github.com/SukkaW/hexo-theme-suka
         Version: 1.3.3
     -->
-    <script>
-window.lsVersion = "1.3.3",
-window.oldVersion = [
-    
-        
-            "0.2.0","0.0.1","0.1.0","1.0.0","1.0.1","1.1.0","1.1.1","1.2.0","1.3.0"
-        
-    
-]
-</script>
 
-    <!-- ### DNS Prefetch ### -->
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
+
 <!-- busuanzi -->
 
     <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
@@ -49,8 +42,7 @@ window.oldVersion = [
 
 
 
-
-    <!-- ### Preload ### -->
+    <!-- ## Preload ## -->
     
     <!-- Busuanzi -->
     
@@ -63,92 +55,123 @@ window.oldVersion = [
 
 
     <!-- ### Meta & Title & Info ### -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
 
-<!-- Title -->
-<title>Gallery / blog / gadflysu</title>
+    <!-- Title -->
+    <title>Gallery / blog / gadflysu</title>
 
-<!-- favicon -->
-<!-- Favicons -->
+    <!-- Favicons -->
+    <link rel="icon" type="image/ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image/png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image/png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image/png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
 
-    <link rel="icon" type="image/ico" href="/img/favicon.png">
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png">
-
-
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
-
-
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png">
-
-
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/icon-16.png">
-
-
-    <link rel="mask-icon" href="/img/icon.svg" color="#3949ab">
-
-<!-- Android Chrome Color -->
-
-    <meta name="theme-color" content="#3949ab">
-
-
-
-<meta name="format-detection" content="telephone=no">
-
-<!-- Description -->
-<meta name="description" content="">
-
-<!-- Keywords -->
-<meta name="keywords" content="gadflysu, blog, GadflySu, sudo, @gadflysu, 博客, Hexo, Linux, Web, Developer, Program">
-
-<!-- Disable Fucking Bloody Baidu Tranformation -->
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- Description -->
+    <meta name="description" content="gadflysu&amp;apos;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。">
+    <!-- Keywords -->
+    <meta name="keywords" content="blog">
 
     <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
     
-        <!-- gallery.css -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.3.0/source/css/gallery.min.css">
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
 
 
+
+
+
+
+
+
+    <!-- Prettify Theme -->
     
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
 
     <!-- ### Site Verification ### -->
     
-    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw">
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
 
 
 
-    <!-- ### RSS ### -->
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Manifest Import -->
     
+        <link rel="manifest" href="pwa_manifest.json">
     
-        <link rel="alternate" type="application/atom+xml" href="/rss.xml">
+    <!-- Open Search -->
     
-
-
-    <!-- ### WebApp ### -->
-    <meta name="mobile-web-app-capable" content="yes">
-<meta name="application-name" content="blog / gadflysu">
-<meta name="msapplication-starturl" content="https://blog.gadflysu.com">
-
-    <meta name="msapplication-navbutton-color" content="#3949ab">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="blog / gadflysu">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-<!-- Manifest Import -->
-
-    <link rel="manifest" href="pwa_manifest.json">
-
-<!-- Open Search -->
-
-    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
-
+        <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+    
 
     <!-- ### The Open Graph & Twitter Card Protocol ### -->
     <meta property="og:title" content="Gallery / blog / gadflysu">
@@ -159,16 +182,18 @@ window.oldVersion = [
 <meta property="og:url" content="https://blog.gadflysu.com/gallery/">
 <meta property="og:image" content="https://blog.gadflysu.com/img/icon-192.png">
 
-<meta property="og:description" content="">
+<meta property="og:description" content="gadflysu&amp;apos;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。">
 
 <meta name="twitter:card" content="summary">
 
 
-    <meta property="og:type" content="blog">
+    <meta property="og:type" content="website">
 
 
 
 
+
+    <meta name="generator" content="Hexo 3.8.0">
 
     <!-- ### Analytics ### -->
     
@@ -188,7 +213,7 @@ window.oldVersion = [
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-131282255-1');
+    gtag('config', 'GTM-56TDLFX');
 </script>
 
 
@@ -197,7 +222,6 @@ window.oldVersion = [
     <div hidden>
     <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
 </div>
-
 
 
 
@@ -214,58 +238,398 @@ window.oldVersion = [
 
     <!-- ### Custom Head ### -->
     
-
-
 </head>
 
     <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
         
-            <!-- ## Gallery ## -->
-            <article class="gallery">
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
     
-        
-            <a class="gallery-link" href="https://i.jpg.dog/img/c78866c8fcab8e8edb20a9e37c3378b6.png" title="住み家" data-descr="pixiv.net/i/70337807">
-                <figure class="gallery-image">
-                    <img src="https://i.jpg.dog/img/c78866c8fcab8e8edb20a9e37c3378b6.md.png" rel="住み家" width="100%">
-                    <figcaption>住み家<br><small>pixiv.net/i/70337807</small></figcaption>
-                </figure>
-            </a>
-        
-            <a class="gallery-link" href="https://i.jpg.dog/img/8975f29cdb459b3a8b1b4f0c8fb0a7af.png" title="晩夏の灯　宵の風" data-descr="pixiv.net/i/70352475">
-                <figure class="gallery-image">
-                    <img src="https://i.jpg.dog/img/8975f29cdb459b3a8b1b4f0c8fb0a7af.md.png" rel="晩夏の灯　宵の風" width="100%">
-                    <figcaption>晩夏の灯　宵の風<br><small>pixiv.net/i/70352475</small></figcaption>
-                </figure>
-            </a>
-        
     
-</article>
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+        <a href="/search/" class="navbar-link">Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">Tags</a>
+    
+        <a href="/donate/" class="navbar-link">Donate</a>
+    
+        <a href="/ref/" class="navbar-link">Referral</a>
+    
+        <a href="/links/" class="navbar-link">Links</a>
+    
+        <a href="/about/" class="navbar-link">About</a>
+    
+        <a href="/changelog/" class="navbar-link">Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=blog / gadflysu&url=https://blog.gadflysu.com&pic=https://blog.gadflysu.com/img/icon-192.png&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=Gallery" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=blog / gadflysu&title=Gallery&summary=gadflysu&#39;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。&pics=https://blog.gadflysu.com/img/icon-192.png&url=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=Gallery" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAAAAAB0L9x7AAABjElEQVR42u3ayRKCMBBFUf7/p3WPPbwOFrxQl42laDyLVHri+BhcBwgQILZAHMUV/jD5zvkzZV0Qvojsz7L3ClpZF4Q3ItpY0f3o3hmnrAtib8R5UyooEO9GRPezQwvEexBZoIkSlTIoJQfZpSgK4nZElaRcef1btg3iVkRbtAabrkts/l6Vg7gVUW2kLIlVD6uuwAbhi8gSkqwpojZE2sIahCWiS1onyW1VNEknJggbRFfElAXM4KD6AYOwRCwHnwCaJTVyFAVhg1AbIxVIHd6UURSEFaIKRNkGUxKi0cYEYYGYNLyUTVodUGUUBWGD6BpgShNFPcykqhyEBWI6bO+GsEpTFoQ3olpsqagRhzAg9kIohe+kIT8OYCAeR6w0RKZNVekBQBCPIyaDuOp99wAYiH0Q0mBdGM4pQU+qykFYILqkVimQlaR5+eFxEI8gpslt11xTmiog9kV0BbE6dLm0MUFYIdQiaPLwHwh/hFrYdkPZapALYh/EuJBtAtlS4wyEDeLJCwQIENaIL+v2uXnVYTuuAAAAAElFTkSuQmCC" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">Gallery</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>07/16/2019</span>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>👀</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=Gallery&url=https://blog.gadflysu.com/gallery/&pic=https://blog.gadflysu.com/img/icon-192.png&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+    </li>
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=Gallery&url=https://blog.gadflysu.com/gallery/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/gallery/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/gallery/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=blog / gadflysu&title=blog / gadflysu&summary=gadflysu&#39;s blog - gadflysu writes blogs about science, technology and life here. Programming is art. / gadflysu 的博客，陈列个人的技术文章、观点、随笔等。&pics=https://blog.gadflysu.com/img/icon-192.png&url=https://blog.gadflysu.com/gallery/" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+    </li>
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/gallery/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAAAAAB0L9x7AAABjElEQVR42u3ayRKCMBBFUf7/p3WPPbwOFrxQl42laDyLVHri+BhcBwgQILZAHMUV/jD5zvkzZV0Qvojsz7L3ClpZF4Q3ItpY0f3o3hmnrAtib8R5UyooEO9GRPezQwvEexBZoIkSlTIoJQfZpSgK4nZElaRcef1btg3iVkRbtAabrkts/l6Vg7gVUW2kLIlVD6uuwAbhi8gSkqwpojZE2sIahCWiS1onyW1VNEknJggbRFfElAXM4KD6AYOwRCwHnwCaJTVyFAVhg1AbIxVIHd6UURSEFaIKRNkGUxKi0cYEYYGYNLyUTVodUGUUBWGD6BpgShNFPcykqhyEBWI6bO+GsEpTFoQ3olpsqagRhzAg9kIohe+kIT8OYCAeR6w0RKZNVekBQBCPIyaDuOp99wAYiH0Q0mBdGM4pQU+qykFYILqkVimQlaR5+eFxEI8gpslt11xTmiog9kV0BbE6dLm0MUFYIdQiaPLwHwh/hFrYdkPZapALYh/EuJBtAtlS4wyEDeLJCwQIENaIL+v2uXnVYTuuAAAAAElFTkSuQmCC" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                    
+                    <article id="post-content">
+                        
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/gallery/index.html">https://blog.gadflysu.com/gallery/index.html</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2019-07-14");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-07-16T08:32:12.577Z" itemprop="datePublished">07/16/2019</time>
+
+    , Updated at&nbsp;<time datetime="2019-07-13T17:03:32.975Z" itemprop="dateModified">07/14/2019</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+
+    <!-- Next Nav -->
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/gallery/index.html'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/gallery/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+        <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+    </p>
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    Using <a href="https://pages.github.com" target="_blank" rel="nofollow noopener noreferrer">GitHub Pages</a>, <a href="https://analytics.google.com" target="_blank" rel="nofollow noopener noreferrer">Google Analytics</a> & <a href="https://web.umeng.com" target="_blank" rel="nofollow noopener noreferrer">CNZZ</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+            
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
 
         
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
 
         <!-- ### Import File ### -->
         <!-- ### Footer JS Import ### -->
 
 <script>
+
+    
 window.lazyLoadOptions = {
     elements_selector: ".lazyload",
     threshold: 50
 };
 
-
-
-/* Cnosole Log */
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
 console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
 </script>
 
-<!-- vanilla-lazyload -->
-
-    <script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
-
-
-
-    <!-- Busuanzi -->
-    
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.9.0" async></script>
     <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
 
 
@@ -274,24 +638,13 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
 
 
 
-
-
-
-<!-- gallery.js -->
-
-    
-        <script src="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.3.0/source/js/gallery.min.js"></script>
-    
-
-
 <!-- Comment -->
 
     
 
 
 <!-- ### Custom Footer ### -->
-
-
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
     </body>
 
 </html>
