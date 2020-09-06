@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>Changelog | blog / gadflysu</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.5"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
+
+
+
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="Changelog | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="website"><meta property="og:url" content="https://blog.gadflysu.com/changelog/"><meta property="og:locale" content="en"><meta name="description" content="201911&#x2F;22 Suka: 1.3.3 → 1.4.0 Vendors: suka 1.3.0 → 1.4.0, spectre 0.5.3 → 0.5.5, vanilla-lazyload 8.9.0 → 12.4.0  09&#x2F;03增加 changelog 页面。 09&#x2F;02切换到 Suka 主题的 canary 分支。 07&#x2F;14 使用 Suka 主题。 使用 Google Analyt - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="blog"><meta property="article:published_time" content="2020-09-06T18:22:28.732Z"><meta property="article:modified_time" content="2020-05-06T21:03:39.231Z"><meta property="og:updated_time" content="2020-05-06T21:03:39.231Z">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/changelog/">
+
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-56TDLFX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-56TDLFX');
+</script>
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+    
+        <a href="/archives/" class="navbar-link">📦 Archive</a>
+    
+    
+        <a href="/search/" class="navbar-link">🔍 Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">🏷 Tags</a>
+    
+        <a href="/donate/" class="navbar-link">💰 Donate</a>
+    
+        <a href="/ref/" class="navbar-link">🎭 Referral</a>
+    
+        <a href="/links/" class="navbar-link">🔗 Links</a>
+    
+        <a href="/about/" class="navbar-link">ℹ️ About</a>
+    
+        <a href="/changelog/" class="navbar-link">📈 Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">💌 Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=Changelog" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=Changelog" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAAAAAB0L9x7AAABjElEQVR42u3a266DMAxEUf7/p9tX1OLxBFCYoM3LkXK4rEpW7DjZPgHXBgIEiCUQm7j29/zeux+v/te+F0Qs4jBoinH1Aed5EOsgqqBzg3Z/rx3MIJZFOBOVGgPxPkT1kip5gXgHoko0R8nJ/fhtWRTEdIRKUlf+3lZtg5iKaBetooA5CkBVIJ9elYOYilCB1C2I3GKmfB+ISEQ1aXUB6k5KKnBB5CKqh88EnFMMgchGVAFXjXVNEgX9ezeIpRBdg7RrmKkfAiIb0X3gbLPdabyDyERUk5FVlIhC10lmIDIR3QPVBKaKYmeyA5GNUMWMVbB2AegEJogYhJOs3GbrSFMWRD5i9PDOyCZ++eNAxCO6oLuyQLIWxCCiECpQu2TlHAIaOgAI4lGEsxHXBVu3WLplcxbENISbkNS4wti7gSCiEN2CxilWrEaZm8BARCCcxYrbOHM2XEC8C+EcBnMaLiDWRqgm/OjBDhBrIJyDXV1DRAXmpSwKYjpitAnqFDjDjTMQMYgnLxAgQEQjvqxmGShd7CACAAAAAElFTkSuQmCC" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">📑 RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">Changelog</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>09/07/2020</span>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=Changelog&url=https://blog.gadflysu.com/changelog/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/changelog/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/changelog/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/changelog/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAAAAAB0L9x7AAABjElEQVR42u3a266DMAxEUf7/p9tX1OLxBFCYoM3LkXK4rEpW7DjZPgHXBgIEiCUQm7j29/zeux+v/te+F0Qs4jBoinH1Aed5EOsgqqBzg3Z/rx3MIJZFOBOVGgPxPkT1kip5gXgHoko0R8nJ/fhtWRTEdIRKUlf+3lZtg5iKaBetooA5CkBVIJ9elYOYilCB1C2I3GKmfB+ISEQ1aXUB6k5KKnBB5CKqh88EnFMMgchGVAFXjXVNEgX9ezeIpRBdg7RrmKkfAiIb0X3gbLPdabyDyERUk5FVlIhC10lmIDIR3QPVBKaKYmeyA5GNUMWMVbB2AegEJogYhJOs3GbrSFMWRD5i9PDOyCZ++eNAxCO6oLuyQLIWxCCiECpQu2TlHAIaOgAI4lGEsxHXBVu3WLplcxbENISbkNS4wti7gSCiEN2CxilWrEaZm8BARCCcxYrbOHM2XEC8C+EcBnMaLiDWRqgm/OjBDhBrIJyDXV1DRAXmpSwKYjpitAnqFDjDjTMQMYgnLxAgQEQjvqxmGShd7CACAAAAAElFTkSuQmCC" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2019"><span class="post-toc-number">1.</span> <span class="post-toc-text">2019</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-22"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">11&#x2F;22</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#09-03"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">09&#x2F;03</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#09-02"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">09&#x2F;02</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#07-14"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">07&#x2F;14</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2018"><span class="post-toc-number">2.</span> <span class="post-toc-text">2018</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12-31"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">12&#x2F;31</span></a></li></ol></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="11-22"><a href="#11-22" class="headerlink" title="11/22"></a>11/22</h3><ul>
+<li>Suka: <code>1.3.3</code> → <code>1.4.0</code></li>
+<li>Vendors: suka <code>1.3.0</code> → <code>1.4.0</code>, spectre <code>0.5.3</code> → <code>0.5.5</code>, vanilla-lazyload <code>8.9.0</code> → <code>12.4.0</code></li>
+</ul>
+<h3 id="09-03"><a href="#09-03" class="headerlink" title="09/03"></a>09/03</h3><p>增加 <a href="https://blog.gadflysu.com/changelog/">changelog</a> 页面。</p>
+<h3 id="09-02"><a href="#09-02" class="headerlink" title="09/02"></a>09/02</h3><p>切换到 <a target="_blank" rel="noopener" href="https://theme-suka.skk.moe/">Suka</a> 主题的 <a target="_blank" rel="noopener" href="https://github.com/SukkaW/hexo-theme-suka/tree/canary">canary</a> 分支。</p>
+<h3 id="07-14"><a href="#07-14" class="headerlink" title="07/14"></a>07/14</h3><ul>
+<li>使用 <a target="_blank" rel="noopener" href="https://theme-suka.skk.moe/">Suka</a> 主题。</li>
+<li>使用 <a target="_blank" rel="noopener" href="https://analytics.google.com/">Google Analytics</a> 和 <a target="_blank" rel="noopener" href="https://web.umeng.com/">CNZZ</a> 统计分析。</li>
+</ul>
+<h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><h3 id="12-31"><a href="#12-31" class="headerlink" title="12/31"></a>12/31</h3><ul>
+<li>博客 <a href="https://blog.gadflysu.com/">blog / gadflysu</a> 上线。</li>
+<li>托管在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>。</li>
+<li>使用 <a target="_blank" rel="noopener" href="https://github.com/viosey/hexo-theme-material">Material</a> 主题。</li>
+</ul>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/changelog/index.html">https://blog.gadflysu.com/changelog/index.html</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2020-05-07");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2020-09-06T18:22:28.732Z" itemprop="datePublished">09/07/2020</time>
+
+    , Updated at&nbsp;<time datetime="2020-05-06T21:03:39.231Z" itemprop="dateModified">05/07/2020</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+
+    <!-- Next Nav -->
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/changelog/index.html'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/changelog/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Visitors</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+
+
+<!-- ### Custom Footer ### -->
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
+    </body>
+
+</html>

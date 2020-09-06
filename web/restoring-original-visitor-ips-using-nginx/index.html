@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>使用 nginx 获取真实访客 IP | blog / gadflysu</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.5"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
+
+
+
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="使用 nginx 获取真实访客 IP | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/"><meta property="og:locale" content="en"><meta name="description" content="当网站使用诸如 Cloudflare 的反代时，服务器默认只会得到来自反代服务地址的访客请求。此时需要做点什么来获取真实访客 IP。  ℹ️ [Note] 我使用 nginx 和 Cloudflare。本文适用于 Ubuntu 18.04 和 nginx (1.14.0)。 Cloudflare 将真实访客 IP 包含在 CF-Connecting-IP 和 X-Forwarded-For 两个  - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="nginx, reverse proxy, cdn, cloudflare, blog"><meta property="og:image" content="https://user-images.githubusercontent.com/11007704/80925037-44c12500-8dbf-11ea-8874-16894244a653.jpg"><meta property="article:published_time" content="2019-11-18T16:00:00.000Z"><meta property="article:modified_time" content="2019-11-18T16:00:00.000Z"><meta property="og:updated_time" content="2019-11-18T16:00:00.000Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="nginx, reverse proxy, cdn, cloudflare, blog"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/">
+
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-56TDLFX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-56TDLFX');
+</script>
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.gadflysu.com/img/icon-192.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/"
+    },
+    "headline": "使用 nginx 获取真实访客 IP | blog / gadflysu",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.gadflysu.com/img/icon-192.png"
+    },
+    
+    "datePublished": "2019-11-18T16:00:00.000Z",
+    "dateModified": "2019-11-18T16:00:00.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "gadflysu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/avatar.png"
+        },
+        "description": "<b>希望與熱烈的風</b>,<em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "blog / gadflysu",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/icon-192.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.gadflysu.com/search/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "nginx, reverse proxy, cdn, cloudflare, blog",
+    "description": "当网站使用诸如 Cloudflare 的反代时，服务器默认只会得到来自反代服务地址的访客请求。此时需要做点什么来获取真实访客 IP。  ℹ️ [Note] 我使用 nginx 和 Cloudflare。本文适用于 Ubuntu 18.04 和 nginx (1.14.0)。 Cloudflare 将真实访客 IP 包含在 CF-Connecting-IP 和 X-Forwarded-For 两个  - gadflysu - blog / gadflysu"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+    
+        <a href="/archives/" class="navbar-link">📦 Archive</a>
+    
+    
+        <a href="/search/" class="navbar-link">🔍 Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">🏷 Tags</a>
+    
+        <a href="/donate/" class="navbar-link">💰 Donate</a>
+    
+        <a href="/ref/" class="navbar-link">🎭 Referral</a>
+    
+        <a href="/links/" class="navbar-link">🔗 Links</a>
+    
+        <a href="/about/" class="navbar-link">ℹ️ About</a>
+    
+        <a href="/changelog/" class="navbar-link">📈 Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">💌 Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=使用 nginx 获取真实访客 IP" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=使用 nginx 获取真实访客 IP" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAAAAAA83tqdAAACMElEQVR42u3awW6DQAxFUf7/p9tNF6hi/K4JKAm+bFIlKTmtYvC88fbzBccmUqRIkR+A3Irj8Bf/nk+Pq5/3j+lzRc5FVpj9CSvsEeD/+/fPo88VORq5OgkpolUhpPcnvEiRBNkpmAotUuQVyKP3rF5bXbCrRkOkSHKjrxqN1NQenfOWLkjk45DVgujOx8tWiyIfhYyhEVhU0eJZFcvLqZrIRyGrL3J1YT8bSLUWbiJHItPNv2xKQeCamuiyEEWORq4W8ylMTQVUnXd1kxApMgWftJBIA5KaDpEiV4VBPyg1I1VzERsbkSORdLOzG6R2LvxotShyHJIE7WkzoLMZRZoOkTORBJg2MknxVNBlsyFyJJJsJFVQsll1NiAQORdJA3oy0FltVLWH9kSORNIAlATzZEHWGcQTORNJBkCqhRdFk41VlKqJHIOsLsp0UImiSTAmci4yFUR1ce8EBSRsECmyCjW7gT0pMhosiJyNTGF7GvisQOm1uHElciSShKZkWDMFXDRkRUmvyDHIasMohfgp8DoVaIkciyQDI2TIiQ5CpX+CSJG0oYgDcGHjk2yAihTZDZnODoJUz+PASuQIZDpI6EQWVp1hZJGzkfSLTIopNczpMYYDIscgOwVDQgDS8LYLR+Q4JBnKJE0rCU1JcyxSJBk6Jg1uJ9iPG/siRV6AScOc9MYhUiTZPOoM4XXDgnKgTuQ4JLnxk7Cg+oPTeV5aLYp8FPKTD5EiRYp84/EL/8Y3FWeh8d4AAAAASUVORK5CYII=" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">📑 RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">使用 nginx 获取真实访客 IP</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>11/19/2019</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/web/">web</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=使用 nginx 获取真实访客 IP&url=https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAAAAAA83tqdAAACMElEQVR42u3awW6DQAxFUf7/p9tNF6hi/K4JKAm+bFIlKTmtYvC88fbzBccmUqRIkR+A3Irj8Bf/nk+Pq5/3j+lzRc5FVpj9CSvsEeD/+/fPo88VORq5OgkpolUhpPcnvEiRBNkpmAotUuQVyKP3rF5bXbCrRkOkSHKjrxqN1NQenfOWLkjk45DVgujOx8tWiyIfhYyhEVhU0eJZFcvLqZrIRyGrL3J1YT8bSLUWbiJHItPNv2xKQeCamuiyEEWORq4W8ylMTQVUnXd1kxApMgWftJBIA5KaDpEiV4VBPyg1I1VzERsbkSORdLOzG6R2LvxotShyHJIE7WkzoLMZRZoOkTORBJg2MknxVNBlsyFyJJJsJFVQsll1NiAQORdJA3oy0FltVLWH9kSORNIAlATzZEHWGcQTORNJBkCqhRdFk41VlKqJHIOsLsp0UImiSTAmci4yFUR1ce8EBSRsECmyCjW7gT0pMhosiJyNTGF7GvisQOm1uHElciSShKZkWDMFXDRkRUmvyDHIasMohfgp8DoVaIkciyQDI2TIiQ5CpX+CSJG0oYgDcGHjk2yAihTZDZnODoJUz+PASuQIZDpI6EQWVp1hZJGzkfSLTIopNczpMYYDIscgOwVDQgDS8LYLR+Q4JBnKJE0rCU1JcyxSJBk6Jg1uJ9iPG/siRV6AScOc9MYhUiTZPOoM4XXDgnKgTuQ4JLnxk7Cg+oPTeV5aLYp8FPKTD5EiRYp84/EL/8Y3FWeh8d4AAAAASUVORK5CYII=" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                    
+                    <article id="post-content">
+                        <p>当网站使用诸如 <a target="_blank" rel="noopener" href="https://support.cloudflare.com/hc/en-us/articles/205177068">Cloudflare</a> 的反代时，服务器默认只会得到来自反代服务地址的访客请求。此时需要做点什么来获取真实访客 IP。</p>
+<p><img src="https://user-images.githubusercontent.com/11007704/80925037-44c12500-8dbf-11ea-8874-16894244a653.jpg" alt="Reverse Proxy"></p>
+<p>ℹ️ <strong>[Note]</strong> 我使用 nginx 和 Cloudflare。本文适用于 Ubuntu 18.04 和 nginx (1.14.0)。</p>
+<p>Cloudflare 将真实访客 IP 包含在 <code>CF-Connecting-IP</code> 和 <code>X-Forwarded-For</code> 两个 HTTP 请求头中。</p>
+<ul>
+<li><code>CF-Connecting-IP</code> 提供真实 IP。</li>
+<li><code>CF-Connecting-IP</code> 提供代理地址和真实 IP：如果 Cloudflare 接收到的请求不含 <code>X-Forwarded-For</code> 头，<code>X-Forwarded-For</code> 会和 <code>CF-Connecting-IP</code> 有相同的值，否则 Cloudflare 会将代理地址追加到该请求头。</li>
+</ul>
+<p>Cloudflare 建议使用 <code>CF-Connecting-IP</code>。</p>
+<p>对于 nginx，需要使用 <a target="_blank" rel="noopener" href="https://nginx.org/en/docs/http/ngx_http_realip_module.html"><code>ngx_http_realip_module</code></a> 模块，该模块用于根据指定的 header 域修改客户端地址和端口（可选）。Ubuntu 上使用 apt 安装的 nginx 已包含该模块。</p>
+<p>语法：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set_real_ip_from<span class="built_in"> address </span>| CIDR | unix:;</span><br><span class="line">real_ip_header field | X-Real-IP | X-Forwarded-For | proxy_protocol;</span><br></pre></td></tr></table></figure>
+
+<p>上下文：<code>http</code>、<code>server</code> 或 <code>location</code>。</p>
+<p>具体配置：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># <span class="keyword">get</span> ip list <span class="keyword">from</span> https:<span class="comment">//www.cloudflare.com/ips-v4</span></span><br><span class="line">set_real_ip_from <span class="number">173.245</span><span class="number">.48</span><span class="number">.0</span>/<span class="number">20</span>;</span><br><span class="line">set_real_ip_from <span class="number">103.21</span><span class="number">.244</span><span class="number">.0</span>/<span class="number">22</span>;</span><br><span class="line">set_real_ip_from <span class="number">103.22</span><span class="number">.200</span><span class="number">.0</span>/<span class="number">22</span>;</span><br><span class="line">set_real_ip_from <span class="number">103.31</span><span class="number">.4</span><span class="number">.0</span>/<span class="number">22</span>;</span><br><span class="line">set_real_ip_from <span class="number">141.101</span><span class="number">.64</span><span class="number">.0</span>/<span class="number">18</span>;</span><br><span class="line">set_real_ip_from <span class="number">108.162</span><span class="number">.192</span><span class="number">.0</span>/<span class="number">18</span>;</span><br><span class="line">set_real_ip_from <span class="number">190.93</span><span class="number">.240</span><span class="number">.0</span>/<span class="number">20</span>;</span><br><span class="line">set_real_ip_from <span class="number">188.114</span><span class="number">.96</span><span class="number">.0</span>/<span class="number">20</span>;</span><br><span class="line">set_real_ip_from <span class="number">197.234</span><span class="number">.240</span><span class="number">.0</span>/<span class="number">22</span>;</span><br><span class="line">set_real_ip_from <span class="number">198.41</span><span class="number">.128</span><span class="number">.0</span>/<span class="number">17</span>;</span><br><span class="line">set_real_ip_from <span class="number">162.158</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">15</span>;</span><br><span class="line">set_real_ip_from <span class="number">104.16</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">12</span>;</span><br><span class="line">set_real_ip_from <span class="number">172.64</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">13</span>;</span><br><span class="line">set_real_ip_from <span class="number">131.0</span><span class="number">.72</span><span class="number">.0</span>/<span class="number">22</span>;</span><br><span class="line"># <span class="keyword">get</span> ip list <span class="keyword">from</span> https:<span class="comment">//www.cloudflare.com/ips-v6</span></span><br><span class="line">set_real_ip_from <span class="number">2400</span>:cb00::/<span class="number">32</span>;</span><br><span class="line">set_real_ip_from <span class="number">2606</span>:<span class="number">4700</span>::/<span class="number">32</span>;</span><br><span class="line">set_real_ip_from <span class="number">2803</span>:f800::/<span class="number">32</span>;</span><br><span class="line">set_real_ip_from <span class="number">2405</span>:b500::/<span class="number">32</span>;</span><br><span class="line">set_real_ip_from <span class="number">2405</span>:<span class="number">8100</span>::/<span class="number">32</span>;</span><br><span class="line">set_real_ip_from <span class="number">2</span>a06:<span class="number">98</span>c0::/<span class="number">29</span>;</span><br><span class="line">set_real_ip_from <span class="number">2</span>c0f:f248::/<span class="number">32</span>;</span><br><span class="line"></span><br><span class="line"># use any of the following two</span><br><span class="line">real_ip_header CF-Connecting-IP;</span><br><span class="line"># real_ip_header X-Forwarded-For;</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>set_real_ip_from</code> 定义告知正确替换地址（即真实访客 IP）的可信任地址，这里是 <a target="_blank" rel="noopener" href="https://www.cloudflare.com/ips/">Cloudflare 的 IP</a>（可能更新）；<code>real_ip_header</code> 定义用于获取客户端地址的 hearder 域。</p>
+<p>我将上述配置添加到 <code>/etc/nginx/nginx.conf</code> 的 <code>http</code> 块中，保存后按照惯例执行 <code>sudo nginx -t &amp;&amp; sudo nginx -s reload</code> 即可。</p>
+<p>📖 <strong>[Ref]</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs-Logging-visitor-IP-addresses-with-mod-cloudflare-">Restoring original visitor IPs: Logging visitor IP addresses with mod_cloudflare – Cloudflare Support</a></li>
+<li><a target="_blank" rel="noopener" href="https://support.cloudflare.com/hc/en-us/articles/200170986-How-does-Cloudflare-handle-HTTP-Request-headers-">How does Cloudflare handle HTTP Request headers? – Cloudflare Support</a></li>
+</ol>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/">https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2019-11-19");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-11-18T16:00:00.000Z" itemprop="datePublished">11/19/2019</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/web/'>web</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/nginx/" rel="tag">#&nbsp;nginx</a>
+
+<a class="post-tags-list-item" href="/tags/reverse-proxy/" rel="tag">#&nbsp;reverse proxy</a>
+
+<a class="post-tags-list-item" href="/tags/cdn/" rel="tag">#&nbsp;cdn</a>
+
+<a class="post-tags-list-item" href="/tags/cloudflare/" rel="tag">#&nbsp;cloudflare</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/post/windows-disk-cleanup/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Windows 磁盘清理指北</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/post/windows-boot-options/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Windows 启动引导选项</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Visitors</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
+    </body>
+
+</html>

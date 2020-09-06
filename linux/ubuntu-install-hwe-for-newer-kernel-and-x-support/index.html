@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | blog / gadflysu</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.5"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
+
+
+
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/"><meta property="og:locale" content="en"><meta name="description" content="本文是一份提示。 TL;DR: 1sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04   原计划于今年 2 月 7 日发布的 Ubuntu 18.04.2 LTS 因 Linux 4.18 内核的一个 bug 推延至 2 月 14 日。（放送旧闻？）Ubuntu 18.04 - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="ubuntu, software, hwe, blog"><meta property="article:published_time" content="2019-03-05T16:00:00.000Z"><meta property="article:modified_time" content="2019-03-05T16:00:00.000Z"><meta property="og:updated_time" content="2019-03-05T16:00:00.000Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="ubuntu, software, hwe, blog"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">
+
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-56TDLFX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-56TDLFX');
+</script>
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.gadflysu.com/img/icon-192.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/"
+    },
+    "headline": "为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持 | blog / gadflysu",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.gadflysu.com/img/icon-192.png"
+    },
+    
+    "datePublished": "2019-03-05T16:00:00.000Z",
+    "dateModified": "2019-03-05T16:00:00.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "gadflysu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/avatar.png"
+        },
+        "description": "<b>希望與熱烈的風</b>,<em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "blog / gadflysu",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/icon-192.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.gadflysu.com/search/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "ubuntu, software, hwe, blog",
+    "description": "本文是一份提示。 TL;DR: 1sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04   原计划于今年 2 月 7 日发布的 Ubuntu 18.04.2 LTS 因 Linux 4.18 内核的一个 bug 推延至 2 月 14 日。（放送旧闻？）Ubuntu 18.04 - gadflysu - blog / gadflysu"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+    
+        <a href="/archives/" class="navbar-link">📦 Archive</a>
+    
+    
+        <a href="/search/" class="navbar-link">🔍 Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">🏷 Tags</a>
+    
+        <a href="/donate/" class="navbar-link">💰 Donate</a>
+    
+        <a href="/ref/" class="navbar-link">🎭 Referral</a>
+    
+        <a href="/links/" class="navbar-link">🔗 Links</a>
+    
+        <a href="/about/" class="navbar-link">ℹ️ About</a>
+    
+        <a href="/changelog/" class="navbar-link">📈 Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">💌 Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAAAAAA83tqdAAACLklEQVR42u2cQVLDQAwE/f9Pw4VTytK0TBKC1XsJBHu3XRUpo5GK4+sfrENIIYUU8gMgj2aVN//87fG69PvZvd25Qu6F7EAe36sOPju8gqLnCrkbcrL52UHV9V3QJXghhewgqwScgqBM1EIK+STILuFXIG8PHCFvATkRtuT96gFeooKEvB1kVxC98vVp1aKQt4KMplEQGOnwzih4mqsm5K0gk6Btky0Us9VDpfOE3A1JgCbGVWcedHsKKWRnlnabEuO+EjHVGSNjX8jbQl4xomgjKd3T7SHkXshOIFATgNzfBQ2uFoVcB0kOTcZWCrxksraDIkKuhaTCg5irV4ozIXdD4kIdCta012TYSci9kDQoSFOTNFBJ40DIvZC0OCIGPxEnaagkCgwh10FOEjwxWCfBgqtFIVdAThI5NROmiR8Nigh5e8jJoZ3Bn8z86gsDNUCFXAtJhj+6YooY/cnEElLI35hRyUygBRkyrIRcD0kTfTL7UxDhLq2Q6yA7YUCbRlcFRtnoEnIlZEridEBpKoaROSvkWsj0gU4DILTxToyIOPUn5CrILgCouE0DS3RgT0ghyWZ0gIkUW2SwVMidkGlNxS8BIgWgkHsh6dARLbS65vxUsAi5F5Im6DQ8Mrl+HDhCroMkoiI9UCeiqbCIKkhIIYcNpglwNFuFFBIEDknaNOBig1XI1ZB4eONg/1BrIkhiA1TIdZDpi5/+nAacyNCnkEJ+8hJSSCGF/MP1DetnFkQzzsxyAAAAAElFTkSuQmCC" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">📑 RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>03/06/2019</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/linux/">linux</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAAAAAA83tqdAAACLklEQVR42u2cQVLDQAwE/f9Pw4VTytK0TBKC1XsJBHu3XRUpo5GK4+sfrENIIYUU8gMgj2aVN//87fG69PvZvd25Qu6F7EAe36sOPju8gqLnCrkbcrL52UHV9V3QJXghhewgqwScgqBM1EIK+STILuFXIG8PHCFvATkRtuT96gFeooKEvB1kVxC98vVp1aKQt4KMplEQGOnwzih4mqsm5K0gk6Btky0Us9VDpfOE3A1JgCbGVWcedHsKKWRnlnabEuO+EjHVGSNjX8jbQl4xomgjKd3T7SHkXshOIFATgNzfBQ2uFoVcB0kOTcZWCrxksraDIkKuhaTCg5irV4ozIXdD4kIdCta012TYSci9kDQoSFOTNFBJ40DIvZC0OCIGPxEnaagkCgwh10FOEjwxWCfBgqtFIVdAThI5NROmiR8Nigh5e8jJoZ3Bn8z86gsDNUCFXAtJhj+6YooY/cnEElLI35hRyUygBRkyrIRcD0kTfTL7UxDhLq2Q6yA7YUCbRlcFRtnoEnIlZEridEBpKoaROSvkWsj0gU4DILTxToyIOPUn5CrILgCouE0DS3RgT0ghyWZ0gIkUW2SwVMidkGlNxS8BIgWgkHsh6dARLbS65vxUsAi5F5Im6DQ8Mrl+HDhCroMkoiI9UCeiqbCIKkhIIYcNpglwNFuFFBIEDknaNOBig1XI1ZB4eONg/1BrIkhiA1TIdZDpi5/+nAacyNCnkEJ+8hJSSCGF/MP1DetnFkQzzsxyAAAAAElFTkSuQmCC" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                    
+                    <article id="post-content">
+                        <p>本文是一份提示。</p>
+<p>TL;DR:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>原计划于今年 2 月 7 日发布的 Ubuntu 18.04.2 LTS 因 Linux 4.18 内核的一个 bug 推延至 2 月 14 日。（放送旧闻？）Ubuntu 18.04.2 LTS 最终伴随着来自 18.10 的内核与图形更新以及其他安全补丁和 bug 修复得以正式发布。此外，Ubuntu 18.04 的生命周期从五年延长至<strong>十年</strong>，这是 Ubuntu 创始人 Mark Shuttleworth 在去年 11 月的 <a target="_blank" rel="noopener" href="https://www.openstack.org/summit/berlin-2018/">OpenStack Summit</a> 上宣布的。</p>
+<p><strong>Ubuntu LTS enablement</strong>（也叫 <strong>HWE</strong> 或 <strong>H</strong>ard<strong>w</strong>are <strong>E</strong>nablement）<strong>stacks</strong> 用于支持不断更新的硬件技术，能够为现存的 Ubuntu LTS 提供更新的内核与图形支持，适用于桌面版、服务器版甚至 Cloud 版和虚拟镜像。</p>
+<p>HWE Stacks (i.e. HWE Kernel + X Stack) 随 LTS 的小版本更新（<code>point release</code>，比如最近的 <code>18.04.2</code>）发布，当通过媒介安装新版 Ubuntu LTS 时，HWE 会一并安装，对于正在运行的系统则需要手动安装。为了减轻维护团队的负担，HWE 采用滚动更新的模式。LTS 的第五个（即最后一个）小版本更新时，用户将被要求升级至最后一个 HWE stack 以保留安全更新和 bug 修复的支持。</p>
+<p>安装 HWE 只需要执行： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</span><br></pre></td></tr></table></figure>
+
+<p>下面是我的安装记录，显示了一些实际即将安装的和移除的包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ sudo apt install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">The following packages were automatically installed and are no longer required:</span><br><span class="line">  linux-headers-4.13.0-43 linux-headers-4.13.0-43-generic</span><br><span class="line">Use &#x27;sudo apt autoremove&#x27; to remove them.</span><br><span class="line">The following additional packages will be installed:</span><br><span class="line">  linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-headers-generic-hwe-18.04</span><br><span class="line">  linux-image-4.18.0-15-generic linux-image-generic-hwe-18.04 linux-modules-4.18.0-15-generic</span><br><span class="line">  linux-modules-extra-4.18.0-15-generic xserver-xorg-core-hwe-18.04 xserver-xorg-input-all-hwe-18.04</span><br><span class="line">  xserver-xorg-input-libinput-hwe-18.04 xserver-xorg-legacy-hwe-18.04 xserver-xorg-video-all-hwe-18.04</span><br><span class="line">  xserver-xorg-video-amdgpu-hwe-18.04 xserver-xorg-video-ati-hwe-18.04 xserver-xorg-video-fbdev-hwe-18.04</span><br><span class="line">  xserver-xorg-video-intel-hwe-18.04 xserver-xorg-video-nouveau-hwe-18.04 xserver-xorg-video-qxl-hwe-18.04</span><br><span class="line">  xserver-xorg-video-radeon-hwe-18.04 xserver-xorg-video-vesa-hwe-18.04 xserver-xorg-video-vmware-hwe-18.04</span><br><span class="line">Suggested packages:</span><br><span class="line">  fdutils linux-hwe-doc-4.18.0 | linux-hwe-source-4.18.0 linux-hwe-tools xfonts-100dpi | xfonts-75dpi</span><br><span class="line">  firmware-amd-graphics xserver-xorg-video-r128 xserver-xorg-video-mach64 firmware-misc-nonfree</span><br><span class="line">Recommended packages:</span><br><span class="line">  xserver-xorg-input-wacom-hwe-18.04</span><br><span class="line">The following packages will be REMOVED:</span><br><span class="line">  xserver-xorg xserver-xorg-core xserver-xorg-input-all xserver-xorg-input-all-hwe-16.04 xserver-xorg-input-evdev</span><br><span class="line">  xserver-xorg-input-libinput xserver-xorg-input-synaptics xserver-xorg-input-wacom xserver-xorg-input-wacom-hwe-16.04</span><br><span class="line">  xserver-xorg-legacy xserver-xorg-video-all xserver-xorg-video-amdgpu xserver-xorg-video-ati xserver-xorg-video-fbdev</span><br><span class="line">  xserver-xorg-video-intel xserver-xorg-video-nouveau xserver-xorg-video-qxl xserver-xorg-video-radeon</span><br><span class="line">  xserver-xorg-video-vesa xserver-xorg-video-vmware</span><br><span class="line">The following NEW packages will be installed:</span><br><span class="line">  linux-generic-hwe-18.04 linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-headers-generic-hwe-18.04</span><br><span class="line">  linux-image-4.18.0-15-generic linux-image-generic-hwe-18.04 linux-modules-4.18.0-15-generic</span><br><span class="line">  linux-modules-extra-4.18.0-15-generic xserver-xorg-core-hwe-18.04 xserver-xorg-hwe-18.04</span><br><span class="line">  xserver-xorg-input-all-hwe-18.04 xserver-xorg-input-libinput-hwe-18.04 xserver-xorg-legacy-hwe-18.04</span><br><span class="line">  xserver-xorg-video-all-hwe-18.04 xserver-xorg-video-amdgpu-hwe-18.04 xserver-xorg-video-ati-hwe-18.04</span><br><span class="line">  xserver-xorg-video-fbdev-hwe-18.04 xserver-xorg-video-intel-hwe-18.04 xserver-xorg-video-nouveau-hwe-18.04</span><br><span class="line">  xserver-xorg-video-qxl-hwe-18.04 xserver-xorg-video-radeon-hwe-18.04 xserver-xorg-video-vesa-hwe-18.04</span><br><span class="line">  xserver-xorg-video-vmware-hwe-18.04</span><br><span class="line">0 upgraded, 23 newly installed, 20 to remove and 4 not upgraded.</span><br><span class="line">Need to get 68.1 MB of archives.</span><br><span class="line">After this operation, 324 MB of additional disk space will be used.</span><br><span class="line">Do you want to continue? [Y/n] </span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>📖 <strong>[Ref]</strong> <a target="_blank" rel="noopener" href="https://news.softpedia.com/news/ubuntu-18-04-2-lts-released-with-linux-kernel-4-18-from-ubuntu-18-10-524961.shtml">Softpedia news</a> | <a target="_blank" rel="noopener" href="https://itsfoss.com/ubuntu-18-04-ten-year-support/">It’s F.O.S.S news</a> | <a target="_blank" rel="noopener" href="https://wiki.ubuntu.com/Kernel/LTSEnablementStack">Ubuntu wiki LTSEnablementStack</a>, <a target="_blank" rel="noopener" href="https://wiki.ubuntu.com/Kernel/RollingLTSEnablementStack">RollingLTSEnablementStack</a></p>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/">https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2019-03-06");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-03-05T16:00:00.000Z" itemprop="datePublished">03/06/2019</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/linux/'>linux</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/ubuntu/" rel="tag">#&nbsp;ubuntu</a>
+
+<a class="post-tags-list-item" href="/tags/software/" rel="tag">#&nbsp;software</a>
+
+<a class="post-tags-list-item" href="/tags/hwe/" rel="tag">#&nbsp;hwe</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/database/mariadb-on-ubuntu/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">在 Ubuntu 安装与配置 MariaDB</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/issue/windows-error-0xc0e90002/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Windows 启动错误 0xc0e90002 的解决办法</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Visitors</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
+    </body>
+
+</html>

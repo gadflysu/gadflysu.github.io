@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>正则表达式 | blog / gadflysu</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.5"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
+
+
+
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="正则表达式 | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/general/regular-expression/"><meta property="og:locale" content="en"><meta name="description" content="正则表达式 (Regular Expression, regex, regexp) 使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。    A regular expression is a pattern that describes a set of strings.   常用的工具 grep 中的「re」就是指正则表达式，Ken Thompson 在 44 年前 (Nov. 197 - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="string, pattern matching, grep, sed, awk, blog"><meta property="og:image" content="https://user-images.githubusercontent.com/11007704/61181419-d7d67600-a658-11e9-9034-4701ef46de23.png"><meta property="og:image" content="https://user-images.githubusercontent.com/11007704/61181422-df961a80-a658-11e9-869b-6fbf6a635953.png"><meta property="article:published_time" content="2019-07-11T16:00:00.000Z"><meta property="article:modified_time" content="2019-07-11T16:00:00.000Z"><meta property="og:updated_time" content="2019-07-11T16:00:00.000Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="string, pattern matching, grep, sed, awk, blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://user-images.githubusercontent.com/11007704/61181419-d7d67600-a658-11e9-9034-4701ef46de23.png">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/general/regular-expression/">
+
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-56TDLFX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-56TDLFX');
+</script>
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.gadflysu.com/general/regular-expression/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.gadflysu.com/img/icon-192.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.gadflysu.com/general/regular-expression/"
+    },
+    "headline": "正则表达式 | blog / gadflysu",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://user-images.githubusercontent.com/11007704/61181419-d7d67600-a658-11e9-9034-4701ef46de23.png"
+    },
+    
+    "datePublished": "2019-07-11T16:00:00.000Z",
+    "dateModified": "2019-07-11T16:00:00.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "gadflysu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/avatar.png"
+        },
+        "description": "<b>希望與熱烈的風</b>,<em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "blog / gadflysu",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/icon-192.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.gadflysu.com/search/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "string, pattern matching, grep, sed, awk, blog",
+    "description": "正则表达式 (Regular Expression, regex, regexp) 使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。    A regular expression is a pattern that describes a set of strings.   常用的工具 grep 中的「re」就是指正则表达式，Ken Thompson 在 44 年前 (Nov. 197 - gadflysu - blog / gadflysu"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+    
+        <a href="/archives/" class="navbar-link">📦 Archive</a>
+    
+    
+        <a href="/search/" class="navbar-link">🔍 Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">🏷 Tags</a>
+    
+        <a href="/donate/" class="navbar-link">💰 Donate</a>
+    
+        <a href="/ref/" class="navbar-link">🎭 Referral</a>
+    
+        <a href="/links/" class="navbar-link">🔗 Links</a>
+    
+        <a href="/about/" class="navbar-link">ℹ️ About</a>
+    
+        <a href="/changelog/" class="navbar-link">📈 Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">💌 Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=正则表达式" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=正则表达式" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB1klEQVR42u3ay3LDMAxD0fz/T7dbpyMBoJuFhVxv+rLD0xlaEim9fh54vUCBAgVqgXqJ6+2BPz/vnr/ee30miQOqB7ULZhNTBFf37OKA6kKpZF0m5SbY6jOSOKC+E5UkfZLwoECpoLsJGRSo6WS7Cqie/+gqAdTjUS5pP/X1Y9UMqEej0uJgl+gqaFqAgOpCuQ+9s4DbTbyqgQKqD7UKthpgVfDkPjmxg6pAuYEwLRrcgi9Z9IHqQrmiMv27DZwMnqCORq0SVQ2iyX2TJqysZkAdjdoNgK5Rn2xGOiSoLpQrBtSE6hZ2041JUB0otdmYNOndwQk1QI8rZFDHoNLFXVIMuN/JFwpUBSpN4GRDyE3IowYHqGNRSRKnjbSk8JD/PKgKVBoo2fiegEH1oqIi0SSta5QkCzxQXajJwa47G41qkrcTMqgjUcn3bqP7Pw1aUJ0oVXSONxNvbgyA6kOli/zpAZz4YA+oClRyUFAd9hsHFi8KqA7UNCFVk2xy8CbquoA6FqUWY2pAnBQPrvkBqg+VFKK2mAxeiFHXBVQ1yiVr2tyQgzSor0Qlg6MrNm6d4AB1HCppbt0ZUN1LAqoTlQx+qumVNO+TQxigOlBPukCBAgXqcv0Cbo6xAPOG834AAAAASUVORK5CYII=" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">📑 RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+            <div class="card-image lazyload" data-bg="url('https://user-images.githubusercontent.com/11007704/61181419-d7d67600-a658-11e9-9034-4701ef46de23.png')"></div>
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">正则表达式</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>07/12/2019</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/general/">general</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=正则表达式&url=https://blog.gadflysu.com/general/regular-expression/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/general/regular-expression/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/general/regular-expression/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/general/regular-expression/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB1klEQVR42u3ay3LDMAxD0fz/T7dbpyMBoJuFhVxv+rLD0xlaEim9fh54vUCBAgVqgXqJ6+2BPz/vnr/ee30miQOqB7ULZhNTBFf37OKA6kKpZF0m5SbY6jOSOKC+E5UkfZLwoECpoLsJGRSo6WS7Cqie/+gqAdTjUS5pP/X1Y9UMqEej0uJgl+gqaFqAgOpCuQ+9s4DbTbyqgQKqD7UKthpgVfDkPjmxg6pAuYEwLRrcgi9Z9IHqQrmiMv27DZwMnqCORq0SVQ2iyX2TJqysZkAdjdoNgK5Rn2xGOiSoLpQrBtSE6hZ2041JUB0otdmYNOndwQk1QI8rZFDHoNLFXVIMuN/JFwpUBSpN4GRDyE3IowYHqGNRSRKnjbSk8JD/PKgKVBoo2fiegEH1oqIi0SSta5QkCzxQXajJwa47G41qkrcTMqgjUcn3bqP7Pw1aUJ0oVXSONxNvbgyA6kOli/zpAZz4YA+oClRyUFAd9hsHFi8KqA7UNCFVk2xy8CbquoA6FqUWY2pAnBQPrvkBqg+VFKK2mAxeiFHXBVQ1yiVr2tyQgzSor0Qlg6MrNm6d4AB1HCppbt0ZUN1LAqoTlQx+qumVNO+TQxigOlBPukCBAgXqcv0Cbo6xAPOG834AAAAASUVORK5CYII=" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="post-toc-number">1.</span> <span class="post-toc-text">基本结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%96%B9%E6%8B%AC%E5%8F%B7%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="post-toc-number">2.</span> <span class="post-toc-text">方括号表达式与字符类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8C%B9%E9%85%8D%E7%A9%BA%E4%B8%B2%E7%9A%84%E7%89%B9%E6%AE%8A%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="post-toc-number">3.</span> <span class="post-toc-text">匹配空串的特殊表达式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%8D%E5%90%91%E5%BC%95%E7%94%A8%E4%B8%8E%E5%AD%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="post-toc-number">4.</span> <span class="post-toc-text">反向引用与子表达式</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p><strong>正则表达式 (Regular Expression, regex, regexp) 使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。</strong></p>
+<blockquote>
+<p>  A <em>regular expression</em> is a pattern that describes a set of strings. </p>
+</blockquote>
+<p>常用的工具 grep 中的「re」就是指正则表达式，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Ken_Thompson">Ken Thompson</a> 在 44 年前 (Nov. 1974) 将此符号系统引入 grep。正则表达式的 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> 规范，分为<strong>基本型正则表达式</strong> (Basic Regular Expression, BRE) 和<strong>扩展型正则表达式</strong> (Extended Regular Express, ERE)。顾名思义，后者会更强大。在 GNU 实现的 grep 中，基本语法和扩展语法的可用功能没有区别。<strong>Perl 兼容正则表达式</strong> (Perl Compatible Regular Expressions, PCRE) 支持更多的功能，它是由 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Philip_Hazel">Philip Hazel</a> 在上个世纪末 (1997) 开发的一个正则表达式引擎，实现与 Perl 5 一致的语法和语义，被用于许多现代的著名项目，如 Apache、PHP、KDE、Postfix、Nmap 以及 Apple Safari。</p>
+<h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>我们暂且不管<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Formal_language">形式语言</a>、<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Automata_theory">自动机</a>之类的理论，先来看一个简单的例子：<code>hello*</code>。这个正则表达式是含有 6 个字符的字符串，它匹配 <code>hello</code>、<code>helloo</code> 以及 <code>hellooo</code> 等等无穷多个以「hello」开头、后接 0 个或多个「o」的字符串。</p>
+<p>正则表达式的基本结构是匹配一个字符的模式 (pattern)。<strong>大部分普通的字符，包括所有的字母和数字，都匹配它们自身</strong>，如 <code>h</code> 匹配 <code>h</code>、<code>e</code> 匹配 <code>e</code>。</p>
+<p>一些有特殊功能的字符，如上例中表示匹配前面的子表达式 (<code>o</code>) 任意次的 <code>*</code>，叫作<strong>元字符</strong> (meta-character)。**若要匹配元字符自身，则需要一个前缀的反斜杠 (<code>\</code>, backslash) 进行转义 (escape)**，如 <code>\*</code> 匹配一个星号 (<code>*</code>, asterisk)。</p>
+<p><strong>元字符有：<code>^</code> <code>$</code> <code>(</code> <code>)</code> <code>*</code> <code>+</code> <code>?</code> <code>.</code> <code>[</code> <code>\</code> <code>&#123;</code> <code>|</code>。</strong></p>
+<p><strong>句点 <code>.</code> 是元字符，匹配除回车符 (carriage return, CR) 和换行符 (newline / line feed, LF) 之外的任意的单字符。</strong>例如，<code>w.ll</code> 能匹配 <code>will</code> 和 <code>well</code>。</p>
+<p>一个正则表达式可后接像 <code>*</code> 这样的表达式，表示**重复操作 (repetition)**。详见下表：</p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>*</code></strong></td>
+<td><strong>匹配前面的子表达式 0 次或更多次。</strong></td>
+</tr>
+<tr>
+<td><strong><code>?</code></strong></td>
+<td><strong>匹配前面的子表达式 0 次或 1 次。</strong></td>
+</tr>
+<tr>
+<td><strong><code>+</code></strong></td>
+<td><strong>匹配前面的子表达式 1 次或更多次。</strong></td>
+</tr>
+<tr>
+<td><strong><code>&#123;n&#125;</code></strong></td>
+<td><strong>匹配前面的子表达式恰好 n 次。</strong></td>
+</tr>
+<tr>
+<td><strong><code>&#123;n,&#125;</code></strong></td>
+<td><strong>匹配前面的子表达式至少 n 次。</strong></td>
+</tr>
+<tr>
+<td><strong><code>&#123;n,m&#125;</code></strong></td>
+<td><strong>匹配前面的子表达式至少 n 次、至多 m 次。</strong></td>
+</tr>
+</tbody></table>
+<p>从上表可见重复操作不一定由单个字符完成，更复杂的操作可能需要成对出现的花括号 (<code>&#123;</code> &amp; <code>&#125;</code>, curly braces) 以及数字。<code>*</code> 等价于 <code>&#123;0,&#125;</code>，<code>?</code> 等价于 <code>&#123;0,1&#125;</code>，<code>+</code> 等价于 <code>&#123;1,&#125;</code>。此外 GNU grep 中还支持 <code>&#123;,m&#125;</code>，表示匹配至多 m 次，这是 GNU 的扩展 (extension)。</p>
+<p>两个正则表达式可以直接连接，表示**串接操作 (concatenation)**，其结果匹配任何由分别匹配原表达式的字符串串接而得的字符串。为了表达得严谨些，看起来有点绕，举个例子来看就会很简单：正则表达式 <code>a</code> 和 <code>b</code> 串接的结果 <code>ab</code>，匹配由字符串 <code>a</code> 和 <code>b</code> 串接而得的字符串 <code>ab</code>。显然，这种操作是基本而广泛的。</p>
+<p>两个正则表达式可以用竖线符 <code>|</code> 连接起来，表示**选择操作 (alternation)**，其结果匹配两个表达式中的任意一个。举个例子：<code>a|b</code> 匹配 <code>a</code> 或 <code>b</code>。（没错，这和或运算 (or) 的中缀表示法一致。）</p>
+<p><strong>重复操作优先于串接操作，串接操作优先于选择操作。</strong>例如，<code>hi*</code> 能匹配 <code>hii</code> 而不能匹配 <code>hihi</code>，<code>fuc|nk</code> 能匹配 <code>fuc</code> 而不能匹配 <code>funk</code>。</p>
+<p><strong>整个表达式可以使用圆括号 (<code>(</code> &amp; <code>)</code>, parentheses) 括起来，形成一个新的子表达式 (subexpression)，其优先级比前述三种操作都更高。</strong>例如，<code>(hi)*</code> 能匹配 <code>hihi</code>，<code>fu(c|n)k</code> 能匹配 <code>funk</code>。</p>
+<p><strong>空的正则表达式匹配空字符串 ``。</strong></p>
+<h2 id="方括号表达式与字符类"><a href="#方括号表达式与字符类" class="headerlink" title="方括号表达式与字符类"></a>方括号表达式与字符类</h2><p>除了前文介绍的花括号和圆括号，还有一种常见的括号——方括号 (<code>[</code> &amp; <code>]</code>, (square) brackets)。 <strong>由方括号括起来的一系列字符叫作方括号表达式 (bracket expression)，匹配方括号内字符序列中的任意一个字符。</strong>例如，<code>[fox]</code> 匹配 <code>f</code>、<code>o</code> 或者 <code>x</code>，等价于 <code>f|o|x</code>。</p>
+<p><strong>若序列中第一个字符为脱字符 (<code>^</code>, caret)，则匹配排除序列中字符的任何字符。</strong>例如，<code>[^cat]</code> 则无法匹配 <code>c</code>、<code>a</code> 或 <code>t</code> 但能匹配 <code>d</code>、<code>0</code> 或 <code>g</code> 等等。</p>
+<p><strong>方括号内仍有特殊功能的元字符仅余用于转义的反斜杠 <code>\</code> 以及在第一位的脱字符 <code>^</code>。</strong>例如，<code>[(fu)*k]</code> 能匹配 <code>(</code>、<code>f</code>、<code>u</code>、<code>)</code>、<code>*</code> 或者 <code>k</code>。</p>
+<p><strong>在方括号表达式中，由两个字符及其之间的连字符 (<code>-</code>, hyphen) 组成的字符串叫作字符范围表达式 (range expression)，匹配在<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Character_encoding">字符集</a>中处于这两个字符之间范围的任意一个字符。</strong>还是举例子比较简单，对于一般的字符编码，<code>[a-z]</code> 匹配任意一个小写字母，<code>[0-9]</code> 匹配一位阿拉伯数字。所以，<code>[A-D]</code> 等价于 <code>[ABCD]</code> 即 <code>A|B|C|D</code>。</p>
+<p><img src="https://user-images.githubusercontent.com/11007704/61181422-df961a80-a658-11e9-869b-6fbf6a635953.png" alt="典型的 8 位编码字符集：ASCII"></p>
+<p>此外，<strong>方括号表达式中预定义了一些命名字符类 (named character class)，表示一系列特定的字符。</strong>详见下表：</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>[:lower:]</code></strong></td>
+<td><strong>小写字母字符，同 <code>[a-z]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:upper:]</code></strong></td>
+<td><strong>大写字母字符，同 <code>[A-Z]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:alpha:]</code></strong></td>
+<td><strong>字母字符，即 <code>[:lower:]</code> 和 <code>[:upper:]</code>，同 <code>[A-Za-z]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:digit:]</code></strong></td>
+<td><strong>数字字符，同 <code>[0-9]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:xdigit:]</code></strong></td>
+<td><strong>十六进制数字字符，同 <code>[A-Fa-f0-9]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:alnum:]</code></strong></td>
+<td><strong>字母和数字字符，即 <code>[:alpha:]</code> 和 <code>[:digit:]</code>，同 <code>[0-9A-Za-z]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:blank:]</code></strong></td>
+<td><strong>空白符，指空格 (space, SP) 和制表符 (horizontal tab, HT)，同 <code>[ \t]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:space:]</code></strong></td>
+<td><strong>空格符，指制表符 (HT)、换行符 (LF)、垂直制表符 (vertical tab, VT)、换页符 (form feed, FF)、回车符 (CR) 和空格 (SP)</strong></td>
+</tr>
+<tr>
+<td><strong><code>[:punct:]</code></strong></td>
+<td><strong>标点字符，有：<code>!</code> <code>&quot;</code> <code>#</code> <code>$</code> <code>%</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>*</code> <code>+</code> <code>,</code> <code>-</code> <code>.</code> <code>/</code> <code>:</code> <code>;</code> <code>&lt;</code> <code>=</code> <code>&gt;</code> <code>?</code> <code>@</code> <code>[</code> <code>\</code> <code>]</code> <code>^</code> <code>_</code> <code>&#x60;</code> <code>&#123;</code> <code>&#x7C;</code> <code>&#125;</code> <code>~</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:graph:]</code></strong></td>
+<td><strong>有形字符，即 <code>[:alnum:]</code> 和 <code>[:punct:]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>[:print:]</code></strong></td>
+<td><strong>可打印字符，即 <code>[:alnum:]</code>、<code>[:punct:]</code> 和空格 (SP)</strong></td>
+</tr>
+<tr>
+<td><strong><code>[:cntrl:]</code></strong></td>
+<td><strong>控制字符，在 ASCII 中指从十进制的 0 到 37，以及 177 (DEL)</strong></td>
+</tr>
+</tbody></table>
+<p>注意上表首列中的<strong>中括号是类名的一部分，含有命名符号类的正则表达式应该形如 <code>[[:name:]]</code>。</strong>例如，正则表达式 <code>[[:lower:]01]</code> 匹配所有小写字母，以及两个数字 <code>0</code>、<code>1</code>。</p>
+<p>这里提及一个有趣的问题：我们知道 <code>[[:digit:]]</code> 等价于 <code>[0-9]</code>，那么如何写一个等价的一般的方括号表达式以在 shell 中使用 GNU grep 匹配 <code>[:punct:]</code> 这样一个复杂的符号类？这个问题主要是将有特殊功能的字符表示为普通字符，涉及 shell 中的引号使用以及中括号内的字符顺序。答案是：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> all shells, single quote is outside the quotes</span></span><br><span class="line">grep &#x27;[][!&quot;#$%&amp;&#x27;\&#x27;&#x27;()*+,./:;&lt;=&gt;?@\^_`&#123;|&#125;~-]&#x27; file</span><br><span class="line"><span class="meta">#</span><span class="bash"> all shells, single quote is inside double quotes</span></span><br><span class="line">grep &#x27;[][!&quot;#$%&amp;&#x27;&quot;&#x27;&quot;&#x27;()*+,./:;&lt;=&gt;?@\^_`&#123;|&#125;~-]&#x27; file</span><br><span class="line"><span class="meta">#</span><span class="bash"> ksh, bash, and zsh only, does not expand variables</span></span><br><span class="line">grep $&#x27;[][!&quot;#$%&amp;\&#x27;()*+,./:;&lt;=&gt;?@\\^_`&#123;|&#125;~-]&#x27; file</span><br></pre></td></tr></table></figure>
+
+<p>我们<strong>在 shell 中通常用单引号来引用正则表达式</strong>，因为单引号最大限度地避免<a target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html">扩展</a> (expansion)，保留特殊字符的字面值 (literal value)，如 <code>$</code> 仅仅是美元符 (dollar sign) 而非变量标志。前文说方括号内的元字符并未提到方括号 (<code>[</code> &amp; <code>]</code>)，也就是说 <code>[[]</code> 匹配左方括号，<code>[]]</code> 匹配右方括号。这是没错的，虽然看起来有点不合常理的机智，因为一般而言 <code>]</code> 不是标志着这个子表达式的终结吗？——类似于「在第一位的 <code>^</code> 代表排除式内字符」的规定，特别地，<strong>方括号内在第一位的 <code>]</code> 匹配自身，而非结束方括号表达式。所以若要匹配 <code>]</code>，必须将它放在第一位；正如若要匹配 <code>^</code>，不得将它放在第一位。</strong>除此二之外，更多规则详见下表：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[.</code></td>
+<td>表示 collating symbol 的开始</td>
+</tr>
+<tr>
+<td><code>.]</code></td>
+<td>表示 collating symbol 的结束</td>
+</tr>
+<tr>
+<td><code>[=</code></td>
+<td>表示 equivalence class 的开始</td>
+</tr>
+<tr>
+<td><code>=]</code></td>
+<td>表示 equivalence class 的结束</td>
+</tr>
+<tr>
+<td><code>[:</code></td>
+<td>表示命名字符类的开始，后跟有效类名</td>
+</tr>
+<tr>
+<td><code>:]</code></td>
+<td>表示命名字符类的结束</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>表示字符范围，当在非首位且非末位时 <!-- TODO: or the ending point of a range --></td>
+</tr>
+</tbody></table>
+<h2 id="匹配空串的特殊表达式"><a href="#匹配空串的特殊表达式" class="headerlink" title="匹配空串的特殊表达式"></a>匹配空串的特殊表达式</h2><p>反斜杠符 <code>\</code> 作为转义字符（港台称「跳脫字元」），后跟一些特定的字符，表示一些特殊的模式匹配。</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>\b</code></strong></td>
+<td><strong>匹配单词边缘的空字符串</strong></td>
+</tr>
+<tr>
+<td><strong><code>\B</code></strong></td>
+<td><strong>匹配非单词边缘的空字符串</strong></td>
+</tr>
+<tr>
+<td><strong><code>\&lt;</code></strong></td>
+<td><strong>匹配单词开头位置的空字符串</strong></td>
+</tr>
+<tr>
+<td><strong><code>\&gt;</code></strong></td>
+<td><strong>匹配单词末尾位置的空字符串</strong></td>
+</tr>
+<tr>
+<td><strong><code>\w</code></strong></td>
+<td><strong>匹配单词成分，等价于 <code>[_[:alnum:]]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>\W</code></strong></td>
+<td><strong>匹配非单词成分，等价于 <code>[^_[:alnum:]]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>\s</code></strong></td>
+<td><strong>匹配空白符，等价于 <code>[[:space:]]</code></strong></td>
+</tr>
+<tr>
+<td><strong><code>\S</code></strong></td>
+<td><strong>匹配非空白符，等价于 <code>[^[:space:]]</code></strong></td>
+</tr>
+</tbody></table>
+<p>其中「单词边缘」？「空字符串」？不太好理解。</p>
+<p>举个例子，字符串 <code>self-censorship</code> 的每对相邻字符 (eg. <code>s</code> <code>e</code>)之间以及第一个 <code>s</code> 的左边、末尾 <code>p</code> 的右边的位置上，可以看作存在一个（或任意个）「空字符串」``。</p>
+<p>那么位于第一个 <code>s</code> 和 <code>c</code> 的左边、<code>f</code> 和 <code>p</code> 的右边，也就是「单词边缘」的位置上的那个空串，能够由 <code>\b</code> 匹配。于是 <code>\bs.</code> 能匹配该串中的 <code>se</code> 而不匹配 <code>so</code> 或 <code>sh</code>。所谓单词边缘就是指一个其左右两个字符一个属于单词成分 (<code>\w</code>)、一个不属于单词成分的位置。于是不难理解 <code>\B</code>、<code>\&lt;</code> 和 <code>\&gt;</code> 应匹配什么位置的空串。</p>
+<p><strong>匹配特定空串实际上就是匹配位置。</strong></p>
+<p><strong>脱字符 <code>^</code> 匹配行首的空串，美元符 <code>$</code> 匹配行末的空串。</strong>这两个字符被称为**锚 (anchor)**，因为它们分别被锚定到行首和行末。例如，一文本文件有如下字符：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Hip-Hop</span></span><br></pre></td></tr></table></figure>
+
+<p>则 <code>^H.p</code> 匹配该行内的 <code>Hip</code>，<code>H.p$</code> 匹配该行内的 <code>Hop</code>。</p>
+<h2 id="反向引用与子表达式"><a href="#反向引用与子表达式" class="headerlink" title="反向引用与子表达式"></a>反向引用与子表达式</h2><p><strong>反向引用 (back-reference) 的语法为 <code>\n</code>，其中 <code>n</code> 是一位数字。<code>\n</code> 引用了正则表达式中第 n 个由圆括号形成的子表达式 (parenthesized subexpression)。</strong>例如，<code>(f)\1</code> 相当于 <code>(f)(f)</code>，匹配 <code>ff</code>。</p>
+<p><strong>当被引用的子表达式被用于选择操作 (<code>|</code>) 中，假如该子表达式所在的部分不参与匹配，则整个匹配失败。</strong>例如，<code>a(.)|b\1</code> 无法匹配 <code>ba</code>。GNU grep 给出的错误是「Invalid back reference」。</p>
+<p>当有多个正则表达式进行匹配（比如 grep 使用 <code>-e &lt;PATTERN&gt;</code> 或 <code>-f &lt;FILE&gt;</code> 参数）时，向后引用的编号 (n) 是对于每一个正则表达式而言的。</p>
+<hr>
+<p>以上是「正则表达式」的基本内容。</p>
+<p>📖 <strong>[Ref]</strong> <a target="_blank" rel="noopener" href="https://www.gnu.org/software/grep/manual/grep.html#Regular-Expressions">GNU grep docs</a></p>
+<!-- **[More]** [《grep、sed 和 awk 的简明指南》](https://blog.gadflysu.com/tool/guide-to-grep-sed-and-awk/) -->
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/general/regular-expression/">https://blog.gadflysu.com/general/regular-expression/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2019-07-12");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-07-11T16:00:00.000Z" itemprop="datePublished">07/12/2019</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/general/'>general</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/string/" rel="tag">#&nbsp;string</a>
+
+<a class="post-tags-list-item" href="/tags/pattern-matching/" rel="tag">#&nbsp;pattern matching</a>
+
+<a class="post-tags-list-item" href="/tags/grep/" rel="tag">#&nbsp;grep</a>
+
+<a class="post-tags-list-item" href="/tags/sed/" rel="tag">#&nbsp;sed</a>
+
+<a class="post-tags-list-item" href="/tags/awk/" rel="tag">#&nbsp;awk</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/life/boc-mastercard-visa-debit-card/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">中国银行「长城跨境通国际借记卡」体验</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/database/mariadb-on-ubuntu/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">在 Ubuntu 安装与配置 MariaDB</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/general/regular-expression/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/general/regular-expression/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Visitors</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
+    </body>
+
+</html>

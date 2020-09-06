@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>现在开始使用 Ubuntu 20.04 | blog / gadflysu</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.5"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
+
+
+
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="现在开始使用 Ubuntu 20.04 | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/linux/ubuntu-primer/"><meta property="og:locale" content="en"><meta name="description" content="上一次对主力操作系统的改动是从 Ubuntu 16.04 直接升级到 18.04，多年运行的系统至今已经累积了许多冗余文件，所以最近 Ubuntu 20.04 发布，我决定在新的硬盘分区从零开始安装配置。 之前意识到系统性能瓶颈也许不在内存而在硬盘读写，已经对残留的 Windows 所在硬盘进行了清理，腾出一定的空间就用来装新的 Ubuntu，了结我将系统硬盘从缓慢的 HDD 换到 SSD 的心愿 - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="ubuntu, cheat sheet, share, blog"><meta property="article:published_time" content="2020-05-14T16:00:00.000Z"><meta property="article:modified_time" content="2020-09-06T17:56:43.959Z"><meta property="og:updated_time" content="2020-09-06T17:56:43.959Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="ubuntu, cheat sheet, share, blog"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/linux/ubuntu-primer/">
+
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-56TDLFX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-56TDLFX');
+</script>
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.gadflysu.com/linux/ubuntu-primer/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.gadflysu.com/img/icon-192.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.gadflysu.com/linux/ubuntu-primer/"
+    },
+    "headline": "现在开始使用 Ubuntu 20.04 | blog / gadflysu",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.gadflysu.com/img/icon-192.png"
+    },
+    
+    "datePublished": "2020-05-14T16:00:00.000Z",
+    "dateModified": "2020-09-06T17:56:43.959Z",
+    "author": {
+        "@type": "Person",
+        "name": "gadflysu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/avatar.png"
+        },
+        "description": "<b>希望與熱烈的風</b>,<em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "blog / gadflysu",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/icon-192.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.gadflysu.com/search/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "ubuntu, cheat sheet, share, blog",
+    "description": "上一次对主力操作系统的改动是从 Ubuntu 16.04 直接升级到 18.04，多年运行的系统至今已经累积了许多冗余文件，所以最近 Ubuntu 20.04 发布，我决定在新的硬盘分区从零开始安装配置。 之前意识到系统性能瓶颈也许不在内存而在硬盘读写，已经对残留的 Windows 所在硬盘进行了清理，腾出一定的空间就用来装新的 Ubuntu，了结我将系统硬盘从缓慢的 HDD 换到 SSD 的心愿 - gadflysu - blog / gadflysu"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+    
+        <a href="/archives/" class="navbar-link">📦 Archive</a>
+    
+    
+        <a href="/search/" class="navbar-link">🔍 Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">🏷 Tags</a>
+    
+        <a href="/donate/" class="navbar-link">💰 Donate</a>
+    
+        <a href="/ref/" class="navbar-link">🎭 Referral</a>
+    
+        <a href="/links/" class="navbar-link">🔗 Links</a>
+    
+        <a href="/about/" class="navbar-link">ℹ️ About</a>
+    
+        <a href="/changelog/" class="navbar-link">📈 Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">💌 Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=现在开始使用 Ubuntu 20.04" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=现在开始使用 Ubuntu 20.04" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB1klEQVR42u3byW6EQAxFUf7/pzurSK0I+10jFuBcNpkYTktFVXnI8XngcYgSJUrUCepojt+/V+d2v0vX/r1G1C7U6aALN67O767tniNqH4oM8ASvXgD8HFH/AnX2oGowd4NblKjJpFqhupdB1H4UufnZgK82cFc+hKg9KBI43PH19mhG1CNRMekAJlWy8N6adRH1aBTZ9FcTZjeAJ3BRu1BdQqw6h2zeUtDRbvJEvR5FEmRpoHcfsAsaRO1DVTedJMe6hXoURIhagSKLMd0MVt/TJIqoHSiCoMXFtIinAS9qB6pLkKWAgAQKk0SvqF2otFimRbYLPtLPovahrhYhSeA52hSKWoOaFB5Jo00qFpQviqgVqGmBJ024NDg9XeBFrUHR4JM8PL0MXfOgqB2oNOHRm6KHTpP7ol6JSk3HFJoGN5p4Ra1AkYmSFiGvNFmI2olCRefQwDxJfODKqKhXouiApoN41BgoaiWKTqIkSE1BRJeEFbUHRQMGdNPQwHMpQhb1StSkmE3RlwqXolah0iJLG7tIoj8WjEStRpHmGdIM3S3qokTRf64gDRK3DXRRj0PR4hBJXHSJk655WtQe1HjhhA/qGnfigizqtagnHaJEiRL1dfwAotyPPjjHIIcAAAAASUVORK5CYII=" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">📑 RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">现在开始使用 Ubuntu 20.04</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>05/15/2020</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/linux/">linux</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=现在开始使用 Ubuntu 20.04&url=https://blog.gadflysu.com/linux/ubuntu-primer/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/linux/ubuntu-primer/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/linux/ubuntu-primer/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/linux/ubuntu-primer/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB1klEQVR42u3byW6EQAxFUf7/pzurSK0I+10jFuBcNpkYTktFVXnI8XngcYgSJUrUCepojt+/V+d2v0vX/r1G1C7U6aALN67O767tniNqH4oM8ASvXgD8HFH/AnX2oGowd4NblKjJpFqhupdB1H4UufnZgK82cFc+hKg9KBI43PH19mhG1CNRMekAJlWy8N6adRH1aBTZ9FcTZjeAJ3BRu1BdQqw6h2zeUtDRbvJEvR5FEmRpoHcfsAsaRO1DVTedJMe6hXoURIhagSKLMd0MVt/TJIqoHSiCoMXFtIinAS9qB6pLkKWAgAQKk0SvqF2otFimRbYLPtLPovahrhYhSeA52hSKWoOaFB5Jo00qFpQviqgVqGmBJ024NDg9XeBFrUHR4JM8PL0MXfOgqB2oNOHRm6KHTpP7ol6JSk3HFJoGN5p4Ra1AkYmSFiGvNFmI2olCRefQwDxJfODKqKhXouiApoN41BgoaiWKTqIkSE1BRJeEFbUHRQMGdNPQwHMpQhb1StSkmE3RlwqXolah0iJLG7tIoj8WjEStRpHmGdIM3S3qokTRf64gDRK3DXRRj0PR4hBJXHSJk655WtQe1HjhhA/qGnfigizqtagnHaJEiRL1dfwAotyPPjjHIIcAAAAASUVORK5CYII=" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="post-toc-number">1.</span> <span class="post-toc-text">开始</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="post-toc-number">2.</span> <span class="post-toc-text">网络配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Shadowsocks"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Shadowsocks</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Privoxy"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Privoxy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ProxyChains-NG"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">ProxyChains-NG</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">软件源</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83"><span class="post-toc-number">3.</span> <span class="post-toc-text">语言环境</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5%E6%B3%95"><span class="post-toc-number">4.</span> <span class="post-toc-text">输入法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E5%88%86%E5%8C%BA"><span class="post-toc-number">5.</span> <span class="post-toc-text">自动挂载分区</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A4%96%E8%A7%82"><span class="post-toc-number">6.</span> <span class="post-toc-text">外观</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B8%B8%E7%94%A8-GUI-%E5%BA%94%E7%94%A8"><span class="post-toc-number">7.</span> <span class="post-toc-text">常用 GUI 应用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B8%B8%E7%94%A8-CLI-%E5%BA%94%E7%94%A8"><span class="post-toc-number">8.</span> <span class="post-toc-text">常用 CLI 应用</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>上一次对主力操作系统的改动是从 Ubuntu 16.04 直接升级到 18.04，多年运行的系统至今已经累积了许多冗余文件，所以最近 <a target="_blank" rel="noopener" href="https://ubuntu.com/blog/ubuntu-20-04-lts-arrives">Ubuntu 20.04 发布</a>，我决定在新的硬盘分区从零开始安装配置。</p>
+<p>之前意识到系统性能瓶颈也许不在<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Random-access_memory">内存</a>而在硬盘读写，已经对残留的 Windows 所在硬盘进行了<a href="https://blog.gadflysu.com/post/windows-disk-cleanup/">清理</a>，腾出一定的空间就用来装新的 Ubuntu，了结我将系统硬盘从缓慢的 HDD 换到 SSD 的心愿。</p>
+<p>这是一次系统迁移的实践。得益于 Ubuntu/Debian 的丰富生态，整个过程相当顺利，基本还原我之前的工作环境。</p>
+<p>本文分享在常规安装并进入 Ubuntu Desktop 20.04 之后对工作环境的配置，包括但不限于安装常用软件、同步原有／建议配置等，力求美观与高效，前者令我这样审美偏执的人心情愉悦，后者可以加速我的日常工作。本文是系统初始配置的小抄 (cheat sheet)，相当的篇幅是软件分享，没有技术含量。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>首次进入系统的向导窗口将引导我配置 Livepatch，Livepatch 用于减少因安全更新的系统重启，跟随进行即可，期间需要登录 Ubuntu 账号。</p>
+<p>打开蓝牙设置，连接无线键盘。</p>
+<p>系统预装的软件包从发布至今可能已经有包括安全修补在内的更新，执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br><span class="line">sudo apt autoremove</span><br></pre></td></tr></table></figure>
+
+<p>注意刚开机时 Software Updater 可能会占用 <code>/var/lib/apt/lists/</code>，更新无法进行，稍等即可。</p>
+<p>安装必要 CLI 软件以便之后的操作：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install vim curl htop</span><br></pre></td></tr></table></figure>
+
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><p>网络配置是包括 Android 在内的几乎所有操作系统初次启动时的必需步骤，特别是在网路审查普遍的地区。这里不是指网络接口驱动之类的事情，这部分 Ubuntu 已经做到开箱即用；而是指因当地网络策略限制，为了连接国际互联网而不得不进行的网络连接配置。本文以 Shadowsocks 为例，对此仅作简述。</p>
+<h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p><a target="_blank" rel="noopener" href="https://shadowsocks.org/">Shadowsocks</a> 是著名的 SOCKS5 代理，这里使用 <a target="_blank" rel="noopener" href="https://github.com/shadowsocks/shadowsocks-libev">shadowsocks-libev</a>。安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install shadowsocks-libev</span><br></pre></td></tr></table></figure>
+
+<p>停止默认的 <code>ss-server</code> 服务并禁用开机自启：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop --now shadowsocks-libev.service</span><br></pre></td></tr></table></figure>
+
+<p>从网络服务提供者获取配置，写入 <code>/etc/shadowsocks-libev/client.json</code>，运行 <code>ss-local</code> 服务并启用开机自启：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start --now shadowsocks-libev-local@client.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="Privoxy"><a href="#Privoxy" class="headerlink" title="Privoxy"></a>Privoxy</h3><p>有些应用程序仅支持 HTTP 代理，这里利用 <a target="_blank" rel="noopener" href="https://www.privoxy.org/">Privoxy</a> 将 SOCKS5 转为 HTTP。安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install privoxy</span><br></pre></td></tr></table></figure>
+
+<p>编辑配置 <code>/etc/privoxy/config</code>，在第 5.2 节加入下行：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forward-socks5  /   <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">1082</span> .</span><br></pre></td></tr></table></figure>
+
+<p>其中「1082」是我的 Shadowsocks 本地端口。重启服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart privoxy.service</span><br></pre></td></tr></table></figure>
+
+<p>至此 HTTP 代理运行在本地 8118 端口，详见配置第 4.1 节。</p>
+<h3 id="ProxyChains-NG"><a href="#ProxyChains-NG" class="headerlink" title="ProxyChains-NG"></a>ProxyChains-NG</h3><p>我没有配置系统全局代理，这里使用 <a target="_blank" rel="noopener" href="https://github.com/rofl0r/proxychains-ng">ProxyChains-NG</a> 在命令行程序运行时将网络连接重定向以通过 SOCKS5 代理。安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install proxychains4</span><br></pre></td></tr></table></figure>
+
+<p>编辑配置 <code>/etc/proxychains4.conf</code>，加入下行：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> <span class="number">1082</span></span><br></pre></td></tr></table></figure>
+
+<p>其中「1082」是我的 Shadowsocks 本地端口。</p>
+<p>为方便使用，设置命令别名：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;alias pc=&#x27;proxychains -q&#x27;&quot; &gt;&gt; ~/.bash_aliases</span><br></pre></td></tr></table></figure>
+
+<p>或者手动在其他配置文件如 <code>~/.bashrc</code> 中编辑。</p>
+<p>以后若要通过代理执行命令，直接在前面加上 <code>pc</code> 即可，如查看自己 代理 IP：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pc curl ip.sb</span><br></pre></td></tr></table></figure>
+
+<h3 id="软件源"><a href="#软件源" class="headerlink" title="软件源"></a>软件源</h3><p>打开 Software &amp; Updates，修改软件源服务器到国内镜像或者代理服务器所在地。如果和我一样选择后者，接下来为 APT 设置代理，执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf &#x27;acquire &#123;\n  http::proxy  &quot;http://127.0.0.1:8118&quot;;\n  https::proxy &quot;http://127.0.0.1:8118&quot;;\n&#125;\n&#x27; | sudo tee /etc/apt/apt.conf.d/proxy</span><br></pre></td></tr></table></figure>
+
+<h2 id="语言环境"><a href="#语言环境" class="headerlink" title="语言环境"></a>语言环境</h2><p>由于我在安装系统时将时区设定为台湾，执行 <code>locale</code> 可以看到系统的一些语言配置被自动设定为 <code>lzh_TW</code>。最明显的表现是系统各处的日期和时间显示均为中文，为了修改为英文，执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-locale LC_TIME=&quot;en_US.UTF-8&quot; LC_NUMERIC=&quot;en_US.UTF-8&quot; LC_MONETARY=&quot;en_US.UTF-8&quot; LC_PAPER=&quot;en_US.UTF-8&quot; LC_NAME=&quot;en_US.UTF-8&quot; LC_ADDRESS=&quot;en_US.UTF-8&quot; LC_TELEPHONE=&quot;en_US.UTF-8&quot; LC_MEASUREMENT=&quot;en_US.UTF-8&quot; LC_IDENTIFICATION=&quot;en_US.UTF-8&quot;</span><br></pre></td></tr></table></figure>
+
+<p>登出后重新登入生效。</p>
+<h2 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h2><p>之前一直用 Fcitx，原来 Ubuntu 预置的是 IBus，现在开始体验。这里安装支持 IBus 的<a target="_blank" rel="noopener" href="https://rime.im/">中州韻輸入法引擎</a>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ibus-rime</span><br></pre></td></tr></table></figure>
+
+<p>启用 RIME 引擎：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibus engine rime</span><br></pre></td></tr></table></figure>
+
+<p>在使用一段时间之后，发现有时有切换引擎失败的问题。执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibus-daemon &amp;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="自动挂载分区"><a href="#自动挂载分区" class="headerlink" title="自动挂载分区"></a>自动挂载分区</h2><p>我有一个常用的外置硬盘，所以这一步必不可少。</p>
+<p>查看分区 UUID：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo blkid</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>/etc/fstab</code>。注意选项 (<code>&lt;options&gt;</code>) 部分写 <code>defaults,uid=1000,gid=1000</code>。</p>
+<h2 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h2><p>主题和图标选择 Vimix，一款 Material Design 风格的主题。安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/vinceliuice/vimix-gtk-themes</span><br><span class="line">mkdir ~/.local/share/themes -p</span><br><span class="line">./install.sh -d ~/.local/share/themes -c standard light -s laptop</span><br></pre></td></tr></table></figure>
+
+<p>需要通过 Tweaks 来选择主题。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-tweaks</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://t.me/sudo_cast/563">最容易影响观感的真是字体。</a></p>
+</blockquote>
+<p>下列字体下载后解压到 <code>~/.local/share/fonts</code>，执行 <code>fc-cache -f -v</code>。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ipproductions/steveOS/tree/master/steveOS%20(Fonts)">San Francisco</a></li>
+</ul>
+<h2 id="常用-GUI-应用"><a href="#常用-GUI-应用" class="headerlink" title="常用 GUI 应用"></a>常用 GUI 应用</h2><p><strong>Sublime Text 3</strong>：</p>
+<p>我认为 <a target="_blank" rel="noopener" href="https://www.sublimetext.com/">Sublime Text 3</a> 是最好用的文本编辑器。根据官网<a target="_blank" rel="noopener" href="https://www.sublimetext.com/docs/3/linux_repositories.html">说明</a>进行安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -</span><br><span class="line">sudo apt-get install apt-transport-https</span><br><span class="line">echo &quot;deb https://download.sublimetext.com/ apt/stable/&quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sublime-text</span><br></pre></td></tr></table></figure>
+
+<p>从首选项 (Preferences) 菜单进入【Settings】，编辑配置。</p>
+<p>与其他文本编辑器类似，Sublime Text 3 也拥有丰富的包 (package)，作为插件或扩展。</p>
+<p>首先安装包管理器 <strong>Package Control</strong>。根据<a target="_blank" rel="noopener" href="https://packagecontrol.io/installation">官网说明</a>，按下【Ctrl + Shift + P】唤出命令面板 (Command Palette)，输入 <code>Install Package Control</code> 并按下【Enter】以确认；或者从工具 (Tools) 菜单中选择【Install Package Control…】。由于当地网络政策，上述步骤可能并不顺利，可以重复尝试，或者通过环境变量设置代理。</p>
+<p>然后为 Package Control 设置代理（可选）。根据<a target="_blank" rel="noopener" href="https://packagecontrol.io/docs/settings">官网说明</a>，从首选项 (Preferences) 菜单进入【Package Settings】→【Package Control】→【Settings – User】，编辑用户配置文件，添加下列行：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;http_proxy&quot;: &quot;host:port&quot;,</span><br><span class="line">&quot;https_proxy&quot;: &quot;host:port&quot;,</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>host</code>、<code>port</code> 根据实际情况调整（如 <code>127.0.0.1:8118</code>），注意 JSON 格式。</p>
+<p>我选择 Material Design 风格的主题 <a target="_blank" rel="noopener" href="https://github.com/equinusocio/material-theme">Material Theme</a>。根据<a target="_blank" rel="noopener" href="https://github.com/equinusocio/material-theme/blob/master/README.md">文档</a>，按下【Ctrl + Shift + P】唤出命令面板 (Command Palette)，输入 <code>Package Control: Install Package</code> 并按下【Enter】以确认，这是安装包的一般步骤。然后搜索 <code>Material Theme</code>，选择开发者 ID 为 <code>equinusocio</code> 的那个，按下【Enter】来安装。安装过程会提示是否安装作为依赖的另一个包 <code>A File Icon</code>，点击【Install】即可。</p>
+<p>激活主题。唤出命令面板并输入 <code>Material Theme: Activate theme</code>。</p>
+<p>自定义配置。从首选项 (Preferences) 菜单进入【Settings】，编辑用户配置文件，添加下列行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;font_options&quot;: [&quot;gray_antialias&quot;],</span><br><span class="line">&quot;always_show_minimap_viewport&quot;: true,</span><br><span class="line">&quot;bold_folder_labels&quot;: true,</span><br><span class="line">&quot;overlay_scroll_bars&quot;: &quot;enabled&quot;,</span><br><span class="line">&quot;material_theme_accent_cyan&quot;: true,</span><br><span class="line">&quot;material_theme_arrow_folders&quot;: true,</span><br><span class="line">&quot;material_theme_compact_panel&quot;: true,</span><br><span class="line">&quot;material_theme_compact_sidebar&quot;: true,</span><br><span class="line">&quot;material_theme_contrast_mode&quot;: true,</span><br><span class="line">&quot;material_theme_panel_separator&quot;: true,</span><br><span class="line">&quot;material_theme_small_statusbar&quot;: true,</span><br><span class="line">&quot;material_theme_small_tab&quot;: true,</span><br><span class="line">&quot;material_theme_tabs_separator&quot;: true,</span><br><span class="line">&quot;material_theme_titlebar&quot;: true,</span><br></pre></td></tr></table></figure>
+
+<p>其他包：</p>
+<ul>
+<li><code>PackageResourceViewer</code>：查看和编辑包资源文件。</li>
+<li><code>CoolFormat</code>：代码格式化工具。</li>
+<li><code>Carbon</code>：<a target="_blank" rel="noopener" href="https://carbon.now.sh/">Carbon</a> 用于分享代码段的图片。</li>
+</ul>
+<p><strong>Typora</strong>：</p>
+<p>我认为 <a target="_blank" rel="noopener" href="https://typora.io/">Typora</a> 是最好用的 Markdown 编辑器。根据官网<a target="_blank" rel="noopener" href="https://typora.io/#linux">说明</a>进行安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository &#x27;deb https://typora.io/linux ./&#x27;</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install typora</span><br></pre></td></tr></table></figure>
+
+<p><strong>CopyQ</strong>：</p>
+<p>剪贴板历史管理是【Ctrl + C/V】的绝配。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install copyq</span><br></pre></td></tr></table></figure>
+
+<p>到首选项 (Preference) 中设定开机自启 (Autostart)，设定显示主窗口的快捷键，比如【Shift + F3】。</p>
+<p><strong>Synapse</strong>：</p>
+<p>按下【Ctrl + Space】来唤出启动器，快速搜索或启动应用，以及其他插件。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install synapse</span><br></pre></td></tr></table></figure>
+
+<p>到首选项 (Preference) 中设定开机自启 (Startup on login)，设定主题为「Virgilio」。</p>
+<p><strong>Plank</strong>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install plank</span><br></pre></td></tr></table></figure>
+
+<p>到首选项 (Preference) 中设定主题为「GTK+」，适当设定【Icon Zoom】。</p>
+<p>到 Startup Applications 中添加新项以设定开机自启，名字 (Name) 任意，命令 (Command) 为 <code>plank</code>。</p>
+<p><strong>Conky</strong>：</p>
+<p>桌面展示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install conky</span><br></pre></td></tr></table></figure>
+
+<p>到 Startup Applications 中添加新项以设定开机自启，名字 (Name) 任意，命令 (Command) 为 <code>conky -d</code>。</p>
+<p>顶栏 (panel) 展示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install indicator-multiload</span><br></pre></td></tr></table></figure>
+
+<p>到首选项 (Preference) 中设定【Indicator items…】，添加新项 <code>🔥 $(size(mem.user)) ⬇️ $(speed(net.down)) ⬆️ $(speed(net.up))</code>，然后到顶栏曲线图处使用鼠标滚轮切换到该项显示。</p>
+<p><strong>Flameshot</strong>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install flameshot</span><br></pre></td></tr></table></figure>
+
+<p>到配置选项 (Configuration) 中设定开机自启 (Launch at startup)。</p>
+<p>到系统键盘设定中，添加新的自定义快捷键，比如【Ctrl + Shift + Alt + P】，名字 (Name) 任意，命令 (Command) 为 <code>flameshot gui</code>。</p>
+<p><strong>Kazam</strong>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install kazam</span><br></pre></td></tr></table></figure>
+
+<p><strong>GNOME sushi</strong>：</p>
+<p>文件快捷预览工具。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-sushi</span><br></pre></td></tr></table></figure>
+
+<p>在文件管理器 (Nautilus) 中，按下空格即可对选中文件进行快速预览。</p>
+<p><strong>Nautilus Image Converter</strong>：</p>
+<p>在文件浏览器中快捷调整图片尺寸的工具。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nautilus-image-converter</span><br></pre></td></tr></table></figure>
+
+<p>对图片的右键菜单中可以快速调整图片大小 (resize images)。</p>
+<p><strong>Dconf Editor</strong>：</p>
+<p>DConf 是用于存储桌面环境设定的底层键值对数据库，这里安装一个 GUI 编辑器。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install dconf-editor</span><br></pre></td></tr></table></figure>
+
+<p><strong>Compiz Config Settings Manager</strong>：</p>
+<p>Compiz 是窗口管理器，这里安装一个 GUI 设定管理。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install compizconfig-settings-manager</span><br></pre></td></tr></table></figure>
+
+<p><strong>Telegram</strong>：</p>
+<p>我认为 <a target="_blank" rel="noopener" href="https://telegram.org/">Telegram</a> 是世界上最好用的即时通讯工具。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install telegram-desktop</span><br></pre></td></tr></table></figure>
+
+<p><strong>Meld</strong>：</p>
+<p>Meld 是著名的图形对比 (diff) 与合并 (merge) 工具，支持对比文件和文件夹。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install meld</span><br></pre></td></tr></table></figure>
+
+<p><strong>qBittorrent</strong>：</p>
+<p>我认为 <a target="_blank" rel="noopener" href="https://github.com/qbittorrent/qBittorrent">qBittorrent</a> 是最好用的 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/BitTorrent">BitTorrent</a> 图形客户端。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install qbittorrent -y</span><br></pre></td></tr></table></figure>
+
+<p>按照 <a target="_blank" rel="noopener" href="https://github.com/qbittorrent/qBittorrent/wiki/Frequently-Asked-Questions#where-does-qbittorrent-save-its-settings">Wiki</a> 描述迁移程序设定和种子等数据，将 <code>~/.config/qBittorrent/</code> 和 <code>~/.local/share/data/qBittorrent/</code> 两个文件夹复制到相应位置。</p>
+<p><strong>Thunderbird</strong>：</p>
+<p><a target="_blank" rel="noopener" href="https://www.thunderbird.net/">Thunderbird</a> 是 Mozilla 名下开源的电子邮件、新闻、RSS 和聊天客户端。在适应一段时间之后，我认为 Thunderbird 非常可靠。</p>
+<p>Ubuntu 系统预置 Thunderbird。按照文档 <a target="_blank" rel="noopener" href="https://support.mozilla.org/en-US/kb/profiles-where-thunderbird-stores-user-data">“Profiles”</a> 或 <a target="_blank" rel="noopener" href="https://support.mozilla.org/en-US/kb/moving-thunderbird-data-to-a-new-computer">“Moving Thunderbird Data to a New Computer”</a> 迁移个人数据 (<code>~/.thunderbird/xxxxxxxx.default/</code>) 或全部应用数据 (<code>~/.thunderbird/</code>)。</p>
+<p><strong>KeePassXC</strong>：</p>
+<p>KeePassXC 是密码管理器的不二之选。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install keepassxc</span><br></pre></td></tr></table></figure>
+
+<p>到设定 (Settings) 中启用【Show a system tray icon】。</p>
+<p><strong>云存储</strong>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Dropbox</span></span><br><span class="line">sudo apt install nautilus-dropbox</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> MEGA</span></span><br><span class="line">wget https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/nautilus-megasync-xUbuntu_20.04_amd64.deb</span><br><span class="line">sudo dpkg -i megasync-xUbuntu_20.04_amd64.deb nautilus-megasync-xUbuntu_20.04_amd64.deb</span><br><span class="line">sudo apt install -f</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">坚果云</span></span><br><span class="line">wget https://www.jianguoyun.com/static/exe/installer/ubuntu/nautilus_nutstore_amd64.deb</span><br><span class="line">sudo dpkg -i nautilus_nutstore_amd64.deb</span><br><span class="line">sudo apt-get install -f</span><br></pre></td></tr></table></figure>
+
+<p><strong>网易云音乐</strong>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb</span><br><span class="line">sudo dpkg -i netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb</span><br></pre></td></tr></table></figure>
+
+<p><strong>QQ</strong>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/wszqkzqk/deepin-wine-ubuntu</span><br><span class="line">cd deepin-wine-ubuntu</span><br><span class="line">./install.sh</span><br><span class="line">sudo apt install fonts-wqy-microhei fonts-wqy-zenhei</span><br><span class="line">wget http://packages.deepin.com/deepin/pool/non-free/d/deepin.com.qq.im/deepin.com.qq.im_9.1.8deepin0_i386.deb</span><br><span class="line">sudo dpkg -i deepin.com.qq.im_9.1.8deepin0_i386.deb</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用-CLI-应用"><a href="#常用-CLI-应用" class="headerlink" title="常用 CLI 应用"></a>常用 CLI 应用</h2><p><strong>oathtool</strong>：</p>
+<p>基于时间的一次性密码 (TOTP) 的命令行工具。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install oathtool</span><br></pre></td></tr></table></figure>
+
+<p>在妥善、谨慎地保存密钥 (key) 文件的前提下，获取一次性密码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat KEY_FILE | xargs oathtool --totp -b -d 6 -w 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>Neofetch</strong>：</p>
+<p>显示系统基本信息。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install neofetch</span><br></pre></td></tr></table></figure>
+
+<p><strong>trash-cli</strong>：</p>
+<p><code>trash-cli</code> 是命令行的回收站工具，与图形环境兼容 (FreeDesktop.org)，支持记录文件名、原路径、删除日期和权限。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install trash-cli</span><br></pre></td></tr></table></figure>
+
+<p><strong>Google Chrome</strong>：</p>
+<p>从<a target="_blank" rel="noopener" href="https://www.google.com/chrome">官网</a>下载对应版本 (deb) 的包，然后安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i google-chrome-stable_*.deb</span><br><span class="line">sudo apt install -f</span><br></pre></td></tr></table></figure>
+
+<p>安装过程 Google Chrome 会自动配置软件源，以后使用 APT 更新即可。但在第一次执行 <code>apt update</code> 时，如果遇到无法验证签名的错误：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">W: GPG error: http://dl.google.com/linux/chrome/deb stable InRelease: The following signatures couldn&#x27;t be verified because the public key is not available: NO_PUBKEY 78BD65473CB3BD13</span><br><span class="line">E: The repository &#x27;http://dl.google.com/linux/chrome/deb stable InRelease&#x27; is not signed.</span><br></pre></td></tr></table></figure>
+
+<p>根据 <a target="_blank" rel="noopener" href="https://www.google.com/linuxrepositories/">Google Linux Software Repositories</a> 说明，执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+
+<p><strong>Chromium</strong>：</p>
+<p>大概是从 Ubuntu 19.10 开始，<code>chromium-browser</code> 成为一个过渡包，直接执行 <code>apt install chromium-browser</code> 会自动从 Snap 安装 Chromium 浏览器。Snap 版本的 Chromium 在读写其他分区的文件时存在不便。总之 Snap 并不讨喜。好在上游 Debian 10 的软件源仍在编译 Chromium，利用这一点，我们可以仍然从 APT 安装 Chromium。</p>
+<p>如果已经从 Snap 安装 Chromium，那么先卸载：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">snap remove chromium</span><br><span class="line">sudo apt remove chromium-browser</span><br></pre></td></tr></table></figure>
+
+<p>如果同时安装了 <code>chromium-chromedriver</code>、<code>chromium-browser-l10n</code>、<code>chromium-codecs-ffmpeg-extra</code> 等包，相应执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove chromium-chromedriver chromium-browser-l10n chromium-codecs-ffmpeg-extra</span><br></pre></td></tr></table></figure>
+
+<p>添加 Debian Stable 源。新建并编辑 <code>/etc/apt/sources.list.d/debian-stable.list</code>：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Debian stable</span></span><br><span class="line">deb http:<span class="regexp">//</span>ftp.debian.org<span class="regexp">/debian/</span> stable main</span><br><span class="line"><span class="comment"># deb-src http://ftp.debian.org/debian/ stable main</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Debian updates (previously known as &#x27;volatile&#x27;)</span></span><br><span class="line">deb http:<span class="regexp">//</span>ftp.debian.org<span class="regexp">/debian/</span> stable-updates main</span><br><span class="line"><span class="comment"># deb-src http://ftp.debian.org/debian/ stable-updates main</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Debian security updates</span></span><br><span class="line">deb http:<span class="regexp">//</span>security.debian.org<span class="regexp">/ stable/u</span>pdates main</span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian-security buster/updates main</span></span><br><span class="line"><span class="comment"># deb-src http://security.debian.org/ stable/updates main</span></span><br></pre></td></tr></table></figure>
+
+<p>获取并添加 Debian 公钥：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install debian-archive-keyring</span><br><span class="line">sudo apt-key add /usr/share/keyrings/debian-archive-keyring.gpg</span><br></pre></td></tr></table></figure>
+
+<p>根据 <a target="_blank" rel="noopener" href="https://manpages.debian.org/buster/apt/apt_preferences.5.en.html">APT 文档</a>，设定软件源优先级策略。新建并编辑 <code>/etc/apt/preferences.d/debian-chromium</code>：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Explanation:</span> Prevent installing from debian repo.</span><br><span class="line"><span class="attr">Package:</span> *</span><br><span class="line"><span class="attr">Pin:</span> origin <span class="string">&quot;*.debian.org&quot;</span></span><br><span class="line">Pin-<span class="attr">Priority:</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Explanation:</span> Allow installing chromium from debian repo.</span><br><span class="line"><span class="attr">Package:</span> chromium*</span><br><span class="line"><span class="attr">Pin:</span> origin <span class="string">&quot;*.debian.org&quot;</span></span><br><span class="line">Pin-<span class="attr">Priority:</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<p>检查策略：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">apt-cache policy chromium linux-base</span><br></pre></td></tr></table></figure>
+
+<p>安装 Chromium：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install chromium chromium-l10n</span><br></pre></td></tr></table></figure>
+
+<p>打开 <code>chrome://flags</code>，查看 Chrome/Chromium 中值得注意的试验性选项：</p>
+<ul>
+<li><code>#tab-groups</code>：标签分组。</li>
+<li><code>#enable-parallel-downloading</code>：多线程下载。</li>
+<li><code>#tab-hover-cards</code>：标签预览卡片（禁用）。</li>
+<li><code>#global-media-controls</code>：全局媒体控制。</li>
+</ul>
+<hr>
+<p>以上。又水了一篇。🐟</p>
+<hr>
+<p>📖 <strong>[Ref]</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/1179273/how-to-remove-snap-completely-without-losing-the-chromium-browser">How to remove snap completely without losing the Chromium browser? - Ask Ubuntu</a></li>
+</ul>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/linux/ubuntu-primer/">https://blog.gadflysu.com/linux/ubuntu-primer/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2020-09-07");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2020-05-14T16:00:00.000Z" itemprop="datePublished">05/15/2020</time>
+
+    , Updated at&nbsp;<time datetime="2020-09-06T17:56:43.959Z" itemprop="dateModified">09/07/2020</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/linux/'>linux</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/ubuntu/" rel="tag">#&nbsp;ubuntu</a>
+
+<a class="post-tags-list-item" href="/tags/cheat-sheet/" rel="tag">#&nbsp;cheat sheet</a>
+
+<a class="post-tags-list-item" href="/tags/share/" rel="tag">#&nbsp;share</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/post/redirect-jike-to-jellow/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">在即刻 app 刷 Jellow</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/linux/ubuntu-primer/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/linux/ubuntu-primer/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Visitors</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
+    </body>
+
+</html>

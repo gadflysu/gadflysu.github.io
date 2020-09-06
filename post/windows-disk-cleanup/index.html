@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>Windows 磁盘清理指北 | blog / gadflysu</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.5"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
+
+
+
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="Windows 磁盘清理指北 | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/post/windows-disk-cleanup/"><meta property="og:locale" content="en"><meta name="description" content="Windows 分区 (C:) 的使用率总是不知不觉就出奇地高，这里需要一些技巧来删除无用文件。其实我是准备从 SSD 腾出一部分空间来安装新的 Linux 系统（比如可怕的 Arch Linux 什么的），但一键削除实在感觉危险，还是人工处理一下。 ⚠️ [Attention] 请务必在「明白自己在做什么」的前提下进行操作，并为自己的行为负责。 系统的磁盘清理和碎片整理磁盘清理工具是系统中用于清 - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="windows, guide, file management, disk cleanup, blog"><meta property="article:published_time" content="2019-11-29T16:00:00.000Z"><meta property="article:modified_time" content="2019-12-01T16:00:00.000Z"><meta property="og:updated_time" content="2019-12-01T16:00:00.000Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="windows, guide, file management, disk cleanup, blog"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/post/windows-disk-cleanup/">
+
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-56TDLFX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-56TDLFX');
+</script>
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.gadflysu.com/post/windows-disk-cleanup/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.gadflysu.com/img/icon-192.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.gadflysu.com/post/windows-disk-cleanup/"
+    },
+    "headline": "Windows 磁盘清理指北 | blog / gadflysu",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.gadflysu.com/img/icon-192.png"
+    },
+    
+    "datePublished": "2019-11-29T16:00:00.000Z",
+    "dateModified": "2019-12-01T16:00:00.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "gadflysu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/avatar.png"
+        },
+        "description": "<b>希望與熱烈的風</b>,<em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "blog / gadflysu",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/icon-192.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.gadflysu.com/search/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "windows, guide, file management, disk cleanup, blog",
+    "description": "Windows 分区 (C:) 的使用率总是不知不觉就出奇地高，这里需要一些技巧来删除无用文件。其实我是准备从 SSD 腾出一部分空间来安装新的 Linux 系统（比如可怕的 Arch Linux 什么的），但一键削除实在感觉危险，还是人工处理一下。 ⚠️ [Attention] 请务必在「明白自己在做什么」的前提下进行操作，并为自己的行为负责。 系统的磁盘清理和碎片整理磁盘清理工具是系统中用于清 - gadflysu - blog / gadflysu"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+    
+        <a href="/archives/" class="navbar-link">📦 Archive</a>
+    
+    
+        <a href="/search/" class="navbar-link">🔍 Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">🏷 Tags</a>
+    
+        <a href="/donate/" class="navbar-link">💰 Donate</a>
+    
+        <a href="/ref/" class="navbar-link">🎭 Referral</a>
+    
+        <a href="/links/" class="navbar-link">🔗 Links</a>
+    
+        <a href="/about/" class="navbar-link">ℹ️ About</a>
+    
+        <a href="/changelog/" class="navbar-link">📈 Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">💌 Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=Windows 磁盘清理指北" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=Windows 磁盘清理指北" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB30lEQVR42u3cy27DMAxEUf//TyebLopAmrl0vBCZ0aZtYMTHgCyJD/R6HTiuoIIKKqgF6hJjd83yC/8+312H7hPUGBS9yednn7/v/ib3CWoeanXj3ZfuJrF6Kdx9gvotlJusDhhUUKuJvdtk6YIZ1O+h5Ea5uMZtyLsHeOSUENTxKHWgf/LnY9FMUEej6AZLAoDq5n076xLU0ai7wegOoia2XWCDGoVSAaQD0IBUgYKahyKBgAs81cOpIDeoWahdAlUd8MmLQQ96Qc1DkUNbJfHqFlT5oEGNQDmESqRVk/52kQ5qDMod0FygSRZR9BBBjUSpxKtriCBFAZTcD2oEqlp4VEErabKQyf2gWqOqCx8ZBG6LkEG1RdFg0wUQpGnHvUhBzUDRBZMmxVzCpNR8GlRb1DcLXzXBLwOQoMag3MSkyXw6+ctVrKBaomgighzsVKHgVhUrqNaoSvBAglTVSFEubAfVBqUaA9VB0BaAqgFrUCNQbtDmUdrILAOQoEagKpORFpFUgIs35KBao0jDDQ00XJLj6wacoNqgaPGaNpW6RVc2SwQ1HkUSsyQhG1RQZNFEQeYF/+FDUKNQ1UQFSb66ZBvKugTVEuU2TYUnzVsqeAhqHuqkEVRQQQX1b7wB50Ygn3akNZYAAAAASUVORK5CYII=" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">📑 RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">Windows 磁盘清理指北</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>11/30/2019</span>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=Windows 磁盘清理指北&url=https://blog.gadflysu.com/post/windows-disk-cleanup/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/post/windows-disk-cleanup/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/post/windows-disk-cleanup/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/post/windows-disk-cleanup/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB30lEQVR42u3cy27DMAxEUf//TyebLopAmrl0vBCZ0aZtYMTHgCyJD/R6HTiuoIIKKqgF6hJjd83yC/8+312H7hPUGBS9yednn7/v/ib3CWoeanXj3ZfuJrF6Kdx9gvotlJusDhhUUKuJvdtk6YIZ1O+h5Ea5uMZtyLsHeOSUENTxKHWgf/LnY9FMUEej6AZLAoDq5n076xLU0ai7wegOoia2XWCDGoVSAaQD0IBUgYKahyKBgAs81cOpIDeoWahdAlUd8MmLQQ96Qc1DkUNbJfHqFlT5oEGNQDmESqRVk/52kQ5qDMod0FygSRZR9BBBjUSpxKtriCBFAZTcD2oEqlp4VEErabKQyf2gWqOqCx8ZBG6LkEG1RdFg0wUQpGnHvUhBzUDRBZMmxVzCpNR8GlRb1DcLXzXBLwOQoMag3MSkyXw6+ctVrKBaomgighzsVKHgVhUrqNaoSvBAglTVSFEubAfVBqUaA9VB0BaAqgFrUCNQbtDmUdrILAOQoEagKpORFpFUgIs35KBao0jDDQ00XJLj6wacoNqgaPGaNpW6RVc2SwQ1HkUSsyQhG1RQZNFEQeYF/+FDUKNQ1UQFSb66ZBvKugTVEuU2TYUnzVsqeAhqHuqkEVRQQQX1b7wB50Ygn3akNZYAAAAASUVORK5CYII=" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86%E5%92%8C%E7%A2%8E%E7%89%87%E6%95%B4%E7%90%86"><span class="post-toc-number">1.</span> <span class="post-toc-text">系统的磁盘清理和碎片整理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pagefile-sys-%E5%92%8C-hiberfil-sys"><span class="post-toc-number">2.</span> <span class="post-toc-text">pagefile.sys 和 hiberfil.sys</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E5%88%B0%E5%85%B6%E4%BB%96%E4%BD%8D%E7%BD%AE"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装程序到其他位置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6%E5%A4%B9%E6%88%96%E7%94%A8%E6%88%B7%E6%96%87%E4%BB%B6%E5%A4%B9%E4%BD%8D%E7%BD%AE"><span class="post-toc-number">4.</span> <span class="post-toc-text">修改临时文件夹或用户文件夹位置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%88%A0%E9%99%A4%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6"><span class="post-toc-number">5.</span> <span class="post-toc-text">删除临时文件</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>Windows 分区 (C:) 的使用率总是不知不觉就出奇地高，这里需要一些技巧来删除无用文件。其实我是准备从 SSD 腾出一部分空间来安装新的 Linux 系统（比如可怕的 Arch Linux 什么的），但一键削除实在感觉危险，还是人工处理一下。</p>
+<p>⚠️ <strong>[Attention]</strong> 请务必在「明白自己在做什么」的前提下进行操作，并为自己的行为负责。</p>
+<h2 id="系统的磁盘清理和碎片整理"><a href="#系统的磁盘清理和碎片整理" class="headerlink" title="系统的磁盘清理和碎片整理"></a>系统的磁盘清理和碎片整理</h2><p>磁盘清理工具是系统中用于清理磁盘的工具。（这是一句废话。）对磁盘分区右键选择【属性】，接着选择【磁盘清理】，然后选择要删除的文件并确定，或者进一步选择【清理系统文件】，按照提示进行操作。</p>
+<p>ℹ️ <strong>[Note]</strong> 建议删除：临时文件、以前的 Windows 安装 (Windows.old)。</p>
+<p>碎片整理程序可以重新组织磁盘上的碎片数据，从而提高计算机整体运行速度和效率。（这可不是废话。）进入【控制面板】，选择【系统和安全】，接着在【管理工具】部分选择【对硬盘进行碎片整理】，然后选择对应的磁盘分区并点击【优化】按钮即可，你也可以在下方配置定期整理的计划，按照提示进行操作。另外还有一些第三方的碎片整理工具，如 <a target="_blank" rel="noopener" href="https://www.auslogics.com/en/software/disk-defrag/">Auslogics Disk Defrag</a>、<a target="_blank" rel="noopener" href="https://www.ccleaner.com/defraggler">Defraggler</a>（与 CCleaner 同属 Piriform Ltd）或 <a target="_blank" rel="noopener" href="https://www.iobit.com/en/iobitsmartdefrag.php">IObit Smart Defrag</a> 等等。</p>
+<h2 id="pagefile-sys-和-hiberfil-sys"><a href="#pagefile-sys-和-hiberfil-sys" class="headerlink" title="pagefile.sys 和 hiberfil.sys"></a><code>pagefile.sys</code> 和 <code>hiberfil.sys</code></h2><p>其实这两个文件，我是用 SpaceSniffer 检视磁盘占用情况的时候发现的，它们都是很大的单文件，能有几 GB 到十几 GB。前者是虚拟内存文件，系统设定了虚拟内存功能之后会使用一定的磁盘空间当作内存使用，类似于 Linux 的 swap file；后者保存了混合休眠 (hibernate) 前的系统内存状态，系统设定了混合休眠功能之后会出现该文件。删除办法不是粗暴的 Shift + Delete，建议关闭对应功能后重启计算机。</p>
+<p><code>gadflysu</code> 觉得自己的 16 GB 内存差不多也够用，决定直接关闭以前启用的「虚拟内存」功能，你也可以自定义允许占用的磁盘空间大小。打开此电脑 (This PC)，对空白处右键选择【属性】，选择【高级系统设置】，在【高级】选项卡下的【性能】部分，点击【设置…】按钮，接着在【高级】选项卡下的【虚拟内存】部分，点击【更改】按钮，取消勾选【自动管理所有驱动器的分页文件大小】，在下方选择【无分页文件】、【自定义大小】或其他，按照提示进行操作。</p>
+<p><code>gadflysu</code> 的 Windows 不是主力工作平台，对混合休眠模式没有需求，决定直接关闭该功能。以管理员身份在命令提示符中执行：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">POWERCFG /<span class="built_in">H</span> off</span><br></pre></td></tr></table></figure>
+
+<p>若仍需该功能，可以执行 <code>POWERCFG /HIBERNATE /SIZE &lt;PERCENT_SIZE&gt;</code> 指定 hiberfile 相对内存大小的比例，<code>&lt;PERCENT_SIZE&gt;</code> 值取范围 40 - 100。</p>
+<h2 id="安装程序到其他位置"><a href="#安装程序到其他位置" class="headerlink" title="安装程序到其他位置"></a>安装程序到其他位置</h2><p>程序文件一般占用了相当的磁盘空间，将程序安装到其他分区可以一定程度地控制 C 盘占用，同时对于经常重装系统的情况也可以避免重复的程序安装过程。虽然，这对很多人来说可能是不建议的操作 (not recommended operation)，但是 <code>gadflysu</code> 不介意。</p>
+<p>对 Google Chrome 这样顽固地安装到 C 盘且无法自定义安装位置的软件，你可能需要 Junction 这样的工具，参见文档 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sysinternals/downloads/junction">Junction - Windows Sysinternals | Microsoft Docs</a>。</p>
+<h2 id="修改临时文件夹或用户文件夹位置"><a href="#修改临时文件夹或用户文件夹位置" class="headerlink" title="修改临时文件夹或用户文件夹位置"></a>修改临时文件夹或用户文件夹位置</h2><p>对 C 盘的控制也可以是选择将部分文件存储到其他分区。</p>
+<p>对于临时文件的自定义，首先创建新的临时文件夹，然后打开此电脑 (This PC)，对空白处右键选择【属性】，选择【高级系统设置】，在【高级】选项卡下点击【环境变量…】按钮，接着分别设定用户变量或系统变量中的 <code>TEMP</code> 和 <code>TMP</code> 变量，按照提示进行操作。</p>
+<p>对于用户文件夹（包括 3D Objects、Desktop、Documents、Downloads、Music、Pictures 和 Videos 等）的自定义，打开此电脑 (This PC)，对对应文件夹右键选择【属性】，在【位置】选项卡下点击【移动…】按钮，按照提示进行操作。</p>
+<h2 id="删除临时文件"><a href="#删除临时文件" class="headerlink" title="删除临时文件"></a>删除临时文件</h2><p>系统中有很多地方存放着临时文件（比如缓存）。除了前文提到的 <code>TEMP</code> 变量所指示的位置，还有很多：</p>
+<ul>
+<li>如果你安装了 Adobe 公司的软件，那么可能有：<code>C:\adobeTemp\</code></li>
+<li>如果你安装了 Apple iTunes，那么可能有：<code>%LocalAppData%\Apple Computer\iTunes\Cache.db</code>、<code>C:\ProgramData\Apple Computer\Installer Cache</code>、<code>C:\ProgramData\Apple\Installer Cache</code></li>
+<li>系统软件更新下载：<code>C:\Windows\SoftwareDistribution\Download</code></li>
+<li>Windows Defender 的更新备份缓存：<code>C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Backup</code></li>
+<li>Windows Explporer 的缓存：<code>C:\Users\Gadfly\AppData\Local\Microsoft\Windows\Explorer</code> 下的 <code>*cache*</code></li>
+<li>内存转储文件：<code>C:\Windows\Minidump</code></li>
+<li>最近打开文件：<code>C:\Users\Gadfly\AppData\Roaming\Microsoft\Windows\Recent</code></li>
+</ul>
+<p>上面是些胡乱举的例子，反正临时文件也不难找。手动删除文件的风险较高，请务必在「明白自己在做什么」的前提下进行操作。</p>
+<hr>
+<p>大概以上几种方式。</p>
+<p>又水了一篇。🐟</p>
+<hr>
+<p>📖 <strong>[Ref]</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.icoa.cn/a/780.html">Windows 10 下 C 盘空间清理 - 逍遥峡谷</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/29579672">Win10 C 盘怎么瘦身？ - 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.crucial.cn/learn-with-crucial/ssd/how-to-defrag-hard-drive">硬盘碎片整理步骤教程 - Crucial</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/5d1eca3451882555300fe49a">Windows C 盘清理 - 掘金</a></li>
+</ul>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/post/windows-disk-cleanup/">https://blog.gadflysu.com/post/windows-disk-cleanup/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2019-12-02");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-11-29T16:00:00.000Z" itemprop="datePublished">11/30/2019</time>
+
+    , Updated at&nbsp;<time datetime="2019-12-01T16:00:00.000Z" itemprop="dateModified">12/02/2019</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/windows/" rel="tag">#&nbsp;windows</a>
+
+<a class="post-tags-list-item" href="/tags/guide/" rel="tag">#&nbsp;guide</a>
+
+<a class="post-tags-list-item" href="/tags/file-management/" rel="tag">#&nbsp;file management</a>
+
+<a class="post-tags-list-item" href="/tags/disk-cleanup/" rel="tag">#&nbsp;disk cleanup</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/post/redirect-jike-to-jellow/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">在即刻 app 刷 Jellow</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/web/restoring-original-visitor-ips-using-nginx/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">使用 nginx 获取真实访客 IP</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/post/windows-disk-cleanup/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/post/windows-disk-cleanup/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Visitors</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
+    </body>
+
+</html>

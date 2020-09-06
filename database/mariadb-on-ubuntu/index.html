@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>在 Ubuntu 安装与配置 MariaDB | blog / gadflysu</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="192x192" href="/img/icon-192.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/icon-32.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/icon-16.png"><link rel="mask-icon" href="/img/icon.svg" color="#3949ab"><meta name="theme-color" content="#3949ab">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.5"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #d81b60;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #d81b60;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #d81b60;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #3949ab;
+    }
+
+    .avatar {
+        background: #3949ab;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #3949ab;
+    }
+
+    .navbar-link:hover {
+        color: #3949ab;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #3949ab;
+        border-color: #3949ab;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #3949ab;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@1.4.0/source/css/highlight/mono-blue.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+    <meta name="google-site-verification" content="DcZgzxBJEKhJ-QcS-HSfl2s8Bogwj1BzQ0Fpd0-LvZw" />
+
+
+
+    <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="在 Ubuntu 安装与配置 MariaDB | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/database/mariadb-on-ubuntu/"><meta property="og:locale" content="en"><meta name="description" content="MariaDB 是流行的关系型数据库管理系统 (RDBMS)，其著名用户有 Wikipedia、WordPress.com 和 Google。在 2009 年 Oracle 收购 Sun Microsystems 之后，后者旗下的开源数据库系统 MySQL 自然归属于（臭名昭著的）Oracle。为规避潜在的闭源风险，MySQL 的创始人 Michael Widenius 及原开发团队创建了一个保证 - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="mariadb, mysql, linux, ubuntu, primer, blog"><meta property="og:image" content="https://user-images.githubusercontent.com/11007704/61181404-b7a6b700-a658-11e9-9853-8105b93592f5.png"><meta property="article:published_time" content="2019-03-17T16:00:00.000Z"><meta property="article:modified_time" content="2019-03-17T16:00:00.000Z"><meta property="og:updated_time" content="2019-03-17T16:00:00.000Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="mariadb, mysql, linux, ubuntu, primer, blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://user-images.githubusercontent.com/11007704/61181404-b7a6b700-a658-11e9-9853-8105b93592f5.png">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="https://blog.gadflysu.com/database/mariadb-on-ubuntu/">
+
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <!-- ### Analytics ### -->
+    
+    <!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-131282255-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-56TDLFX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-56TDLFX');
+</script>
+
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1277815718&web_id=1277815718" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://blog.gadflysu.com/database/mariadb-on-ubuntu/",
+    "@type": "BlogPosting",
+    "logo": "https://blog.gadflysu.com/img/icon-192.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.gadflysu.com/database/mariadb-on-ubuntu/"
+    },
+    "headline": "在 Ubuntu 安装与配置 MariaDB | blog / gadflysu",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://user-images.githubusercontent.com/11007704/61181404-b7a6b700-a658-11e9-9853-8105b93592f5.png"
+    },
+    
+    "datePublished": "2019-03-17T16:00:00.000Z",
+    "dateModified": "2019-03-17T16:00:00.000Z",
+    "author": {
+        "@type": "Person",
+        "name": "gadflysu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/avatar.png"
+        },
+        "description": "<b>希望與熱烈的風</b>,<em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "blog / gadflysu",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.gadflysu.com/img/icon-192.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blog.gadflysu.com/search/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "mariadb, mysql, linux, ubuntu, primer, blog",
+    "description": "MariaDB 是流行的关系型数据库管理系统 (RDBMS)，其著名用户有 Wikipedia、WordPress.com 和 Google。在 2009 年 Oracle 收购 Sun Microsystems 之后，后者旗下的开源数据库系统 MySQL 自然归属于（臭名昭著的）Oracle。为规避潜在的闭源风险，MySQL 的创始人 Michael Widenius 及原开发团队创建了一个保证 - gadflysu - blog / gadflysu"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">blog / gadflysu</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                <b>希望與熱烈的風</b><br><em><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Talk is Cheap</a></em>
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+    
+        <a href="/archives/" class="navbar-link">📦 Archive</a>
+    
+    
+        <a href="/search/" class="navbar-link">🔍 Search</a>
+    
+    
+        <a href="/tags/" class="navbar-link">🏷 Tags</a>
+    
+        <a href="/donate/" class="navbar-link">💰 Donate</a>
+    
+        <a href="/ref/" class="navbar-link">🎭 Referral</a>
+    
+        <a href="/links/" class="navbar-link">🔗 Links</a>
+    
+        <a href="/about/" class="navbar-link">ℹ️ About</a>
+    
+        <a href="/changelog/" class="navbar-link">📈 Changelog</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">💌 Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=blog / gadflysu&url=https://blog.gadflysu.com&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com&title=在 Ubuntu 安装与配置 MariaDB" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=https://blog.gadflysu.com&text=在 Ubuntu 安装与配置 MariaDB" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB6klEQVR42u3b0W7CMAyF4b7/S7OrSRWLz/lNmdS4pzcMwchXycSxE47XDa8jqKCCCmqBOsT1+/r58c8HLf7n/BodJ6hZqGqw9w9TyApAxwlqHqoaXAV3FfDuZqpxgnoGqpoYV8Gt8EEFtRqQJt1qEg7qWSgVxNViDi3cwCIxqHmoTuFw5fHfqpmgboWyTQcRqCRZq8Xix12XoG6NWiXbahJcvacKYrUIrBJ8UHNQaqFGGhcqGaubsAk5qC1RKghJ4ane3/myBDUTVU16JCmT5pqdVIMagSLNfRrIqmBwi8Kg5qJUsu1MuC6ol8+DGoHqJlNasLoJ2VbIQW2LckHsNhpJ04NudAc1B6WCXf1NN45oUg5qBoo0WztfCNJI+6iaCWo7lGqsokISHq6QNxnUKBQ9SEOTND2E0erkBbUFimxAy00ek8jdxIpWCUFtiyIHSl0Qo40h2ogNaksUTpYioF0DVj0PaiaKbDx2N4O6xWxQc1DkkClt9LtD8TaZBzUC5a5vLfhQERLUCNTVA81XGiRBzUXRjUW3+U0Xi5d/zBPUFija3CI/pHBX+YUJ6hEoeqCZFhuy8RHUY1C0uKANjtZue1DbolTSJRB3GAcdOAxqDMolzs7hGlJk4JNmQW2JutMVVFBBBXW6fgBYzG9e4lC0xQAAAABJRU5ErkJggg==" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+        <a href="/rss.xml" target="_blank" class="navbar-link">📑 RSS</a>
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+            <div class="card-image lazyload" data-bg="url('https://user-images.githubusercontent.com/11007704/61181404-b7a6b700-a658-11e9-9853-8105b93592f5.png')"></div>
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">在 Ubuntu 安装与配置 MariaDB</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.png" src="/img/suka-lazyload.gif" alt="gadflysu's Avatar">
+        <span>03/18/2019</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/database/">database</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=在 Ubuntu 安装与配置 MariaDB&url=https://blog.gadflysu.com/database/mariadb-on-ubuntu/&via=gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gadflysu.com/database/mariadb-on-ubuntu/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.gadflysu.com/database/mariadb-on-ubuntu/&title=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=https://blog.gadflysu.com/database/mariadb-on-ubuntu/&text=blog / gadflysu" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB6klEQVR42u3b0W7CMAyF4b7/S7OrSRWLz/lNmdS4pzcMwchXycSxE47XDa8jqKCCCmqBOsT1+/r58c8HLf7n/BodJ6hZqGqw9w9TyApAxwlqHqoaXAV3FfDuZqpxgnoGqpoYV8Gt8EEFtRqQJt1qEg7qWSgVxNViDi3cwCIxqHmoTuFw5fHfqpmgboWyTQcRqCRZq8Xix12XoG6NWiXbahJcvacKYrUIrBJ8UHNQaqFGGhcqGaubsAk5qC1RKghJ4ane3/myBDUTVU16JCmT5pqdVIMagSLNfRrIqmBwi8Kg5qJUsu1MuC6ol8+DGoHqJlNasLoJ2VbIQW2LckHsNhpJ04NudAc1B6WCXf1NN45oUg5qBoo0WztfCNJI+6iaCWo7lGqsokISHq6QNxnUKBQ9SEOTND2E0erkBbUFimxAy00ek8jdxIpWCUFtiyIHSl0Qo40h2ogNaksUTpYioF0DVj0PaiaKbDx2N4O6xWxQc1DkkClt9LtD8TaZBzUC5a5vLfhQERLUCNTVA81XGiRBzUXRjUW3+U0Xi5d/zBPUFija3CI/pHBX+YUJ6hEoeqCZFhuy8RHUY1C0uKANjtZue1DbolTSJRB3GAcdOAxqDMolzs7hGlJk4JNmQW2JutMVVFBBBXW6fgBYzG9e4lC0xQAAAABJRU5ErkJggg==" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE"><span class="post-toc-number">2.</span> <span class="post-toc-text">安全配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="post-toc-number">3.</span> <span class="post-toc-text">创建用户</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p><a target="_blank" rel="noopener" href="https://mariadb.org/">MariaDB</a> 是流行的关系型数据库管理系统 (RDBMS)，其著名用户有 Wikipedia、WordPress.com 和 Google。在 2009 年 Oracle 收购 Sun Microsystems 之后，后者旗下的开源数据库系统 <a target="_blank" rel="noopener" href="https://www.mysql.com/">MySQL</a> 自然归属于（臭名昭著的）Oracle。为规避潜在的<a target="_blank" rel="noopener" href="https://www.oschina.net/news/41568/mysql-man-pages-license-change-is-a-bug">闭源风险</a>，MySQL 的创始人 Michael Widenius 及原开发团队创建了一个保证开源的新分支——<strong>MariaDB</strong>。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>MariaDB 可以从 Ubuntu 的官方软件源安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mariadb-server</span><br></pre></td></tr></table></figure>
+
+<p>从前文的背景简述可知，MariaDB 兼容 MySQL，毕竟……<code>/usr/bin/mariadb</code> 就是 <code>/usr/bin/mysql</code> 的软链接。</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">5</span> Feb  <span class="number">6</span> <span class="number">13</span>:<span class="number">53</span> /usr/bin/mariadb -&gt; mysql*</span><br></pre></td></tr></table></figure>
+
+<p>要检查软件版本，执行：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ mysql --version</span><br><span class="line">mysql  Ver <span class="number">15.1</span> Distrib <span class="number">10.1</span><span class="number">.38</span>-MariaDB, <span class="keyword">for</span> debian-linux-gnu (x86_64) using readline <span class="number">5.2</span></span><br></pre></td></tr></table></figure>
+
+<p>本文将在上示环境和软件版本下进行。</p>
+<p>启动 MariaDB 服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysql</span><br></pre></td></tr></table></figure>
+
+<h2 id="安全配置"><a href="#安全配置" class="headerlink" title="安全配置"></a>安全配置</h2><p>安装完成后建议首先用软件自带的一个脚本执行初始的安全配置：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure>
+
+<p>注意使用 <code>sudo</code> 以获取 <code>root</code> 权限来执行，这是因为 MariaDB 的默认用户 <code>root</code> 采用 <code>unix_socket</code> 插件进行鉴权（这一点会在后面提到），而执行安全配置需要登录。</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">NOTE: RUNNING <span class="keyword">ALL</span> PARTS <span class="keyword">OF</span> THIS SCRIPT <span class="keyword">IS</span> RECOMMENDED <span class="keyword">FOR</span> <span class="keyword">ALL</span> MariaDB</span><br><span class="line">      SERVERS <span class="keyword">IN</span> PRODUCTION USE!  PLEASE <span class="keyword">READ</span> <span class="keyword">EACH</span> STEP CAREFULLY!</span><br><span class="line"></span><br><span class="line"><span class="keyword">In</span> <span class="keyword">order</span> <span class="keyword">to</span> <span class="keyword">log</span> <span class="keyword">into</span> MariaDB <span class="keyword">to</span> secure it, w<span class="string">e&#x27;ll need the current</span></span><br><span class="line"><span class="string">password for the root user.  If you&#x27;</span>ve just installed MariaDB, <span class="keyword">and</span></span><br><span class="line">you haven<span class="string">&#x27;t set the root password yet, the password will be blank,</span></span><br><span class="line"><span class="string">so you should just press enter here.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Enter current password for root (enter for none): </span></span><br></pre></td></tr></table></figure>
+
+<p><code>root</code> 默认密码为空，按下「Enter」键即可。接下来设置你的 <code>root</code> 用户密码（注意没有回显）：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Setting the root password ensures that nobody can log into the MariaDB</span><br><span class="line">root<span class="built_in"> user </span>without the proper authorisation.</span><br><span class="line"></span><br><span class="line"><span class="builtin-name">Set</span> root password? [Y/n] y</span><br><span class="line">New password: </span><br><span class="line">Re-enter new password: </span><br><span class="line">Password updated successfully!</span><br><span class="line">Reloading privilege tables<span class="built_in">..</span></span><br><span class="line"> <span class="built_in">..</span>. Success!</span><br></pre></td></tr></table></figure>
+
+<p>MariaDB 默认有一个允许任何人登录的匿名用户，方便测试或者初次安装配置（例如后文会讲的用户配置），在生产环境下建议删除之：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">By default, a MariaDB installation has an anonymous user, allowing anyone</span><br><span class="line"><span class="keyword">to</span> log into MariaDB without having <span class="keyword">to</span> have a<span class="built_in"> user </span>account created <span class="keyword">for</span></span><br><span class="line">them.  This is intended only <span class="keyword">for</span> testing, <span class="keyword">and</span> <span class="keyword">to</span> make the installation</span><br><span class="line">go a bit smoother.  You should <span class="builtin-name">remove</span> them before moving into a</span><br><span class="line">production environment.</span><br><span class="line"></span><br><span class="line"><span class="builtin-name">Remove</span> anonymous users? [Y/n] y</span><br><span class="line"> <span class="built_in">..</span>. Success!</span><br></pre></td></tr></table></figure>
+
+<p><code>root</code> 用户一般应该仅允许从本地登录，禁止远程连接：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Normally, root should only be allowed <span class="built_in">to</span> connect <span class="built_in">from</span> <span class="string">&#x27;localhost&#x27;</span>.  This</span><br><span class="line">ensures that someone cannot guess <span class="keyword">at</span> <span class="keyword">the</span> root password <span class="built_in">from</span> <span class="keyword">the</span> network.</span><br><span class="line"></span><br><span class="line">Disallow root login remotely? [Y/n] y</span><br><span class="line"> ... Success!</span><br></pre></td></tr></table></figure>
+
+<p>MariaDB 默认有一个允许任何人访问的数据库 (<code>test</code>)，在生产环境下建议删除之：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">By default, MariaDB comes <span class="keyword">with</span> a <span class="keyword">database</span> named <span class="string">&#x27;test&#x27;</span> that anyone can</span><br><span class="line">access.  This <span class="keyword">is</span> also intended <span class="keyword">only</span> <span class="keyword">for</span> testing, <span class="keyword">and</span> should be removed</span><br><span class="line"><span class="keyword">before</span> moving <span class="keyword">into</span> a production environment.</span><br><span class="line"></span><br><span class="line">Remove <span class="keyword">test</span> <span class="keyword">database</span> <span class="keyword">and</span> <span class="keyword">access</span> <span class="keyword">to</span> it? [Y/n] y</span><br><span class="line"> - Dropping <span class="keyword">test</span> database...</span><br><span class="line"> ... <span class="keyword">Success</span>!</span><br><span class="line"> - Removing <span class="keyword">privileges</span> <span class="keyword">on</span> <span class="keyword">test</span> database...</span><br><span class="line"> ... <span class="keyword">Success</span>!</span><br></pre></td></tr></table></figure>
+
+<p>最后重载权限表以应用上面所做的变更：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Reloading</span> <span class="string">the privilege tables will ensure that all changes made so far</span></span><br><span class="line"><span class="attr">will</span> <span class="string">take effect immediately.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Reload</span> <span class="string">privilege tables now? [Y/n] y</span></span><br><span class="line"> <span class="meta">...</span> <span class="string">Success!</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Cleaning</span> <span class="string">up...</span></span><br><span class="line"></span><br><span class="line"><span class="attr">All</span> <span class="string">done!  If you&#x27;ve completed all of the above steps, your MariaDB</span></span><br><span class="line"><span class="attr">installation</span> <span class="string">should now be secure.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Thanks</span> <span class="string">for using MariaDB!</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><p>经过安装和简单的初始配置之后，我们来尝试连接到 MariaDB server 看看，直接执行：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mysql</span></span><br></pre></td></tr></table></figure>
+
+<p>此时会遇到错误：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">ERROR</span> 1698 (28000): Access denied <span class="keyword">for</span><span class="built_in"> user </span><span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>看起来是访问权限的问题：以 <code>root</code> 用户从本地尝试访问被拒绝。</p>
+<p>我们在前面的配置中已经删除了匿名用户，现在 MariaDB 只有一个 <code>root</code> 用户；而我当前系统登录用户并非 <code>root</code>——其实数据库系统的用户和操作系统的用户显然是两回事，两者有什么关系呢？</p>
+<p>参考 Stack Overflow 的一个<a target="_blank" rel="noopener" href="https://stackoverflow.com/a/42742610">问答</a>，MySQL 在一些系统（比如 Ubuntu）默认使用 <code>unix_socket</code> 插件，依赖系统用户凭证进行鉴权。<a target="_blank" rel="noopener" href="https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/">官方文档</a>讲，这个插件发布于 <a target="_blank" rel="noopener" href="https://mariadb.com/kb/en/mariadb-520-release-notes/">MariaDB 5.2.0</a>，从 <a target="_blank" rel="noopener" href="https://mariadb.com/kb/en/mariadb-1043-release-notes/">MariaDB 10.4.3</a> 开始默认启用。<code>unix_socket</code> 允许用户通过本地的 <a target="_blank" rel="noopener" href="https://mariadb.com/kb/en/library/server-system-variables/#socket">Unix socket 文件</a>使用系统凭证登录到 MariaDB Server。此插件通过系统调用可以获取连接到 <code>socket</code> 的进程 <code>uid</code>，进而得到与其关联的用户名，然后会将连接用户作为具有相同用户名的 MariaDB 用户进行身份验证。</p>
+<p>简单的理解大概是，MariaDB 现在是通过系统用户来登录的，那么就要求 MariaDB 有一个同名用户。我们来看看 MariaDB 现在的用户配置：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ sudo mysql  # connect as &quot;root&quot;</span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt; USE mysql;</span><br><span class="line">MariaDB [mysql]&gt; SELECT User, Host, plugin FROM mysql.user;</span><br><span class="line">+----------+-----------+-------------+</span><br><span class="line">| User     | Host      | plugin      |</span><br><span class="line">+----------+-----------+-------------+</span><br><span class="line">| root     | localhost | unix_socket |</span><br><span class="line">+----------+-----------+-------------+</span><br><span class="line">2 rows in set (0.12 sec)</span><br></pre></td></tr></table></figure>
+
+<p>虽然也可以修改插件配置，但是这里我仍然建议<a target="_blank" rel="noopener" href="https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/#creating-users">创建</a>一个同名的数据库用户：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ sudo mysql  # connect as &quot;root&quot;</span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt; USE mysql;</span><br><span class="line">MariaDB [mysql]&gt; CREATE USER &#x27;YOUR_SYSTEM_USER&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;&#x27;;</span><br><span class="line">MariaDB [mysql]&gt; GRANT ALL PRIVILEGES ON *.* TO &#x27;YOUR_SYSTEM_USER&#x27;@&#x27;localhost&#x27;;</span><br><span class="line">MariaDB [mysql]&gt; UPDATE user SET plugin=&#x27;unix_socket&#x27; WHERE User=&#x27;YOUR_SYSTEM_USER&#x27;;</span><br><span class="line">MariaDB [mysql]&gt; FLUSH PRIVILEGES;</span><br><span class="line">MariaDB [mysql]&gt; exit;</span><br><span class="line"></span><br><span class="line">➜  ~ systemctl restart mysql</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>YOUR_SYSTEM_USER</code> 是你的用户名。至此就可以开始顺利地玩耍了。</p>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;gadflysu</strong>
+            <br>
+            <strong>
+            
+                本文采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">「知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0)」</a>进行许可。你可自由<u>分享</u>、<u>演绎</u>，惟须遵照：<u>署名</u>、<u>非商业性使用</u>、<u>相同方式共享</u>、<u>不得增加额外限制</u>。
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="https://blog.gadflysu.com/database/mariadb-on-ubuntu/">https://blog.gadflysu.com/database/mariadb-on-ubuntu/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2019-03-18");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2019-03-17T16:00:00.000Z" itemprop="datePublished">03/18/2019</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/database/'>database</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/mariadb/" rel="tag">#&nbsp;mariadb</a>
+
+<a class="post-tags-list-item" href="/tags/mysql/" rel="tag">#&nbsp;mysql</a>
+
+<a class="post-tags-list-item" href="/tags/linux/" rel="tag">#&nbsp;linux</a>
+
+<a class="post-tags-list-item" href="/tags/ubuntu/" rel="tag">#&nbsp;ubuntu</a>
+
+<a class="post-tags-list-item" href="/tags/primer/" rel="tag">#&nbsp;primer</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/general/regular-expression/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">正则表达式</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gadflysu.com/database/mariadb-on-ubuntu/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gadflysu.com/database/mariadb-on-ubuntu/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sudoblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="https://blog.gadflysu.com">blog / gadflysu</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Visitors</span>
+        
+            <span>,</span>
+        
+    </span>
+
+
+    <!-- Busuanzi Post Views -->
+    <span id="busuanzi_container_site_pv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_pv"></span>
+        <span>Views</span>
+        
+            <span><br></span>
+        
+    </span>
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2018;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+<script>window.ga_tid = "UA-131282255-1";window.ga_api = "https://blog.gadflysu.com/analytics/";</script><script src="https://cdn.jsdelivr.net/npm/cfga@1.0.1" async></script>
+    </body>
+
+</html>

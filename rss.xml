@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>blog / gadflysu</title>
+  
+  <subtitle>希望與熱烈的風</subtitle>
+  <link href="https://blog.gadflysu.com/rss.xml" rel="self"/>
+  
+  <link href="https://blog.gadflysu.com/"/>
+  <updated>2020-09-06T17:56:43.959Z</updated>
+  <id>https://blog.gadflysu.com/</id>
+  
+  <author>
+    <name>gadflysu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>现在开始使用 Ubuntu 20.04</title>
+    <link href="https://blog.gadflysu.com/linux/ubuntu-primer/"/>
+    <id>https://blog.gadflysu.com/linux/ubuntu-primer/</id>
+    <published>2020-05-14T16:00:00.000Z</published>
+    <updated>2020-09-06T17:56:43.959Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://blog.gadflysu.com/categories/linux/"/>
+    
+    
+    <category term="ubuntu" scheme="https://blog.gadflysu.com/tags/ubuntu/"/>
+    
+    <category term="cheat sheet" scheme="https://blog.gadflysu.com/tags/cheat-sheet/"/>
+    
+    <category term="share" scheme="https://blog.gadflysu.com/tags/share/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在即刻 app 刷 Jellow</title>
+    <link href="https://blog.gadflysu.com/post/redirect-jike-to-jellow/"/>
+    <id>https://blog.gadflysu.com/post/redirect-jike-to-jellow/</id>
+    <published>2019-12-06T16:00:00.000Z</published>
+    <updated>2019-12-07T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="darkmodeisbad" scheme="https://blog.gadflysu.com/tags/darkmodeisbad/"/>
+    
+    <category term="jike" scheme="https://blog.gadflysu.com/tags/jike/"/>
+    
+    <category term="jellow" scheme="https://blog.gadflysu.com/tags/jellow/"/>
+    
+    <category term="redirect" scheme="https://blog.gadflysu.com/tags/redirect/"/>
+    
+    <category term="thor" scheme="https://blog.gadflysu.com/tags/thor/"/>
+    
+    <category term="magisk" scheme="https://blog.gadflysu.com/tags/magisk/"/>
+    
+    <category term="taichi" scheme="https://blog.gadflysu.com/tags/taichi/"/>
+    
+    <category term="xposed" scheme="https://blog.gadflysu.com/tags/xposed/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 磁盘清理指北</title>
+    <link href="https://blog.gadflysu.com/post/windows-disk-cleanup/"/>
+    <id>https://blog.gadflysu.com/post/windows-disk-cleanup/</id>
+    <published>2019-11-29T16:00:00.000Z</published>
+    <updated>2019-12-01T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="windows" scheme="https://blog.gadflysu.com/tags/windows/"/>
+    
+    <category term="guide" scheme="https://blog.gadflysu.com/tags/guide/"/>
+    
+    <category term="file management" scheme="https://blog.gadflysu.com/tags/file-management/"/>
+    
+    <category term="disk cleanup" scheme="https://blog.gadflysu.com/tags/disk-cleanup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 nginx 获取真实访客 IP</title>
+    <link href="https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/"/>
+    <id>https://blog.gadflysu.com/web/restoring-original-visitor-ips-using-nginx/</id>
+    <published>2019-11-18T16:00:00.000Z</published>
+    <updated>2019-11-18T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://blog.gadflysu.com/categories/web/"/>
+    
+    
+    <category term="nginx" scheme="https://blog.gadflysu.com/tags/nginx/"/>
+    
+    <category term="reverse proxy" scheme="https://blog.gadflysu.com/tags/reverse-proxy/"/>
+    
+    <category term="cdn" scheme="https://blog.gadflysu.com/tags/cdn/"/>
+    
+    <category term="cloudflare" scheme="https://blog.gadflysu.com/tags/cloudflare/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 启动引导选项</title>
+    <link href="https://blog.gadflysu.com/post/windows-boot-options/"/>
+    <id>https://blog.gadflysu.com/post/windows-boot-options/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-25T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="windows" scheme="https://blog.gadflysu.com/tags/windows/"/>
+    
+    <category term="boot" scheme="https://blog.gadflysu.com/tags/boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国银行「长城跨境通国际借记卡」体验</title>
+    <link href="https://blog.gadflysu.com/life/boc-mastercard-visa-debit-card/"/>
+    <id>https://blog.gadflysu.com/life/boc-mastercard-visa-debit-card/</id>
+    <published>2019-08-19T16:00:00.000Z</published>
+    <updated>2019-08-22T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="life" scheme="https://blog.gadflysu.com/categories/life/"/>
+    
+    
+    <category term="debit card" scheme="https://blog.gadflysu.com/tags/debit-card/"/>
+    
+    <category term="mastercard" scheme="https://blog.gadflysu.com/tags/mastercard/"/>
+    
+    <category term="visa" scheme="https://blog.gadflysu.com/tags/visa/"/>
+    
+    <category term="bank of china" scheme="https://blog.gadflysu.com/tags/bank-of-china/"/>
+    
+    <category term="finance" scheme="https://blog.gadflysu.com/tags/finance/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://blog.gadflysu.com/general/regular-expression/"/>
+    <id>https://blog.gadflysu.com/general/regular-expression/</id>
+    <published>2019-07-11T16:00:00.000Z</published>
+    <updated>2019-07-11T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="general" scheme="https://blog.gadflysu.com/categories/general/"/>
+    
+    
+    <category term="string" scheme="https://blog.gadflysu.com/tags/string/"/>
+    
+    <category term="pattern matching" scheme="https://blog.gadflysu.com/tags/pattern-matching/"/>
+    
+    <category term="grep" scheme="https://blog.gadflysu.com/tags/grep/"/>
+    
+    <category term="sed" scheme="https://blog.gadflysu.com/tags/sed/"/>
+    
+    <category term="awk" scheme="https://blog.gadflysu.com/tags/awk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Ubuntu 安装与配置 MariaDB</title>
+    <link href="https://blog.gadflysu.com/database/mariadb-on-ubuntu/"/>
+    <id>https://blog.gadflysu.com/database/mariadb-on-ubuntu/</id>
+    <published>2019-03-17T16:00:00.000Z</published>
+    <updated>2019-03-17T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="database" scheme="https://blog.gadflysu.com/categories/database/"/>
+    
+    
+    <category term="mariadb" scheme="https://blog.gadflysu.com/tags/mariadb/"/>
+    
+    <category term="mysql" scheme="https://blog.gadflysu.com/tags/mysql/"/>
+    
+    <category term="linux" scheme="https://blog.gadflysu.com/tags/linux/"/>
+    
+    <category term="ubuntu" scheme="https://blog.gadflysu.com/tags/ubuntu/"/>
+    
+    <category term="primer" scheme="https://blog.gadflysu.com/tags/primer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为 Ubuntu LTS 安装 HWE 以获取更新的内核与图形支持</title>
+    <link href="https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/"/>
+    <id>https://blog.gadflysu.com/linux/ubuntu-install-hwe-for-newer-kernel-and-x-support/</id>
+    <published>2019-03-05T16:00:00.000Z</published>
+    <updated>2019-03-05T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://blog.gadflysu.com/categories/linux/"/>
+    
+    
+    <category term="ubuntu" scheme="https://blog.gadflysu.com/tags/ubuntu/"/>
+    
+    <category term="software" scheme="https://blog.gadflysu.com/tags/software/"/>
+    
+    <category term="hwe" scheme="https://blog.gadflysu.com/tags/hwe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 启动错误 0xc0e90002 的解决办法</title>
+    <link href="https://blog.gadflysu.com/issue/windows-error-0xc0e90002/"/>
+    <id>https://blog.gadflysu.com/issue/windows-error-0xc0e90002/</id>
+    <published>2017-10-21T16:00:00.000Z</published>
+    <updated>2019-07-14T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="issue" scheme="https://blog.gadflysu.com/categories/issue/"/>
+    
+    
+    <category term="windows" scheme="https://blog.gadflysu.com/tags/windows/"/>
+    
+    <category term="boot" scheme="https://blog.gadflysu.com/tags/boot/"/>
+    
+    <category term="error" scheme="https://blog.gadflysu.com/tags/error/"/>
+    
+    <category term="blue screen" scheme="https://blog.gadflysu.com/tags/blue-screen/"/>
+    
+  </entry>
+  
+</feed>
