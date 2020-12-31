@@ -6,7 +6,7 @@
   <link href="https://blog.gadflysu.com/rss.xml" rel="self"/>
   
   <link href="https://blog.gadflysu.com/"/>
-  <updated>2020-09-06T17:56:43.959Z</updated>
+  <updated>2020-12-30T16:00:00.000Z</updated>
   <id>https://blog.gadflysu.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>二〇二〇</title>
+    <link href="https://blog.gadflysu.com/life/2020-in-review/"/>
+    <id>https://blog.gadflysu.com/life/2020-in-review/</id>
+    <published>2020-12-30T16:00:00.000Z</published>
+    <updated>2020-12-30T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="life" scheme="https://blog.gadflysu.com/categories/life/"/>
+    
+    
+    <category term="review" scheme="https://blog.gadflysu.com/tags/review/"/>
+    
+  </entry>
+  
+  <entry>
     <title>现在开始使用 Ubuntu 20.04</title>
     <link href="https://blog.gadflysu.com/linux/ubuntu-primer/"/>
     <id>https://blog.gadflysu.com/linux/ubuntu-primer/</id>
     <published>2020-05-14T16:00:00.000Z</published>
-    <updated>2020-09-06T17:56:43.959Z</updated>
+    <updated>2020-10-05T01:12:14.206Z</updated>
     
     
       

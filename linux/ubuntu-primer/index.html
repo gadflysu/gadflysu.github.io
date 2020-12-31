@@ -161,7 +161,7 @@
     <link rel="alternate" type="application/atom+xml" href="/rss.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="blog / gadflysu"><meta name="msapplication-starturl" content="https://blog.gadflysu.com"><meta name="msapplication-navbutton-color" content="#3949ab"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="blog / gadflysu"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="pwa_manifest.json"><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="blog / gadflysu">
 
     <!-- ### The Open Graph & Twitter Card Protocol ### -->
-    <meta property="og:title" content="现在开始使用 Ubuntu 20.04 | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/linux/ubuntu-primer/"><meta property="og:locale" content="en"><meta name="description" content="上一次对主力操作系统的改动是从 Ubuntu 16.04 直接升级到 18.04，多年运行的系统至今已经累积了许多冗余文件，所以最近 Ubuntu 20.04 发布，我决定在新的硬盘分区从零开始安装配置。 之前意识到系统性能瓶颈也许不在内存而在硬盘读写，已经对残留的 Windows 所在硬盘进行了清理，腾出一定的空间就用来装新的 Ubuntu，了结我将系统硬盘从缓慢的 HDD 换到 SSD 的心愿 - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="ubuntu, cheat sheet, share, blog"><meta property="article:published_time" content="2020-05-14T16:00:00.000Z"><meta property="article:modified_time" content="2020-09-06T17:56:43.959Z"><meta property="og:updated_time" content="2020-09-06T17:56:43.959Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="ubuntu, cheat sheet, share, blog"><meta name="twitter:card" content="summary">
+    <meta property="og:title" content="现在开始使用 Ubuntu 20.04 | blog &#x2F; gadflysu"><meta property="og:site_name" content="blog &#x2F; gadflysu"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.gadflysu.com/linux/ubuntu-primer/"><meta property="og:locale" content="en"><meta name="description" content="上一次对主力操作系统的改动是从 Ubuntu 16.04 直接升级到 18.04，多年运行的系统至今已经累积了许多冗余文件，所以最近 Ubuntu 20.04 发布，我决定在新的硬盘分区从零开始安装配置。 之前意识到系统性能瓶颈也许不在内存而在硬盘读写，已经对残留的 Windows 所在硬盘进行了清理，腾出一定的空间就用来装新的 Ubuntu，了结我将系统硬盘从缓慢的 HDD 换到 SSD 的心愿 - gadflysu - blog &#x2F; gadflysu"><meta name="keywords" content="ubuntu, cheat sheet, share, blog"><meta property="article:published_time" content="2020-05-14T16:00:00.000Z"><meta property="article:modified_time" content="2020-10-05T01:12:14.206Z"><meta property="og:updated_time" content="2020-10-05T01:12:14.206Z"><meta property="article:author" content="gadflysu"><meta property="article:tag" content="ubuntu, cheat sheet, share, blog"><meta name="twitter:card" content="summary">
 
     
 
@@ -225,7 +225,7 @@
     },
     
     "datePublished": "2020-05-14T16:00:00.000Z",
-    "dateModified": "2020-09-06T17:56:43.959Z",
+    "dateModified": "2020-10-05T01:12:14.206Z",
     "author": {
         "@type": "Person",
         "name": "gadflysu",
@@ -630,7 +630,7 @@
 <p>Ubuntu 系统预置 Thunderbird。按照文档 <a target="_blank" rel="noopener" href="https://support.mozilla.org/en-US/kb/profiles-where-thunderbird-stores-user-data">“Profiles”</a> 或 <a target="_blank" rel="noopener" href="https://support.mozilla.org/en-US/kb/moving-thunderbird-data-to-a-new-computer">“Moving Thunderbird Data to a New Computer”</a> 迁移个人数据 (<code>~/.thunderbird/xxxxxxxx.default/</code>) 或全部应用数据 (<code>~/.thunderbird/</code>)。</p>
 <p><strong>KeePassXC</strong>：</p>
 <p>KeePassXC 是密码管理器的不二之选。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install keepassxc</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:phoerious/keepassxc</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt install keepassxc</span><br></pre></td></tr></table></figure>
 
 <p>到设定 (Settings) 中启用【Show a system tray icon】。</p>
 <p><strong>云存储</strong>：</p>
@@ -725,7 +725,7 @@
     <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
     <script>
     (function() {
-        var dateUpdate = Date.parse("2020-09-07");
+        var dateUpdate = Date.parse("2020-10-05");
         var nowDate = new Date();
         var a = nowDate.getTime();
         var b = a - dateUpdate;
@@ -741,7 +741,7 @@
 
 <p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2020-05-14T16:00:00.000Z" itemprop="datePublished">05/15/2020</time>
 
-    , Updated at&nbsp;<time datetime="2020-09-06T17:56:43.959Z" itemprop="dateModified">09/07/2020</time>
+    , Updated at&nbsp;<time datetime="2020-10-05T01:12:14.206Z" itemprop="dateModified">10/05/2020</time>
 
 </p>
 <p class="post-footer-info mb-0 pt-2">
@@ -771,6 +771,13 @@
                 <div class="post-nav px-2 bg-gray">
 <ul class="pagination">
     <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/life/2020-in-review/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">二〇二〇</div>
+            </a>
+        </li>
     
 
     <!-- Next Nav -->
